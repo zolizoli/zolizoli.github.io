@@ -7,7 +7,7 @@
       d3.tsv("example_data.tsv", function (data) {
 
           // Filter for 1 year
-          data = dimple.filterData(data, "Month", [
+          data = dimple.filterData(data, "Topic", [
               "Jan-12", "Feb-12", "Mar-12", "Apr-12", "May-12", "Jun-12",
               "Jul-12", "Aug-12", "Sep-12", "Oct-12", "Nov-12", "Dec-12"
           ]);
@@ -28,7 +28,7 @@
           indicator.setBounds(434, 49, 153, 311);
 
           // Add dates along the y axis
-          var y = indicator.addCategoryAxis("y", "Month");
+          var y = indicator.addCategoryAxis("y", "Topic");
           y.addOrderRule("Date", "Desc");
 
           // Use sales for bar size and hide the axis
@@ -86,7 +86,7 @@
           bubbles.addLegend(60, 10, 410, 60);
 
           // Add a storyboard to the main chart and set the tick event
-          var story = bubbles.setStoryboard("Month", onTick);
+          var story = bubbles.setStoryboard("Topic", onTick);
           // Change the frame duration
           story.frameDuration = frame;
           // Order the storyboard by date
