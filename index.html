@@ -33,8 +33,13 @@ var color = d3.scale.category20();
 
 //Set up the force layout
 var force = d3.layout.force()
+<<<<<<< HEAD
     .charge(-500)
     .linkDistance(230)
+=======
+    .charge(-100)
+    .linkDistance(500)
+>>>>>>> ea8941951d95b574282e9ff54ee36fef11c502ef
     .size([width, height]);
 
 //Append a SVG to the body of the html page. Assign this SVG as an object to svg
@@ -44,7 +49,11 @@ var svg = d3.select("body").append("svg")
     .attr("class", "graph-svg-component");
 
 //Read the data from the mis element 
+<<<<<<< HEAD
 d3.json("star_graph_old_trilogy_mod.json", function(error, graph) {
+=======
+d3.json("actors_min2_data.json", function(error, graph) {
+>>>>>>> ea8941951d95b574282e9ff54ee36fef11c502ef
   if (error) throw error;
 
 //Creates the graph data structure out of the json data
@@ -58,7 +67,11 @@ var link = svg.selectAll(".link")
     .enter().append("line")
     .attr("class", "link")
     .style("stroke-width", function (d) {
+<<<<<<< HEAD
     return d.weight / 3;
+=======
+    return d.x * d.x * d.x * d.x / 100;
+>>>>>>> ea8941951d95b574282e9ff54ee36fef11c502ef
 });
 
 //Do the same with the circles for the nodes - no 
@@ -73,7 +86,11 @@ var node = svg.selectAll(".node")
 
 node.append("circle")
       .attr("class", "node")
+<<<<<<< HEAD
       .attr("r", function(d) { return Math.log10(d.degree + 3) * 9})
+=======
+      .attr("r", function(d) { return d.film_no * 5 })
+>>>>>>> ea8941951d95b574282e9ff54ee36fef11c502ef
       .style("fill", function(d) { return color(d.id); })
       .call(force.drag);
 
@@ -82,25 +99,44 @@ node.append("g");
 node.append("text")
       .attr("dx", 10)
       .attr("dy", ".35em")
+<<<<<<< HEAD
 	  .style("fill", "black")
       .text(function(d) { return d.id });
+=======
+      .text(function(d) { return d.name })
+      .style('color', 'black');
+>>>>>>> ea8941951d95b574282e9ff54ee36fef11c502ef
 
 function mouseover() {
     d3.select(this).select("circle").transition()
         .duration(30)
+<<<<<<< HEAD
         .attr("r", 30);
 //	d3.select(this).select("text").transition()
 //        .duration(30)
 //        .text(function(d) { return d.film_no });
+=======
+        .attr("r", 40);
+	d3.select(this).select("text").transition()
+        .duration(30)
+        .text(function(d) { return d.film_no });
+>>>>>>> ea8941951d95b574282e9ff54ee36fef11c502ef
 }
 
 function mouseout() {
     d3.select(this).select("circle").transition()
         .duration(30)
+<<<<<<< HEAD
         .attr("r", function(d) { return Math.log10(d.degree + 3) * 9} );
 //	d3.select(this).select("text").transition()
 //        .duration(30)
 //		.text(function(d) { return d.name });
+=======
+        .attr("r", function(d) { return d.film_no * 5 });
+	d3.select(this).select("text").transition()
+        .duration(30)
+		.text(function(d) { return d.name });
+>>>>>>> ea8941951d95b574282e9ff54ee36fef11c502ef
 }
 
 
