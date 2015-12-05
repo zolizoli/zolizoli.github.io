@@ -1,0 +1,36 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-bottom: 20px;
+  background-color: #000000;
+}
+
+.jumbotron {
+	background-color: #000000;
+}
+
+.halo {
+	background-color: #000000;
+}
+
+.node {
+          /*stroke: #fff;
+          stroke-width: 1.5px;*/
+        }
+
+
+.link {
+          stroke: #999;
+          stroke-opacity: .6;
+        }
+
+.graph-svg-component {
+            background-color: #000;
+        }
+
+body {
+	color: #ffffff;
+}
+
+footer p {
+	text-align: center;
+}

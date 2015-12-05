@@ -1,0 +1,83 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+
+.jumbotron {
+	background-color: #fff;
+}
+
+.halo {
+	background-color: #fff;
+}
+
+.node {
+          /*stroke: #fff;
+          stroke-width: 1.5px;*/
+        }
+
+
+.link {
+          stroke: #999;
+          stroke-opacity: .6;
+        }
+
+.graph-svg-component {
+            background-color: #000;
+        }
+
+body {
+	color: #000;
+}
+
+#footer p {
+	text-align: center;
+}
+
+.jumbotron h2, p {
+  font-family: 'Lato', sans-serif;
+  text-align: justify;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 50px;
+}
+
+.jumbotron {
+  padding-bottom: 0px;
+}
+
+.halo p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+.halo h2 {
+  margin-top: 30px;
+}
+
+circle.node {
+  fill: lightsteelblue;
+  stroke: #555;
+  stroke-width: 3px;
+}
+circle.leaf {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+path.hull {
+  fill: lightsteelblue;
+  fill-opacity: 0.3;
+}
+line.link {
+  stroke: #333;
+  stroke-opacity: 0.5;
+  pointer-events: none;
+}
+
+svg {
+  border: 1px solid #ccc;
+}
