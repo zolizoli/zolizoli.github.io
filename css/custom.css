@@ -5,7 +5,7 @@ body {
 }
 
 ul.nav {
-	font-family: 'Arvo', courier, serif;
+	font-family: 'monospace', courier, serif;
 }
 
 ul.nav {
@@ -19,7 +19,7 @@ ul.nav {
 }
 
 .jumbotron h1 {
-	font-family: 'Arvo', courier, serif;
+	font-family: 'monospace', courier, serif;
 	margin-top: 0px;
 	margin-bottom: 50px;
 }
@@ -35,7 +35,7 @@ ul.nav {
 }
 
 .homepage h2 {
-	font-family: 'Arvo', courier, serif;
+	font-family: 'monospace', courier, serif;
 	color: #e74c3c;
 	text-transform: uppercase;
 	font-size: 30px;
@@ -48,7 +48,7 @@ ul.nav {
 .homepage h3 {
 	text-transform: uppercase;
 	color: #e74c3c;
-	font-family: 'Arvo', courier, serif;
+	font-family: 'monospace', courier, serif;
 	font-size: 26px;
 }
 

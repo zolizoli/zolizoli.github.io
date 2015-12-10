@@ -2,6 +2,8 @@
 body {
   padding-bottom: 20px;
   background-color: #000000;
+
+    font-family: monospace;
 }
 
 .jumbotron {
@@ -33,4 +35,14 @@ body {
 
 footer p {
 	text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.jumbotron h2 {
+    margin-top: 80px;
+    margin-bottom: 40px;
 }

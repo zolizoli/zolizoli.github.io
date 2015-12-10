@@ -1,12 +1,198 @@
 $(document).ready(function() {
 	 
-	 initOld();initNew();
+	 initOld();initNew();initMood();
+
+    //mood
+    function initMood() {
+        //Width and height
+        var w = 2000;
+        var h = 800;
+        var barPadding = 1;
+        var dataset = [];
+        var datasentim = [];
+        var datascenes = [];
+        var movieStart = [0, 190, 346, 588, 1088, 1368, 1506];
+
+
+        var svg = d3.select("#mood")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+
+        d3.tsv("data/scenes.tsv", function(error, datascenes) {
+            datascenes.forEach(function(d, i) {
+                datascenes[i] = +d.film;
+            });
+
+            d3.tsv("data/scene_sentiment.tsv", function(error, datatsv) {
+                datatsv.forEach(function(d, i) {
+                    datasentim[i] = +d.sentiment;
+                });
+
+
+                d3.csv("data/char2.csv", function(error, data) {
+
+                    data.forEach(function(d, i) {
+
+                        if(d.sum == "#"){
+                            draw(2);
+                        }//if
+                        else
+                        {
+                            dataset[i] = Object.keys(d).map(function (key) {return d[key]});
+
+                        }
+
+                    });//forEach
+                });//csv
+
+                var sqWidth = 6;
+                var baseOpac = 0.5;
+                var gap = 3;
+                var scaleHeight = 2.5;
+                var movieGap = 100;
+                var prevMovie = 0;
+                var sceneNum = 0;
+                var difPos = 0;
+                var linePadding = 5;
+
+                function draw(who){
+
+                    svg.selectAll("#mood line")
+                        .data(movieStart)
+                        .enter()
+                        .append("line")
+                        .attr("x1", 0)
+                        .attr("y1", function(d, i) {
+                            return i*movieGap+linePadding;
+                        })
+                        .attr("x2", function(d, i) {
+                            return (movieStart[i]-movieStart[i-1])*gap;
+                        })
+                        .attr("y2", function(d, i) {
+                            return i*movieGap+linePadding;
+                        })
+                        .attr("stroke-width", 1)
+                        .attr("stroke", "#333")
+                    ;
+
+
+                    svg.selectAll("#mood line")
+                        .data(dataset[who])
+                        .enter()
+                        .append("line")
+                        .filter(function(d, i){ return i < 1506;  })
+
+                        .attr("x1", function(d, i) {
+                            difPos = movieStart[datascenes[i]-1]*gap;
+                            return i*gap-difPos;
+                        })
+                        .attr("y1", function(d, i) {
+                            return movieGap*datascenes[i]; })
+                        .attr("x2", function(d, i) {
+                            difPos = movieStart[datascenes[i]-1]*gap;
+                            return i*gap-difPos; })
+                        .attr("y2", function(d, i) {
+
+                            return  Math.floor(-d*scaleHeight+movieGap*datascenes[i]); })
+                        .attr("stroke-width", 1)
+                        .attr("stroke", function(d, i) {
+                            return (d!=0) ? "white" : "none";   } )
+                        .attr("stroke-linecap", "square")
+                        .attr("class", "ldata")
+                    ;
+
+
+                    svg.selectAll("#mood rects")
+                        .data(dataset[who])
+                        .enter()
+                        .append("rect")
+                        .filter(function(d, i){ return (i < 1506)})
+                        .attr("x", function(d, i) {
+                            difPos = movieStart[datascenes[i]-1]*gap;
+                            return i*gap-sqWidth/2-difPos; })
+                        .attr("y", function(d, i) {
+                            return movieGap*datascenes[i]+linePadding*2; })
+                        .attr("width", sqWidth)
+                        .attr("height", sqWidth)
+                        .attr("fill", function(d, i) {
+                            return (datasentim[i]==0) || (d==0) ? "none" : (datasentim[i]<0) ? "SlateGray" : "DeepPink";   } )
+
+                        .style("opacity", function(d, i) {
+                            return (datasentim[i]<0) ? (datasentim[i]*-1+baseOpac) : (datasentim[i]>0) ? (datasentim[i]+baseOpac) : 0;
+                        })
+
+
+                    ;
+
+
+                    svg.append("text")
+                        .text(dataset[who][1507])
+                        .attr("text-anchor", "middle")
+                        .attr("x", 40)
+                        .attr("y", 50)
+                        .attr("font-family", "sans-serif")
+                        .attr("font-size", "14px")
+                        .attr("fill", "white")
+                        .attr("class", "upper")
+                    ;
+
+
+                }//draw
+
+
+                d3.select("#mood")
+                    .on("click", function() {
+
+                        var newChar = Math.floor(Math.random() * 20-1);
+
+
+                        svg.selectAll(".ldata")
+                            .data(dataset[newChar])
+                            .transition()
+                            .duration(500)
+                            .delay(function(d, i){ return i*500*2/1506; })
+                            .filter(function(d, i){ return i < 1506; })
+                            .attr("y2", function(d, i) {return  Math.floor(-d*scaleHeight+movieGap*datascenes[i]); })
+                            .attr("stroke", function(d, i) {
+                                return (d!=0) ? "white" : "none";   } )
+
+                        ;
+
+                        svg.selectAll("#mood rect")
+                            .data(dataset[newChar])
+                            .transition()
+                            .duration(500)
+                            .delay(function(d, i){ return i*500*2/1506; })
+                            .filter(function(d, i){ return (i < 1506); })
+                            .attr("fill", function(d, i) {
+                                return (datasentim[i]==0) || (d==0) ? "none" : (datasentim[i]<0) ? "SlateGray" : "DeepPink";   } )
+                            .style("opacity", function(d, i) {
+                                return (datasentim[i]<0) ? (datasentim[i]*-1+baseOpac) : (datasentim[i]>0) ? (datasentim[i]+baseOpac) : 0;
+                            })
+                        ;
+
+                        svg.selectAll("#mood text")
+                            .data(dataset[newChar])
+                            .transition()
+                            .duration(500)
+                            .text(dataset[newChar][1507])
+
+                        ;
+
+                    });
+
+
+
+            });	//senti tsv
+        });	//scene tsv
+    }
 	 
 	 //old trilogy 
 		function initOld() {
         //Constants for the SVG
         var width = 1300,
-            height = 800;
+            height = 900;
 
         //Set up the force layout
         var force = d3.layout.force()
