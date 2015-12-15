@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Star Wars</title>
+
+    <!-- Google Font Open Sans and Font Awesome -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom_sw.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    
+
+    <script src="d3/d3.js"></script>
+   
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="title">
+      <div class="container">
+        
+          <h1>VISUALIZING</h1>
+
+          <img src="images/pic-02.png" />
+
+          <h1>MOVIE SCRIPTS</h1>
+        
+          <p>A long time ago, in a galaxy far, far away data analysts were talking about the upcoming new Star Wars movie. One of them has never seen any eposide of the two trilogies before, so they decided to make the movie more accessible to this poor fellow.</p>
+
+      </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="container relation">
+
+        <h1>Relationships matter</h1>
+
+        <p>The SW universe is full of strange-looking characters. They are talking and beeping a lot, and sometimes it is hard to track down who talked to whom. So we took the movie scripts and started coding hard.</p>
+        <p>The conversation graphs represent relationships (edges) between characters (nodes) who are talking in the same scene. The scripts were split into scenes and the names of all character were listed who are speaking in the same scene. Characters who chatted more than three times were selected and their conversations were visualized in form of force-directed graphs. The thickness of an edge indicates how frequently that two characters speak in the same scene. The size of a node means how frequently that character talks in all of the scenes. Except for R2-D2, who doesn’t talk but makes noises like beeping, squealing, howling, shrieking, screaming or chirping.</p>
+
+        <img src="images/pic-03.png" />
+        <img src="images/pic-04.png" />
+        <img src="images/pic-05.png" />
+
+      </div>
+    
+
+    <div class="container halo">
+      <h2>Conversation graph of the Original Trilogy</h2>
+
+      <a class="q-mark" href="#">a</a>
+      <div class="q-text">
+        <p>Click on a node to fade out all but its immediate neighbours.</p>
+        <p>Click to bring them back again.</p>
+        <p>Mouse-over on a node to give more information about that character's conversations.</p>
+      </div>
+
+      <!--
+      <div id="old_trilogy_net"></div>
+      -->
+    </div>
+
+    <iframe src="oldtri.html" seamless width="100%" height="800" frameborder="0" scrolling="no"></iframe>
+
+    <div class="container halo">
+      <h2>Conversation graph of the Prequel Trilogy</h2>
+
+      <a class="q-mark" href="#">a</a>
+      <div class="q-text">
+        <p>Click on a node to fade out all but its immediate neighbours.</p>
+        <p>Click to bring them back again.</p>
+        <p>Mouse-over on a node to give more information about that character's conversations.</p>
+      </div>
+
+      <!--
+      <div id="new_trilogy_net"></div>
+      -->
+
+    </div>
+
+    <iframe src="newtri.html" seamless width="100%" height="800" frameborder="0" scrolling="no"></iframe>
+
+    <div class="separator2">
+    </div>
+
+  <div class="mood">
+    <div class="container">
+
+      <h1>Mood</h1>
+
+      <p>Mood, or if you like fancy names, sentiment, also matters a lot. We analyzed the scripts using sentiment lexicons (one for positive and one for negative words) and assigned a mood score to each and every scene in the movies. This visualization shows where the names of the characters are mentioned in the scripts. The six lines represent the six Star Wars episodes. The height of the bars show how frequently that character is mentioned in that particular scene. The colour of the squares indicate the general sentiment of the text for each scene.</p>
+      <p>Words with negative associations (such as “darkness”, “menace” and “death”) make scenes more gray and words with positive associations (such as “love”, “proud” and “hopeful”) make them more blue.</p>
+
+      <h2>Character mentions and mood for each scene</h2>
+
+      <a class="q-mark" href="#">a</a>
+      <div class="q-text">
+        <p>Click on a name to change to that character's mentions.</p>
+      </div>
+
+      <img src="images/pic-08.png" />
+      <img src="images/pic-10.png" />
+      <img src="images/pic-12.png" />
+
+      <!--
+      <div id="mood"></div>
+      -->
+
+    </div>
+
+    <div class="mooder">
+    <iframe src="mood.html" seamless width="100%" height="800" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+
+    <div class="separator">
+    </div>
+  </div>
+
+    <div class="container foot">
+      <h3>created by</h3>
+      <div class="person col-md-3">
+        <h3>Kitti Balogh</h3>
+        <p>data analyst</p>
+        <a href="http://www.precognox.com" target="_blank">Precognox.com</a></br>
+        <a class="tweet" href="http://www.twitter.com/kttblgh" target="_blank">twitter</a>
+      </div>
+      <div class="person col-md-3">
+        <h3>Krisztina Szucs</h3>
+        <p>data viz designer</p>
+        <a href="http://www.krisztinaszucs.com" target="_blank">krisztinaszucs.com</a></br>
+        <a class="tweet" href="http://www.twitter.com/szucsi" target="_blank">twitter</a>
+      </div>
+      <div class="person col-md-3">
+        <h3>Viktoria Verecze</h3>
+        <p>web designer</p>
+        <a href="mailto:verecze.viktoria@gmail.com">verecze.viktoria@gmail.com</a></br>
+        <a class="tweet" href="http://www.twitter.com/ithil2" target="_blank">twitter</a>
+      </div>
+      <div class="person col-md-3">
+        <h3>Zoltan Varju</h3>
+        <p>computational linguist</p>
+        <a href="http://www.precognox.com" target="_blank">Precognox.com</a></br>
+        <a class="tweet" href="http://www.twitter.com/zoltanvarju" target="_blank">twitter</a>
+      </div>
+      <div class="team col-md-12">
+        <p>Team members do NOT disclose any information regarding the person who hasn’t seen the movies yet, except that he is a really nice guy.</p>
+      </div>
+      <div class="info">
+        <p><div class="fb-like" data-href="http://labs.precognox.com/star_wars/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div> <a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://labs.precognox.com/star_wars/">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+        <p>Source of the Star Wars movie scripts:<a href="http://www.imsdb.com" target="_blank"> http://www.imsdb.com</a> </p>
+        <p>Source of the sentiment lexicons: <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html#lexicon" target="_blank">https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html#lexicon</a></p>
+        <p>Source of the Star Wars logo: <a href="https://commons.wikimedia.org/wiki/File%3AStar_Wars_Logo.svg" target="_blank" title="By User:KAMiKAZOW (Transferred from en.wikipedia to Commons.) [Public domain]">via Wikimedia Commons</a></p>
+      </div>
+
+      <footer>
+
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/sw.js"></script>
+  </body>
+</html>
