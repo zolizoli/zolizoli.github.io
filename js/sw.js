@@ -191,17 +191,17 @@ $(document).ready(function() {
 	 //old trilogy 
 		function initOld() {
         //Constants for the SVG
-        var width = 1300,
-            height = 900;
+        var width = 1500,
+            height = 800;
 
         //Set up the force layout
         var force = d3.layout.force()
-            .charge(-400)
-            .linkDistance(230)
+            .charge(-250)
+            .linkDistance(550)
             .size([width, height]);
 
         //Append a SVG to the body of the html page. Assign this SVG as an object to svg
-        var svg = d3.select("#old_trilogy_net").append("svg")
+        var svg = d3.select("body").append("svg")
             .attr("width", width)
             .attr("height", height)
             .attr("class", "graph-svg-component");
@@ -216,13 +216,22 @@ $(document).ready(function() {
             .start();
 
         //Create all the line svgs but without locations yet
-        var link = svg.selectAll("#old_trilogy_net .link")
+        var link = svg.selectAll(".link")
             .data(graph.links)
             .enter().append("line")
             .attr("class", "link")
+            .attr("stroke", function (d) {
+                return "rgb("+  d.weight*10 +"," + (120+d.weight*10*10) + ","+  (120+d.weight*10*10) +")";
+                //return "rgb("+ (100+d.weight*2*10)  +"," + (100+d.weight*6*10) + ","+ (100+d.weight * 10*10) +")";
+               }) 
             .style("stroke-width", function (d) {
-            return d.weight / 2;
-        });
+            return 0.2+d.weight / 6;     
+                     })
+              .style("opacity", "0.2")
+           
+            
+
+            ;
 
 
         //Toggle stores whether the highlighting is on
@@ -247,28 +256,30 @@ $(document).ready(function() {
                     return neighboring(d, o) | neighboring(o, d) ? 1 : 0.1;
                 });
                 link.style("opacity", function (o) {
-                    return d.index==o.source.index | d.index==o.target.index ? 1 : 0.1;
-                });
+                    return d.index==o.source.index | d.index==o.target.index ? 0.8 : 0.1;
+                })
+
+                ;
                 //Reduce the op
                 toggle = 1;
             } else {
                 //Put them back to opacity=1
                 node.style("opacity", 1);
-                link.style("opacity", 1);
+                link.style("opacity", 0.2);
                 toggle = 0;
             }
         }
 
         //Do the same with the circles for the nodes - no 
         //Changed
-        var node = svg.selectAll("#old_trilogy_net .node")
+        var node = svg.selectAll(".node")
             .data(graph.nodes)
             .enter().append("g")
             .attr("class", "node")
             .call(force.drag)
              .on("mouseover", mouseover)
              .on("mouseout", mouseout)
-             .on('dblclick', connectedNodes); //Added code 
+             .on('click', connectedNodes); //Added code 
 
         var padding = 1, // separation between circles
             radius=8;
@@ -302,18 +313,26 @@ $(document).ready(function() {
         node.append("circle")
               .attr("class", "node")
               .attr("r", function(d) { return Math.log10(d.degree + 3) * 9})
-              .style("fill", "#F00")
+              .style("fill", function(d) {
+                //console.log(d.degree);
+                    //return "rgb("+ (20+d.degree*2)  +"," + (100+d.degree*6) + ","+ (100+d.degree * 10) +")";
+                    return "rgb("+  d.degree +"," + (120+d.degree*10) + ","+  (120+d.degree*10) +")";
+
+               })
+              .style("opacity", "0.8")
               .call(force.drag);
 
         node.append("g");
 
         node.append("text")
-              .attr("dx", 10)
+              .attr("dx", function(d) { return Math.log10(d.degree + 3) * 9 + 2})
               .attr("dy", ".35em")
-              .style("fill", "white")
-              .style("stroke", "darkgray")
-              .style("stroke-width", "0.75px")
-              .text(function(d) { return d.id });
+              .style("fill", "white")             
+              .text(function(d) { return d.id })
+              .attr("class", "name")
+               //.attr("font-size", function(d) { return Math.log10(d.degree + 14) * 9 })
+
+              ;
 
 
         function mouseover() {
@@ -322,71 +341,86 @@ $(document).ready(function() {
                 .attr("r", 30);
             d3.select(this).select("text").transition()
                 .duration(30)
-                .text(function(d) { return  d.degree + ' conversations' });
+                .text(function(d) { return  d.degree + '' })
+                .style("fill", "black")
+                 .attr("dx", function(d) { return Math.log10(d.degree + 3) * 9 -25})
+                 .attr("text-anchor", "middle")
+
+               
+
+
+                ;
         }
 
         function mouseout() {
             d3.select(this).select("circle").transition()
                 .duration(30)
-                .attr("r", function(d) { return Math.log10(d.degree + 3) * 9} );
+                .attr("r", function(d) { return Math.log10(d.degree + 3) * 9})
             d3.select(this).select("text").transition()
                 .duration(30)
-                .text(function(d) { return d.id });
+                .text(function(d) { return d.id })
+                .style("fill", "white")
+                 .attr("dx", function(d) { return Math.log10(d.degree + 3) * 9 + 2})
+                 .attr("text-anchor", "left")
+
+                ;
         }
 
 
 
+var heightScale = 0.5;
+var topPadding= 100;
         //Now we are giving the SVGs co-ordinates - the force layout is generating the co-ordinates which this code is using to update the attributes of the SVG elements
         force.on("tick", function () {
             link.attr("x1", function (d) {
                 return d.source.x;
             })
                 .attr("y1", function (d) {
-                return d.source.y;
+                return d.source.y*heightScale+topPadding;
             })
                 .attr("x2", function (d) {
                 return d.target.x;
             })
                 .attr("y2", function (d) {
-                return d.target.y;
+                return d.target.y*heightScale+topPadding;
             });
 
 
 
-            d3.selectAll("#old_trilogy_net circle").attr("cx", function (d) {
+            d3.selectAll("circle").attr("cx", function (d) {
                 return d.x;
             })
                 .attr("cy", function (d) {
-                return d.y;
+                return d.y*heightScale+topPadding;
             });
 
-            d3.selectAll("#old_trilogy_net text").attr("x", function (d) {
+            d3.selectAll("text").attr("x", function (d) {
                 return d.x;
             })
                 .attr("y", function (d) {
-                return d.y;
+                return d.y*heightScale+topPadding;
             });
 
             node.each(collide(0.25)); 
 
         });});
-		
+
 		}
 	 
 		//new trilogy 
 		function initNew() {
-        //Constants for the SVG
-        var width = 1300,
-            height = 900;
+          //Constants for the SVG
+        var width = 1500,
+            height = 800;
 
         //Set up the force layout
         var force = d3.layout.force()
-            .charge(-400)
-            .linkDistance(230)
+            .charge(-250)
+            .linkDistance(550)
             .size([width, height]);
 
         //Append a SVG to the body of the html page. Assign this SVG as an object to svg
-        var svg = d3.select("#new_trilogy_net").append("svg")
+        var svg = d3.select("body").append("svg")
             .attr("width", width)
             .attr("height", height)
             .attr("class", "graph-svg-component");
@@ -401,13 +435,22 @@ $(document).ready(function() {
             .start();
 
         //Create all the line svgs but without locations yet
-        var link = svg.selectAll("#new_trilogy_net .link")
+        var link = svg.selectAll(".link")
             .data(graph.links)
             .enter().append("line")
             .attr("class", "link")
+            .attr("stroke", function (d) {
+                return "rgb("+  d.weight*10 +"," + (120+d.weight*10*10) + ","+  (120+d.weight*10*10) +")";
+                //return "rgb("+ (100+d.weight*2*10)  +"," + (100+d.weight*6*10) + ","+ (100+d.weight * 10*10) +")";
+               }) 
             .style("stroke-width", function (d) {
-            return d.weight / 2;
-        });
+            return 0.2+d.weight / 6;     
+                     })
+              .style("opacity", "0.2")
+           
+            
+
+            ;
 
 
         //Toggle stores whether the highlighting is on
@@ -432,28 +475,30 @@ $(document).ready(function() {
                     return neighboring(d, o) | neighboring(o, d) ? 1 : 0.1;
                 });
                 link.style("opacity", function (o) {
-                    return d.index==o.source.index | d.index==o.target.index ? 1 : 0.1;
-                });
+                    return d.index==o.source.index | d.index==o.target.index ? 0.8 : 0.1;
+                })
+
+                ;
                 //Reduce the op
                 toggle = 1;
             } else {
                 //Put them back to opacity=1
                 node.style("opacity", 1);
-                link.style("opacity", 1);
+                link.style("opacity", 0.2);
                 toggle = 0;
             }
         }
 
         //Do the same with the circles for the nodes - no 
         //Changed
-        var node = svg.selectAll("#new_trilogy_net .node")
+        var node = svg.selectAll(".node")
             .data(graph.nodes)
             .enter().append("g")
             .attr("class", "node")
             .call(force.drag)
              .on("mouseover", mouseover)
              .on("mouseout", mouseout)
-             .on('dblclick', connectedNodes); //Added code 
+             .on('click', connectedNodes); //Added code 
 
         var padding = 1, // separation between circles
             radius=8;
@@ -487,18 +532,26 @@ $(document).ready(function() {
         node.append("circle")
               .attr("class", "node")
               .attr("r", function(d) { return Math.log10(d.degree + 3) * 9})
-              .style("fill", "#F00")
+              .style("fill", function(d) {
+                //console.log(d.degree);
+                    //return "rgb("+ (20+d.degree*2)  +"," + (100+d.degree*6) + ","+ (100+d.degree * 10) +")";
+                    return "rgb("+  d.degree +"," + (120+d.degree*10) + ","+  (120+d.degree*10) +")";
+
+               })
+              .style("opacity", "0.8")
               .call(force.drag);
 
         node.append("g");
 
         node.append("text")
-              .attr("dx", 10)
+              .attr("dx", function(d) { return Math.log10(d.degree + 3) * 9 + 2})
               .attr("dy", ".35em")
-              .style("fill", "white")
-              .style("stroke", "darkgray")
-              .style("stroke-width", "0.75px")
-              .text(function(d) { return d.id });
+              .style("fill", "white")             
+              .text(function(d) { return d.id })
+              .attr("class", "name")
+               //.attr("font-size", function(d) { return Math.log10(d.degree + 14) * 9 })
+
+              ;
 
 
         function mouseover() {
@@ -507,54 +560,67 @@ $(document).ready(function() {
                 .attr("r", 30);
             d3.select(this).select("text").transition()
                 .duration(30)
-                .text(function(d) { return  d.degree + ' conversations' });
+                .text(function(d) { return  d.degree + '' })
+                .style("fill", "black")
+                 .attr("dx", function(d) { return Math.log10(d.degree + 3) * 9 -25})
+                 .attr("text-anchor", "middle")
+
+               
+
+
+                ;
         }
 
         function mouseout() {
             d3.select(this).select("circle").transition()
                 .duration(30)
-                .attr("r", function(d) { return Math.log10(d.degree + 3) * 9} );
+                .attr("r", function(d) { return Math.log10(d.degree + 3) * 9})
             d3.select(this).select("text").transition()
                 .duration(30)
-                .text(function(d) { return d.id });
+                .text(function(d) { return d.id })
+                .style("fill", "white")
+                 .attr("dx", function(d) { return Math.log10(d.degree + 3) * 9 + 2})
+                 .attr("text-anchor", "left")
+
+                ;
         }
 
 
 
+var heightScale = 0.5;
+var topPadding= 100;
         //Now we are giving the SVGs co-ordinates - the force layout is generating the co-ordinates which this code is using to update the attributes of the SVG elements
         force.on("tick", function () {
             link.attr("x1", function (d) {
                 return d.source.x;
             })
                 .attr("y1", function (d) {
-                return d.source.y;
+                return d.source.y*heightScale+topPadding;
             })
                 .attr("x2", function (d) {
                 return d.target.x;
             })
                 .attr("y2", function (d) {
-                return d.target.y;
+                return d.target.y*heightScale+topPadding;
             });
 
 
 
-            d3.selectAll("#new_trilogy_net circle").attr("cx", function (d) {
+            d3.selectAll("circle").attr("cx", function (d) {
                 return d.x;
             })
                 .attr("cy", function (d) {
-                return d.y;
+                return d.y*heightScale+topPadding;
             });
 
-            d3.selectAll("#new_trilogy_net text").attr("x", function (d) {
+            d3.selectAll("text").attr("x", function (d) {
                 return d.x;
             })
                 .attr("y", function (d) {
-                return d.y;
+                return d.y*heightScale+topPadding;
             });
 
             node.each(collide(0.25)); 
 
         });});
-		
-		}
 		});
