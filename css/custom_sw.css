@@ -37,7 +37,7 @@ h2 {
   font-weight: 400;
   color: #5fcfcf;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   margin: 60px 0 30px 0;
 }
@@ -205,7 +205,7 @@ footer p {
 }
 
 .tweet {
-  background-image: url("../images/pic-09.png");
+  background-image: url("../images/pic-09b.png");
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -215,7 +215,7 @@ footer p {
 }
 
 .tweet:hover {
-  background-image: url("../images/pic-09b.png");
+  background-image: url("../images/pic-09.png");
 }
 
 .team p {
