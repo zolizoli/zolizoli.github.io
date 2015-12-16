@@ -38,8 +38,10 @@
     <script>
 
         //Constants for the SVG
+		console.log(document.getElementsByTagName("body")[0].offsetWidth);
         var width = document.getElementsByTagName("body")[0].offsetWidth,
-            height = 1000;
+            height = 800;
+        
 
         //Set up the force layout
         var force = d3.layout.force()
