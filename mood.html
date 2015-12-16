@@ -163,7 +163,7 @@ function draw(who){
                 .filter(function(d, i){ return dataset[i][1506]>50;  })
                 .append("a")
                 .text(function(d, i) { return dataset[i][1507]; })
-                .style("font-size", Math.log10(w) * 3 + "px")
+                .style("font-size",  Math.sqrt(Math.sqrt(w)) * 2  + "px")
                 .on("click", function(d,i) {return changeChar(i);})
          		.attr("xlink:href", "#") 
 
