@@ -52,6 +52,28 @@
 
   <body>
       
+      <script src="d3/d3.js"></script>
+
+    <style>
+        
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%; /* aspect ratio */
+        vertical-align: top;
+        overflow: hidden;
+        }
+        
+    .svg-content-responsive {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        }
+        
+    </style>
+      
     <div id="fb-root"></div>
     <script> (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -109,7 +131,7 @@
       -->
     </div>
 
-    <iframe src="oldtri.html" seamless width="100%" height="800" frameborder="0" scrolling="no"></iframe>
+    <iframe class="embed-responsive-item" src="oldtri.html" seamless width="100%" height="800" frameborder="0" scrolling="no"></iframe>
 
     <div class="container halo">
       <h2>Conversation graph of the Prequel Trilogy</h2>
@@ -127,7 +149,7 @@
 
     </div>
 
-    <iframe src="newtri.html" seamless width="100%" height="800" frameborder="0" scrolling="no"></iframe>
+    <iframe class="embed-responsive-item" src="newtri.html" seamless width="100%" height="800" frameborder="0" scrolling="no"></iframe>
 
     <div class="separator2">
     </div>
@@ -157,7 +179,7 @@
 
     </div>
     <div class="mooder">
-    <iframe src="mood.html" seamless width="100%" height="800" frameborder="0" scrolling="no"></iframe>
+    <iframe class="embed-responsive-item" src="mood.html" seamless width="100%" height="1000" frameborder="0" scrolling="no"></iframe>
     </div>
 
 
