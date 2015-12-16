@@ -24,7 +24,7 @@
    
     padding:5px;
     margin-left:10px;
-    font-size: 12px;
+    
    
     line-height: 35px;
     border-style: solid;
@@ -60,7 +60,21 @@ background-color: #00FFF0;
   	width:100%;
   	 }
 
-	
+	.svg-container {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%; /* aspect ratio */
+            vertical-align: top;
+            overflow: hidden;
+        }
+        
+        .svg-content-responsive {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
 		</style>
 	</head>
 	<body>	
@@ -69,12 +83,12 @@ background-color: #00FFF0;
 			<div>
 
 		<script type="text/javascript">
-
+            
 			//Width and height
 			var leftPadding = 100;
 			var w = document.getElementById('menu').offsetWidth;
 			var wGraph = w-leftPadding;
-			var h = 800;
+			var h = document.getElementsByTagName("body")[0].offsetHeight + 1000;
 			
 			var padding = 20;
 			var dataset = [];
@@ -143,16 +157,14 @@ d3.tsv("data/scene_sentiment.tsv", function(error, datatsv) {
 function draw(who){
 
 		var selectMenu = d3.select("#menu").selectAll("span")
-         		  .data(dataset)
-        		  .enter()
-        		  .append("p")
-        		 
-         		   .filter(function(d, i){ return dataset[i][1506]>50;  })
-         		    .append("a")
-         		   .text(function(d, i) {				    	
-			  	 	return dataset[i][1507];
-			  	 })
-         		 .on("click", function(d,i) {return changeChar(i);})
+                .data(dataset)
+                .enter()
+                .append("p") 
+                .filter(function(d, i){ return dataset[i][1506]>50;  })
+                .append("a")
+                .text(function(d, i) { return dataset[i][1507]; })
+                .style("font-size", Math.log10(w) * 3 + "px")
+                .on("click", function(d,i) {return changeChar(i);})
          		.attr("xlink:href", "#") 
 
 
