@@ -1,18 +1,238 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-bottom: 20px;
-  background-color: #000000;
-
-    font-family: monospace;
+@media (min-width: 768px) {
+  .container {
+      max-width: 730px;
+  }
 }
 
-.jumbotron {
-	background-color: #000000;
+@media (max-width: 768px) {
+  .team p {
+      padding: 100px 0 !important;
+  }
+}
+
+.container {
+	position: relative;
+}
+
+body {
+  padding-bottom: 20px;
+  background-color: #3e3e3f;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  color: #e6e6e6;
+}
+
+h1 {
+  font-size: 20px;
+  color: #5fcfcf;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: 400;
+  color: #5fcfcf;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 20px;
+  margin: 60px 0 30px 0;
+}
+
+h3 {
+  font-weight: 400;
+  color: #5fcfcf;
+  text-align: center;
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+}
+
+footer p {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  background-color: #545456;
+  padding-top: 70px;
+}
+
+.title p {
+  font-size: 16px;
+  padding: 100px;
+  padding-top: 40px;
+}
+.separator {
+  text-align: center;
+  margin-bottom: 40px;
+  background: #545456; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#545456 50%, #3e3e3f 50%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#545456 50%, #3e3e3f 50%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#545456 50%, #3e3e3f 50%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#545456 50%, #3e3e3f 50% 50%); /* Standard syntax (must be last) */
+	
+	background-image: url('../images/pic-01.png'), -webkit-linear-gradient(#545456 50%, #3e3e3f 50%);
+	background-image: url('../images/pic-01.png'),-o-linear-gradient(#545456 50%, #3e3e3f 50%);
+	background-image: url('../images/pic-01.png'), -moz-linear-gradient(#545456 50%, #3e3e3f 50%);
+	background-image: url('../images/pic-01.png'), linear-gradient(#545456 50%, #3e3e3f 50% 50%);
+	background-position: center center;
+	height: 16px;
+  background-repeat: no-repeat;
+}
+
+.separator2 {
+  text-align: center;
+  background: #3e3e3f; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#3e3e3f 50%, #545456 50%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#3e3e3f 50%, #545456 50%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#3e3e3f 50%, #545456 50%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#3e3e3f 50%, #545456 50% 50%); /* Standard syntax (must be last) */
+	
+	background-image: url('../images/pic-01.png'), -webkit-linear-gradient(#3e3e3f 50%, #545456 50%);
+	background-image: url('../images/pic-01.png'), -o-linear-gradient(#3e3e3f 50%, #545456 50%);
+	background-image: url('../images/pic-01.png'), -moz-linear-gradient(#3e3e3f 50%, #545456 50%);
+	background-image: url('../images/pic-01.png'), linear-gradient(#3e3e3f 50%, #545456 50% 50%);
+	background-position: center center;
+	height: 16px;
+  background-repeat: no-repeat;
+}
+
+.q-text {
+  display: none;
+  color: #5fcfcf;
+  width: 250px;
+  border: 1px solid #5fcfcf;
+  float: right;
+  padding: 5px 5px 0 10px;
+}
+
+.q-text {
+    border: 1px solid #5fcfcf;
+    color: #5fcfcf;
+    display: none;
+    float: right;
+    padding: 5px 5px 0 10px;
+    position: absolute;
+    bottom: -100px;
+    width: 250px;
+    right: 60px;
+	
+	background-color: #545456;
+}
+
+.mood .q-text {
+	bottom: -70px;
+}
+
+.q-text p {
+  font-size: 14px;
+}
+
+.q-mark {
+  background-image: url("../images/pic-06.png");
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  float: right;
+}
+
+.q-mark:hover {
+  background-image: url("../images/pic-07.png");
+}
+
+.disp {
+  display: inline-block;
+  display: -moz-inline-box;
+}
+
+.relation img {
+  margin-right: 20px;
+  margin-top: 30px;
 }
 
 .halo {
-	background-color: #000000;
+	background-color: #3e3e3f;
 }
+
+.halo img {
+  margin-right: 40px;
+}
+
+.mood {
+  background-color: #545456;
+  padding-top: 40px;
+}
+
+.mood img {
+  margin-right: 40px;
+}
+
+.mooder {
+  text-align: center;
+}
+
+.q-mark {
+  float: right;
+}
+
+.foot {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.person h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.person a {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e6e6e6;
+}
+
+.person p {
+  font-size: 13px;
+}
+
+.tweet {
+  background-image: url("../images/pic-09b.png");
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.tweet:hover {
+  background-image: url("../images/pic-09.png");
+}
+
+.team p {
+  font-size: 14px;
+  padding: 100px 160px;
+}
+
+.info p {
+  font-size: 14px;
+}
+
+.info a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e6e6e6;
+}
+
 
 .node {
           /*stroke: #fff;
@@ -26,23 +246,5 @@ body {
         }
 
 .graph-svg-component {
-            background-color: #000;
+            background-color: #3e3e3f;
         }
-
-body {
-	color: #ffffff;
-}
-
-footer p {
-	text-align: center;
-}
-
-.jumbotron h1 {
-    font-size: 48px;
-    margin-bottom: 50px;
-}
-
-.jumbotron h2 {
-    margin-top: 80px;
-    margin-bottom: 40px;
-}

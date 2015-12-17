@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>star wars bar chart</title>
+		<script type="text/javascript" src="d3/d3.js"></script>
+		<style type="text/css">
+		
+		body {
+    background-color: #555;
+	color: white;
+	shape-rendering: crispEdges;
+	font-size: 14px;
+	font-family: sans-serif;
+}
+
+			.upper {
+				
+				color: white;
+				text-transform: uppercase;
+			}
+
+			a{
+   
+    padding:5px;
+    margin-left:10px;
+    font-size: 12px;
+   
+    line-height: 35px;
+    border-style: solid;
+    border-width: 1px;
+    text-transform: uppercase;
+
+    color: #fff;
+    cursor: pointer;
+   
+
+
+
+  }
+
+p { 
+     display: -moz-box;
+     display: inline-block;
+    margin-bottom:-1px;
+ }
+
+  a:hover{
+background-color: #00FFF0;
+   color:#2B2B2B; 
+   border-color: #00FFF0;
+  }
+
+  .focus{
+  background-color: #00FFF0;
+   color:#2B2B2B; 
+     border-color: #00FFF0;
+  }
+            
+  #menu{
+  	padding-top:20px; 
+  	padding-left: 40px;
+  	width:80%;
+  	 }
+
+	.svg-container {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%; /* aspect ratio */
+            vertical-align: top;
+            overflow: hidden;
+        }
+        
+        .svg-content-responsive {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
+		</style>
+	</head>
+	<body>	
+		<div id="menu">
+
+			<div>
+
+		<script type="text/javascript">
+            
+			//Width and height
+			var leftPadding = 100;
+			var w = document.getElementById('menu').offsetWidth;
+			var wGraph = w-leftPadding;
+			var h = document.getElementsByTagName("body")[0].offsetHeight + 1000;
+			
+			var padding = 20;
+			var dataset = [];
+			var datasentim = [];
+			var datascenes = [];
+			var movieStart = [0, 190, 346, 588, 1088, 1368, 1506];
+			var movieLength = [];
+
+		
+			var movieNames = ["The Phantom Menace","Attack of the Clones","Revenge of the Sith", "Star Wars", "The Empire Strikes Back", "Return of the Jedi"];
+			var movieNames2 = ["Ep. I","Ep. II","Ep. III", "Ep. IV", "Ep V", "Ep. VI"];
+
+
+			for(var i=0; i<movieStart.length-1; i++){
+				movieLength[i]=movieStart[i+1]-movieStart[i];
+								
+			}
+		
+var sqWidth = 6;
+var baseOpac = 0.5;
+var gap = 3;
+var scaleHeight = 2.5;
+var movieGap = 80;
+var prevMovie = 0;
+var sceneNum = 0;
+var difPos = 0;
+var linePadding = 5;
+var newGap;
+var menuID;			
+			
+var svg = d3.select("body")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h); 
+
+d3.tsv("data/scenes.tsv", function(error, datascenes) {
+				 datascenes.forEach(function(d, i) {				 		
+      					 datascenes[i] = +d.film;
+      			}); 
+			
+d3.tsv("data/scene_sentiment.tsv", function(error, datatsv) {
+				 datatsv.forEach(function(d, i) {				 		
+      					 datasentim[i] = +d.sentiment;
+
+      			}); 
+
+			
+	d3.csv("data/char3.csv", function(error, data) {
+	   	
+	   	 data.forEach(function(d, i) {
+
+				 if(d.sum == "#"){
+	 					draw(2);
+	    	       		}//if
+	    	     else
+	    	     {
+	    	     	dataset[i] = Object.keys(d).map(function (key) {return d[key]});
+
+	    	     }
+
+  		  });//forEach
+	});//csv
+	
+
+
+function draw(who){
+
+		var selectMenu = d3.select("#menu").selectAll("span")
+         		  .data(dataset)
+        		  .enter()
+        		  .append("p")
+        		 
+         		   .filter(function(d, i){ return dataset[i][1506]>50;  })
+         		    .append("a")
+         		   .text(function(d, i) {				    	
+			  	 	return dataset[i][1507];
+			  	 })
+         		   .style("font-size", Math.sqrt(Math.sqrt(w)) * 2 + "px")
+
+         		   .attr("xlink:href", "#") 
+         		   .attr("id", function (d, i){    
+         		   	
+        					   return "menup"+i;           
+        })
+         		   .on("click", function(d,i) {return changeChar(i);})  
+
+
+			  
+;
+
+d3.selectAll("#menup2")
+    .attr('class',  "focus" );
+
+
+		svg.selectAll("line")
+			   .data(movieLength)
+			   .enter()		
+			   .append("line")
+			   
+			   .attr("x1", 0+leftPadding)
+ 			   .attr("y1", function(d, i) {				   	
+			  	 	return (i+1)*movieGap+linePadding;
+			   })
+
+ 			   .attr("x2", w+leftPadding)
+ 			   .attr("y2", function(d, i) {				   	
+			  	 	return (i+1)*movieGap+linePadding;
+			   })
+ 			   .attr("stroke-width", 1)
+			   .attr("stroke", "#777")  
+			   ;
+
+
+			  svg.selectAll("text")
+			   .data(movieNames2)
+			   .enter()	
+			   .append("text")
+			   .text(function(d, i) {				    	
+			  	 	return movieNames2[i];
+
+			   })
+					   .attr("text-anchor", "end ")
+					   
+					   .attr("x", leftPadding-20)
+					   .attr("y", function(d, i) {				   	
+			  	 	return (i+1)*movieGap+linePadding;
+
+			   })		   
+					   	.attr("fill", "white")
+					   	.attr("class", "upper")
+
+ 		;
+
+				
+					  		
+ 		    
+
+			svg.selectAll("line")
+			   .data(dataset[who])
+			   .enter()		
+			   .append("line")
+			   .filter(function(d, i){ return i < 1506;  })
+
+			   .attr("x1", function(d, i) {			  
+				   	newGap = wGraph/movieLength[datascenes[i]-1];
+				   	difPos = movieStart[datascenes[i]-1]*newGap;
+				 
+				   	return i*newGap-difPos+leftPadding;
+			   })
+			   .attr("y1", function(d, i) {
+			   		return movieGap*datascenes[i]; })
+			   
+			   .attr("x2", function(d, i) {		
+
+			   		newGap = wGraph/movieLength[datascenes[i]-1];
+				   	difPos = movieStart[datascenes[i]-1]*newGap;
+				   	return i*newGap-difPos+leftPadding;
+				   	})
+
+			   .attr("y2", function(d, i) {
+			   
+			  	 	return  Math.floor(-d*scaleHeight+movieGap*datascenes[i]); })
+			   .attr("stroke-width", 1)
+			   .attr("stroke", "white" )  
+			   .style("opacity", function(d, i) {
+						return (d!=0) ? 1 : 0;   } )   
+			   .attr("stroke-linecap", "square")
+			   .attr("class", "ldata")
+			  ;
+
+
+			  svg.selectAll("rects")
+			   .data(dataset[who])
+			   .enter()		
+			   .append("rect")
+			   .filter(function(d, i){ return (i < 1506)})
+			   			   .attr("x", function(d, i) {
+			   			   newGap = wGraph/movieLength[datascenes[i]-1];
+				   	       difPos = movieStart[datascenes[i]-1]*newGap;
+			   			  	 	return i*newGap-sqWidth/2-difPos+leftPadding;
+			   			  	 	 }) 
+						   .attr("y", function(d, i) {
+								return movieGap*datascenes[i]+linePadding*2; }) 
+						   .attr("width", sqWidth)
+						   .attr("height", sqWidth)
+						   .attr("fill", function(d, i) {						   	
+						   		return (datasentim[i]==0) || (d==0) ? "none" : (datasentim[i]<0) ? "#000000" : "#00FFF0";   } ) 
+						   .style("opacity", function(d, i) {
+						   	    return (datasentim[i]<0) ? (datasentim[i]*-1+baseOpac) : (datasentim[i]>0) ? (datasentim[i]+baseOpac) : 0;
+						   })
+
+
+						   ;	
+
+
+		
+
+			 
+
+
+
+}//draw
+
+function changeChar(newChar){
+
+
+	svg.selectAll(".ldata")
+					   .data(dataset[newChar])
+					   .transition()
+					   .duration(500)
+					  // .delay(function(d, i){ return i*500*2/1506; })
+					   .filter(function(d, i){ return i < 1506; })
+					   .attr("y2", function(d, i) {return  Math.floor(-d*scaleHeight+movieGap*datascenes[i]); })
+					   .style("opacity", function(d, i) {
+						return (d!=0) ? 1 : 0;   } ) 					   
+
+					   ;
+	
+					svg.selectAll("rect")
+					   .data(dataset[newChar])
+					   .transition()
+					   .duration(500)
+					  // .delay(function(d, i){ return i*500*2/1506; })
+					   .filter(function(d, i){ return (i < 1506); })
+					   .attr("fill", function(d, i) {						   	
+						   		return (datasentim[i]==0) || (d==0) ? "none" : (datasentim[i]<0) ? "#000000" : "#00FFF0";   } ) 
+
+						 .style("opacity", function(d, i) {
+						   	    return (datasentim[i]<0) ? (datasentim[i]*-1+baseOpac) : (datasentim[i]>0) ? (datasentim[i]+baseOpac) : 0;
+						   })
+						   ;	
+d3.selectAll(".focus")
+    .attr('class',  "" );
+
+
+
+ d3.selectAll("#menup"+newChar)
+    .attr('class',  "focus" );
+				
+}
+
+
+					
+				
+
+;
+
+					
+	
+	});	//senti tsv	   	
+	});	//scene tsv				
+				
+
+		
+
+			
+		</script>
+		
+	</body>
+</html>
