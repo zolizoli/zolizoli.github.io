@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>The Sounds of Migration</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+  
+  
+</head>
+
+<body>
+<!-- main wavesurfer.js lib -->
+<script src="js/wavesurfer.min.js"></script>
+<!-- wavesurfer.js timeline -->
+<script src="js/wavesurfer.timeline.js"></script>
+<h1 align="center">The Sounds of Migration</h1>
+<div id="waveform"></div>
+<div id="waveform-timeline"></div>
+<p align="center">
+  <button class="btn btn-primary" onclick="wavesurfer.playPause()">
+    <i class="glyphicon glyphicon-play"></i>
+    Play
+  </button>
+</p>
+  
+    <script src="js/index.js"></script>
+<div id="legend">
+<p>Emotions and instruments, from top to bottom:
+    <ul>
+        <li>Anger - Woodblock</li>
+        <li>Disgust - Horn</li>
+        <li>Distress - Violin</li>
+        <li>Fear - Church bells</li>
+        <li>Joy - Xylophone</li>
+        <li>Surprise - Bagpipes</li>
+    </ul></p>
+</div>
+<h2>How it's made</h2>
+    <p>
+        <ul>
+            <li>Emotion time series were extracted by using our own emotion lexicons.</li>
+            <li>Time series were mapped to midi notes by using the <a href="https://github.com/cirlabs/miditime">MIDITime Python library</a></li>
+            <li>We used the <a href="http://web.mit.edu/music21/">Music21 library</a> for assigning instruments to emotions.</li>
+            <li>The separate MIDI files were converted into mono wave files by <a href="https://ffmpeg.org/">ffmpeg</a></li>
+            <li>The wave files were merged into a 6-channel wave file with <a href="http://www.audacityteam.org/">Audacity</a></li>
+            <li>The waveform has been displayed with <a href="https://wavesurfer-js.org/">wavesurfer</a></li>
+        </ul>
+    </p>
+<h2>The data</h2>
+<p>We harvested more than forty-two thousands articles on migration published on the main Hungarian news portals between 27/09/2014 and 11/06/2016. You can find an information visualization dashboard based on the corpus <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">here</a>.</p>
+<p>This sonification and the accompanying visualization are experimental tools, their sole porpuse is to give you a glimpse into how the emotions related to migration flowed in the online media. If you’d like to know more about the data, use our dashboard. If you can speak Hungarian, you can read <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">our article on nyest.hu</a>.</p>
+<h2>The team</h2>
+    <p>
+        <ul>
+            <li><a href="https://hu.linkedin.com/in/kitti-balogh-8b810110a">Kitti Balogh</a></li>
+            <li><a href="https://www.linkedin.com/in/zoltanvarju/">Zoltan Varju</a></li>
+        </ul>
+    </p>
+</body>
+</html>
