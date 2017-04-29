@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Concordance Plot</title>
+  <script src="js/d3.min.js" charset="utf-8"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/d3-electrophoresis.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  
+
+</head>
+<body>
+  <h3>Egyes szavak előfordulása Orbán Viktor évértékelő beszédeiben (1999 - 2015)</h3>
+  <div id="gel-field"></div>
+  
+
+  <form method="post" id="textinput">
+
+  <br>
+  <b>Szavak:</b><br/>
+    <input type=text class = "wells" style="width:50px;" value="nép" onchange="render()"></input>
+    <input type=text class = "wells" style="width:50px;" value="nemzet" onchange="render()"></input>
+    <input type=text class = "wells" style="width:50px;" value ="harc" onchange="render()"></input>
+    <input type=text class = "wells" style="width:50px;" value="brüsszel" onchange="render()"></input>
+    <input type=text class = "wells" style="width:50px;" value="moszkva" onchange="render()"></input>
+    <input type=text class = "wells" style="width:50px;" value = "barát" onchange="render()"></input>
+  </form>
+  <br>
+<script src="txt/all.txt"></script>
+<script>
+  console.log(txt);
+</script>
+
+<script type="text/javascript">
+  var svgDiv = document.getElementById("gel-field")
+  var width = svgDiv.clientWidth * 0.75;
+  //var width = 1200;
+  //var height= 600;
+  var height = width * 0.5;
+  var gel = electrophoresis();
+
+  var svg = d3.select("#gel-field").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("viewBox", "0 0 " + width + " " + height)
+    .call(gel.makeGel); // Make black background first.
+
+  
+
+  function render(){
+    
+    // Make DNAtext.
+    var DNA_text = txt;
+
+    // Make maker list.
+    var marker_text = "";
+    var marker_list = [];
+    $.each(marker_text, function(i,d){ marker_list.push(parseInt(d)); });
+
+    // Make Well list.
+    var wells = [marker_list];
+    var names = [""];
+    $(".wells").each(function(i,d){
+      wells.push(d.value);
+      names.push(d.value);
+    })
+
+    // Make parameters for dictionary input.
+    var scale;
+    var smear;
+    var blur;
+    var slow;
+    var no_tooltips = "on";
+    var scale;
+      
+    if ($('#scale_sqrt').prop("checked") == true){
+      scale = d3.scaleSqrt();
+    }else{
+      scale = d3.scaleLinear();
+    }
+    if ($('#smear').prop("checked") == true){
+      smear = .2;
+    }else{
+      smear = undefined
+    }
+    if ($('#blur').prop("checked") == true){
+      blur = 3;
+    }else{
+      blur = undefined
+    }
+    if ($('#slow').prop("checked") == true){
+      slow = 10000;
+    }else{
+      slow = undefined;
+    }
+    if ($('#no-tooltips').prop("checked") == true){
+      no_tooltips = "off";
+    }else{
+      no_tooltips = "on";
+    }
+    var no_tooltips = "off";
+
+    var dict = {scale: scale, band_thick_rate:smear, band_blur:blur, duration:slow, tooltip_band_on:no_tooltips};
+
+    d3.selectAll(".gel").remove();
+    gel = electrophoresis(dict).DNA(DNA_text).enzymes(wells).names(names).tooltip_band_size(height/100).tooltip_name_size(height/50).tooltip_name_offsetX(0);
+    svg.call(gel)
+  }
+render();
+//window.addEventListener('resize', render);
+</script>
+</body>
+</html>
