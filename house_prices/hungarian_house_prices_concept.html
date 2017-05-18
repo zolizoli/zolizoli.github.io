@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>hungarian_house_prices_concept</title>
+<title>Medián négyzetméter árak Magyarországon</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
 </head>
@@ -16,6 +16,16 @@
 <div id="popupbody">
  <div id="popupcontent"></div>
  <div id="pageinfo">
+  <h1>Hogy készült?</h1>
+     <ul>
+         <li>Legyűjtöttünk több mint 190.000 hirdetést</li>
+         <li>A hirdetések lakásokat és házakat kinálnak eladásra.</li>
+         <li>Minden hirdetésre kiszámoltuk a négyzetméter árat.</li>
+         <li>Ezket járási/kerületi szinten csoportosítottuk.</li>
+         <li>A kapott csoportokra kiszámítottuk a mediánt.</li>
+         <li>OpenStreetMap shapefile-okat használtunk QGIS-ben a vizualizációhoz.</li>
+         <li>A qgis2threejs plugin segített nekünk a 3D vizu elkészítésében.</li>
+     </ul>
   <h1>Current View URL</h1>
   <div><input id="urlbox" type="text"></div>
 
