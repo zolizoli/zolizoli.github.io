@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hungarian_house_prices_final</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
+</head>
+<body>
+<div id="webgl"></div>
+
+<!-- popup -->
+<div id="popup" style="display:none;">
+<div id="closebtn">&times;</div>
+<div id="popupbar"></div>
+<div id="popupbody">
+ <div id="popupcontent"></div>
+ <div id="pageinfo">
+  <h1>Hogy készült?</h1>
+     <ul>
+         <li>Legyűjtöttünk több mint 190.000 hirdetést.</li>
+         <li>A hirdetések lakásokat és házakat kinálnak eladásra.</li>
+         <li>Minden hirdetésre kiszámoltuk a négyzetméter árat.</li>
+         <li>Ezket járási/kerületi szinten csoportosítottuk.</li>
+         <li>A kapott csoportokra kiszámítottuk a mediánt.</li>
+         <li>A legalacsonyabb érték 35454 (Jánoshalmi járás), a legmagasabb érték 845283 (Budapest, V.)</li>
+         <li>OpenStreetMap shapefile-okat használtunk QGIS-ben a vizualizációhoz.</li>
+         <li>A qgis2threejs plugin segített nekünk a 3D vizu elkészítésében.</li>
+     </ul>
+  <h1>Navigálás</h1>
+     <ul>
+         <li>Zoomolás - scroll</li>
+         <li>Forgatás - bal gomb lenyomva és közben az egeret mozgatva</li>
+         <li>Mozgazás (jobbra, balra, fel, le) - jobb gomb lenyomva és közben az egeret mozgatva</li>
+     </ul>
+  <h1>Ki követte el?</h1>
+     <p><a href="https://www.linkedin.com/in/zoltanvarju/">Varjú Zoltán</a>, <a href="http://precognox.com/">Precognox.</a></p>
+  <div><input id="urlbox" type="text" style="display:none"></div>
+
+  
+  <div id="usage" style="display:none"></div>
+
+    <div id="about" style="display:none">This page was made with <a href="http://www.qgis.org/" target="_blank">QGIS</a> and <a href="https://github.com/minorua/Qgis2threejs" target="_blank">Qgis2threejs</a> plugin, 
+and uses the following library:
+  <ul>
+  <li>three.js <a href="http://threejs.org/" target="_blank">http://threejs.org/</a> <a href="./threejs/LICENSE" target="_blank" class="license">(LICENSE)</a></li>
+  <li id="lib_proj4js" style="display: none;">Proj4js <a href="http://trac.osgeo.org/proj4js/" target="_blank">http://trac.osgeo.org/proj4js/</a> <a href="./proj4js/LICENSE.md" target="_blank" class="license">(LICENSE)</a></li>
+  </ul>
+  </div>
+ </div>
+</div></div>
+
+<!-- footer -->
+<div id="footer"><div id="infobtn">i</div></div>
+
+<script src="./threejs/three.min.js"></script>
+<script src="./Qgis2threejs.js"></script>
+<script src="./threejs/OrbitControls.js"></script>
+<script>
+var option = Q3D.Options;
+option.bgcolor = 0x000000;
+</script>
+<script src="./hungarian_house_prices_final.js"></script>
+<script>
+if (typeof proj4 !== "undefined") document.getElementById("lib_proj4js").style.display = "list-item";
+
+var container = document.getElementById("webgl");
+var app = Q3D.application;
+app.init(container);
+
+// load the project
+app.loadProject(project);
+
+document.getElementById("infobtn").onclick = app.showInfo.bind(app);
+if ("hidebutton" in app.urlParams) document.getElementById("infobtn").style.display = "none";
+
+app.addEventListeners();
+app.start();
+
+</script>
+</body>
+</html>
