@@ -119,11 +119,40 @@ if(typeof(LDAvis) !== "undefined"){
 	</tr>
 </table>
         </section>
-    <section>
-        <h2>Demográfiai adatok</h2>
+    
+        <section data-background-image="img/topic00.jpg">
+        <h2>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h2>
         </section>
-    <section>
-        <h2>Emóciók</h2>
+        <section data-background-image="img/topic01.jpg">
+        <h2>Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők</h2>
+        </section>
+        <section data-background-image="img/topic02.jpg">
+        <h2>Úton: vonat, busz, hajó, gyalog</h2>
+        </section>
+        <section data-background-image="img/topic03.jpg">
+        <h2>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h2>
+        </section>
+        <section data-background-image="img/topic04.jpg">
+        <h2>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h2>
+        </section>
+        <section data-background-image="img/topic06.jpg">
+        <h2>Átkelés: kerítésnél, határon, tengeren</h2>
+        </section>
+        <section>
+        <h2>Hogy készült?</h2>
+            <p>
+            <ul>
+                <li>A korpusz jellemzőiről a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten megjelent cikkünkből</a> lehet tájékozódni</li>
+                <li>A cikkekből kinyert képeket a Clarifai API-t használva címkéztük fel</li>
+                <li>A kinyert címkékből a Gensim csomag segítségével készítettünk topik modellt</li>
+                <li>Az arcfelismeréshez az OpenCV Haar Cascade modelljét használtuk</li>
+                <li>A kor és nem klasszifikációhoz az <a href="https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/">IMDB 500k+ adathalmazon</a> tréneltunk egy CNN-t Keras-ban</li>
+                <li>A kor klasszifikáció pontossága 0.81 a tréning adatokból visszatartott teszthalmazon, korpuszunkon azonban ennél sokkal rosszabbul teljesít (nem mértük mennyire)</li>
+                <li>A nem klasszifikáció pontossága 0.77 a tréning adatokból visszatartott teszthalmazon, korpuszunkon azonban ennél sokkal rosszabbul teljesít (nem mértük mennyire)</li>
+                <li>Az emóció klasszifikációhoz a <a href="https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data">fer2013</a> adathalmazon tréneltünk egy CNN-t Keras-ban</li>
+                <li>Az emóció klasszifikáció pontossága 0.70, felidézése 0.58 a tréning adatokból visszatartott teszthalmazon, korpuszunkon azonban ennél sokkal rosszabbul teljesít (nem mértük mennyire)</li>
+            </ul>
+            </p>
         </section>
     <section>
         <h3>Készítette</h3>
