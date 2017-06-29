@@ -40,23 +40,24 @@ var LDAvis = function(to_select, data_or_file_name) {
 
     // Set the duration of each half of the transition:
     var duration = 750;
-
+    var w = document.documentElement.clientWidth;
+    var h = document.documentElement.clientHeight;
     // Set global margins used for everything
     var margin = {
-        top: 30,
-        right: 30,
-        bottom: 70,
-        left: 30
+        top: 10,
+        right: 10,
+        bottom: 50,
+        left: 10
     },
-        mdswidth = 530,
-        mdsheight = 530,
-        barwidth = 530,
-        barheight = 530,
-        termwidth = 90, // width to add between two panels to display terms
+        mdswidth = w / 2,
+        mdsheight = h / 2,
+        barwidth = w / 3,
+        barheight = h / 3,
+        termwidth = w / 8, // width to add between two panels to display terms
         mdsarea = mdsheight * mdswidth;
     // controls how big the maximum circle can be
     // doesn't depend on data, only on mds width and height:
-    var rMax = 60;
+    var rMax = h/10;
 
     // proportion of area of MDS plot to which the sum of default topic circle areas is set
     var circle_prop = 0.25;
