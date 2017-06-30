@@ -212,6 +212,8 @@ body {
 
 .reveal iframe {
 	z-index: 1;
+    position: relative;
+    overflow: hidden;
 }
 
 /** Prevents layering issues in certain browser/transition combinations */
@@ -398,7 +400,7 @@ body {
 }
 
 .reveal .slides>section {
-	-ms-perspective: 600px;
+	-ms-perspective: 1000px;
 }
 
 .reveal .slides>section,

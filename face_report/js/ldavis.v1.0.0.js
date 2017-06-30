@@ -499,12 +499,12 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("width", barguide.width/2)
             .style("fill", color2)
             .attr("opacity", 0.8);
-        d3.select("#" + barFreqsID).append("text")
-            .attr("x", barguide.width/2 + 5)
-            .attr("y", mdsheight + 10 + (3/2)*barguide.height + 5)
-            .style("dominant-baseline", "middle")
-            .text("Estimated term frequency within the selected topic")
-            .attr("fill", "white");
+//        d3.select("#" + barFreqsID).append("text")
+//            .attr("x", barguide.width/2 + 5)
+//            .attr("y", mdsheight + 10 + (3/2)*barguide.height + 5)
+//            .style("dominant-baseline", "middle")
+//            .text("Estimated term frequency within the selected topic")
+//            .attr("fill", "white");
 
         // footnotes:
         d3.select("#" + barFreqsID)
@@ -613,19 +613,19 @@ var LDAvis = function(to_select, data_or_file_name) {
 
             // create container div for topic and lambda input:
             var inputDiv = document.createElement("div");
-            inputDiv.setAttribute("id", topID);
-            inputDiv.setAttribute("style", "width: 1210px"); // to match the width of the main svg element
-            document.getElementById(visID).appendChild(inputDiv);
+//            inputDiv.setAttribute("id", topID);
+//            inputDiv.setAttribute("style", "width: 1210px"); // to match the width of the main svg element
+//            document.getElementById(visID).appendChild(inputDiv);
 
             // topic input container:
             var topicDiv = document.createElement("div");
-            topicDiv.setAttribute("style", "padding: 5px; background-color: brown; display: inline-block; width: " + mdswidth + "px; height: 50px; float: left");
+//            topicDiv.setAttribute("style", "padding: 5px; background-color: brown; display: inline-block; width: " + mdswidth + "px; height: 50px; float: left");
             inputDiv.appendChild(topicDiv);
 
             var topicLabel = document.createElement("label");
             topicLabel.setAttribute("for", topicID);
             topicLabel.setAttribute("style", "font-family: sans-serif; font-size: 14px");
-            topicLabel.innerHTML = "Selected Topic: <span id='" + topicID + "-value'></span>";
+            //topicLabel.innerHTML = "Selected Topic: <span id='" + topicID + "-value'></span>";
             topicDiv.appendChild(topicLabel);
 
             var topicInput = document.createElement("input");
@@ -638,36 +638,36 @@ var LDAvis = function(to_select, data_or_file_name) {
             topicInput.id = topicID;
             topicDiv.appendChild(topicInput);
 
-            var previous = document.createElement("button");
-            previous.setAttribute("id", topicDown);
-            previous.setAttribute("style", "margin-left: 5px");
-            previous.innerHTML = "Previous Topic";
-            topicDiv.appendChild(previous);
+//            var previous = document.createElement("button");
+//            previous.setAttribute("id", topicDown);
+//            previous.setAttribute("style", "margin-left: 5px");
+//            previous.innerHTML = "Previous Topic";
+//            topicDiv.appendChild(previous);
 
-            var next = document.createElement("button");
-            next.setAttribute("id", topicUp);
-            next.setAttribute("style", "margin-left: 5px");
-            next.innerHTML = "Next Topic";
-            topicDiv.appendChild(next);
+//            var next = document.createElement("button");
+//            next.setAttribute("id", topicUp);
+//            next.setAttribute("style", "margin-left: 5px");
+//            next.innerHTML = "Next Topic";
+//            topicDiv.appendChild(next);
 
-            var clear = document.createElement("button");
-            clear.setAttribute("id", topicClear);
-            clear.setAttribute("style", "margin-left: 5px");
-            clear.innerHTML = "Clear Topic";
-            topicDiv.appendChild(clear);
+//            var clear = document.createElement("button");
+//            clear.setAttribute("id", topicClear);
+//            clear.setAttribute("style", "margin-left: 5px");
+//            clear.innerHTML = "Clear Topic";
+//            topicDiv.appendChild(clear);
 
             // lambda inputs
             //var lambdaDivLeft = 8 + mdswidth + margin.left + termwidth;
             var lambdaDivWidth = barwidth;
             var lambdaDiv = document.createElement("div");
-            lambdaDiv.setAttribute("id", lambdaInputID);
-            lambdaDiv.setAttribute("style", "padding: 5px; background-color: brown; display: inline-block; height: 50px; width: " + lambdaDivWidth + "px; float: right; margin-right: 30px");
-            inputDiv.appendChild(lambdaDiv);
+            //lambdaDiv.setAttribute("id", lambdaInputID);
+            //lambdaDiv.setAttribute("style", "padding: 5px; background-color: brown; display: inline-block; height: 50px; width: " + lambdaDivWidth + "px; float: right; margin-right: 30px");
+            //inputDiv.appendChild(lambdaDiv);
 
             var lambdaZero = document.createElement("div");
-            lambdaZero.setAttribute("style", "padding: 5px; height: 20px; width: 220px; font-family: sans-serif; float: left");
-            lambdaZero.setAttribute("id", lambdaZeroID);
-            lambdaDiv.appendChild(lambdaZero);
+            //lambdaZero.setAttribute("style", "padding: 5px; height: 20px; width: 220px; font-family: sans-serif; float: left");
+            //lambdaZero.setAttribute("id", lambdaZeroID);
+            //lambdaDiv.appendChild(lambdaZero);
             var xx = d3.select("#" + lambdaZeroID)
                     .append("text")
                     .attr("x", 0)
