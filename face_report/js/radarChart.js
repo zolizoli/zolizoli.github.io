@@ -35,7 +35,7 @@ function RadarChart(id, data, options) {
 	var allAxis = (data[0].map(function(i, j){return i.axis})),	//Names of each axis
 		total = allAxis.length,					//The number of different axes
 		radius = Math.min(cfg.w/2, cfg.h/2), 	//Radius of the outermost circle
-		Format = d3.format('.2f'),			 	//Percentage formatting
+		Format = d3.format('.f2'),
 		angleSlice = Math.PI * 2 / total;		//The width in radians of each "slice"
 	
 	//Scale for the radius
@@ -98,7 +98,7 @@ function RadarChart(id, data, options) {
 	   .attr("y", function(d){return -d*radius/cfg.levels;})
 	   .attr("dy", "0.4em")
 	   .style("font-size", "10px")
-	   .attr("fill", "#737373")
+	   .attr("fill", "white") // fill text indication scale
 	   .text(function(d,i) { return Format(maxValue * d/cfg.levels); });
 
 	/////////////////////////////////////////////////////////
@@ -125,7 +125,9 @@ function RadarChart(id, data, options) {
 	axis.append("text")
 		.attr("class", "legend")
 		.style("font-size", "11px")
+        .attr("fill", "white")
 		.attr("text-anchor", "middle")
+        .attr("fill", "white")
 		.attr("dy", "0.35em")
 		.attr("x", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice*i - Math.PI/2); })
 		.attr("y", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.sin(angleSlice*i - Math.PI/2); })
@@ -250,11 +252,11 @@ function RadarChart(id, data, options) {
 			word,
 			line = [],
 			lineNumber = 0,
-			lineHeight = 1.4, // ems
+			lineHeight = 2, // ems
 			y = text.attr("y"),
 			x = text.attr("x"),
 			dy = parseFloat(text.attr("dy")),
-			tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
+			tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em").attr("fill", "white");
 			
 		while (word = words.pop()) {
 		  line.push(word);
