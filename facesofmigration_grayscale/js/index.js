@@ -6,7 +6,7 @@ var wavesurfer = WaveSurfer.create({
   height: 128
 });
 
-wavesurfer.load('../data/multichannel.wav');
+wavesurfer.load('../data/multichannel_lower.wav');
 
 wavesurfer.on('ready', function () {
   var timeline = Object.create(WaveSurfer.Timeline);
