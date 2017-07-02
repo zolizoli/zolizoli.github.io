@@ -1,0 +1,85 @@
+[  
+  {  
+    "key": "01 Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+    "values" :[  
+      {  
+        "reason": "Semleges",
+        "device": "01 Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+        "value": 22
+        
+      },
+      {  
+        "reason":"Meglepődés",
+        "device":"01 Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+        "value": 28
+      },
+      {  
+        "reason":"Öröm",
+        "device":"01 Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+        "value": 29
+      },
+      {  
+        "reason":"Bánat",
+        "device":"01 Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+        "value": 17
+      },
+      {  
+        "reason":"Félelem",
+        "device":"01 Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+        "value": 22
+      },
+      {  
+        "reason":"Harag",
+        "device":"01 Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+        "value": 2
+      },
+      {  
+        "reason":"Undor",
+        "device":"01 Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+        "value": 21
+      }
+     
+    ]
+  },
+  {  
+    "key":"02 Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+    "values":[  
+      {  
+        "reason":"Semleges",
+        "device":"02 Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+        "value": 27
+      },
+      {  
+        "reason":"Meglepődés",
+        "device":"02 Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+        "value": 16
+      },
+      {  
+        "reason":"Öröm",
+        "device":"02 Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+        "value": 35
+      },
+      {  
+        "reason":"Bánat",
+        "device":"02 Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+        "value": 13
+      },
+      {  
+        "reason":"Félelem",
+        "device":"02 Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+        "value": 20
+      },
+      {  
+        "reason":"Harag",
+        "device":"02 Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+        "value": 13
+      },
+      {  
+        "reason":"Undor",
+        "device":"02 Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+        "value": 35
+      }
+     
+    ]
+  }
+]
