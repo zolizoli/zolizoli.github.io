@@ -60,11 +60,11 @@ p {
  .pop-container {
     display: flex;
     width: 100%;
-    height: 150%;
+    height: 140%;
     flex-direction: column;
     background-color: goldenrod;
     flex-wrap: wrap;
-
+    overflow: hidden;
 
  }
 }
