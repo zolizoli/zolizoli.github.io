@@ -17,7 +17,6 @@
 				font-weight: 300;
 				fill: #242424;
 				text-align: center;
-				text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
 				cursor: default;
 			}
 			
@@ -45,7 +44,7 @@
 			//////////////////////// Set-Up ////////////////////////////// 
 			////////////////////////////////////////////////////////////// 
 
-			var margin = {top: 100, right: 100, bottom: 100, left: 100},
+			var margin = {top: 100, right: 300, bottom: 100, left: 100},
 				width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
 				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
 					
@@ -54,7 +53,7 @@
 			////////////////////////////////////////////////////////////// 
 
 			var data = [
-					  [//iPhone
+					  [//Topik1
 						{axis:"Meglepődés",value:12},
 						{axis:"Öröm",value:8},
 						{axis:"Bánat",value:29},
@@ -62,6 +61,15 @@
 						{axis:"Harag",value:22},
 						{axis:"Undor",value:2},
                         {axis:"Semleges",value:18}
+					  ],
+                    [//Topik2
+						{axis:"Meglepődés",value:3},
+						{axis:"Öröm",value:1},
+						{axis:"Bánat",value:44},
+						{axis:"Félelem",value:31},
+						{axis:"Harag",value:22},
+						{axis:"Undor",value:10},
+                        {axis:"Semleges",value:27}
 					  ]
             ];
 			////////////////////////////////////////////////////////////// 

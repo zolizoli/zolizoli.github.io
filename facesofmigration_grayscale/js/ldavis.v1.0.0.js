@@ -442,13 +442,13 @@ var LDAvis = function(to_select, data_or_file_name) {
                 if (vis_state.topic > 0) topic_on(document.getElementById(topicID + vis_state.topic));
             });
 
-        svg.append("text")
-            .text("Intertopic Distance Map (via multidimensional scaling)")
-            .attr("x", mdswidth/2 + margin.left)
-            .attr("y", 30)
-            .style("font-size", "16px")
-            .attr("fill", "white")
-            .style("text-anchor", "middle");
+//        svg.append("text")
+//            .text("Intertopic Distance Map (via multidimensional scaling)")
+//            .attr("x", mdswidth/2 + margin.left)
+//            .attr("y", 30)
+//            .style("font-size", "16px")
+//            .attr("fill", "white")
+//            .style("text-anchor", "middle");
 
         // establish layout and vars for bar chart
         var barDefault2 = dat3.filter(function(d) {
