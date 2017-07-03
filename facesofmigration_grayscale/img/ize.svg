@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg contentScriptType="text/ecmascript" width="823.5216"
+     xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
+     contentStyleType="text/css"
+     viewBox="-311.592255 -346.000000 823.521606 857.763062" height="857.76306"
+     preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
+     version="1.1">
+    <g id="edges">
+        <path fill="none" stroke-width="0.03196803"
+              d="M 250.275375,-335.419861 C 272.428009,-252.132935 180.726593,-93.973633 97.439690,-71.820992"
+              class="Fidesz ENSZ" stroke-opacity="0.69803923" stroke="#98d6c4"/>
+        <path fill="none" stroke-width="0.43956044"
+              d="M 250.275375,-335.419861 C 274.214264,-191.295700 93.936371,60.798843 -50.187786,84.737724"
+              class="Fidesz MSZP" stroke-opacity="0.69803923" stroke="#96d5c3"/>
+        <path fill="none" stroke-width="0.08791209"
+              d="M 250.275375,-335.419861 C 349.604706,-302.852051 449.747009,-105.006302 417.179199,-5.676945"
+              class="Fidesz M1" stroke-opacity="0.69803923" stroke="#9fd8c8"/>
+        <path fill="none" stroke-width="0.066933066"
+              d="M 250.275375,-335.419861 C 325.063965,-282.664246 358.113403,-91.347977 305.357788,-16.559391"
+              class="Fidesz Facebook" stroke-opacity="0.69803923"
+              stroke="#abddd0"/>
+        <path fill="none" stroke-width="0.66033965"
+              d="M 250.275375,-335.419861 C 340.607300,-100.890427 124.311043,386.401550 -110.218391,476.733459"
+              class="Fidesz Jobbik" stroke-opacity="0.69803923" stroke="#90d2bf"/>
+        <path fill="none" stroke-width="0.005994006"
+              d="M 250.275375,-335.419861 C 229.433273,-169.601791 -50.557022,47.862209 -216.375107,27.020107"
+              class="Fidesz BBC" stroke-opacity="0.69803923" stroke="#added1"/>
+        <path fill="none" stroke-width="0.18481518"
+              d="M 250.275375,-335.419861 C 247.172363,-185.795303 18.080986,33.986988 -131.543564,30.883968"
+              class="Fidesz LMP" stroke-opacity="0.69803923" stroke="#a4dacc"/>
+        <path fill="none" stroke-width="0.20479521"
+              d="M 250.275375,-335.419861 C 375.636902,-300.919922 511.929321,-61.127716 477.429382,64.233818"
+              class="Fidesz DK" stroke-opacity="0.69803923" stroke="#a2daca"/>
+        <path fill="none" stroke-width="0.15284716"
+              d="M 250.275375,-335.419861 C 165.375580,-202.090805 -161.967697,-129.446945 -295.296753,-214.346741"
+              class="Fidesz ellenzéki párt" stroke-opacity="0.69803923"
+              stroke="#a7dcce"/>
+        <path fill="none" stroke-width="0.7212787"
+              d="M 250.275375,-335.419861 C 296.470520,-122.862930 46.927856,265.265198 -165.629074,311.460327"
+              class="Fidesz MTI" stroke-opacity="0.69803923" stroke="#3f9c6f"/>
+        <path fill="none" stroke-width="0.08291708"
+              d="M 250.275375,-335.419861 C 276.216614,-124.520401 -1.220711,230.740616 -212.120163,256.681854"
+              class="Fidesz Google" stroke-opacity="0.69803923" stroke="#abddd0"/>
+        <path fill="none" stroke-width="0.12687312"
+              d="M 250.275375,-335.419861 C 228.496735,-175.450348 -44.125481,31.835926 -204.094986,10.057278"
+              class="Fidesz KDNP" stroke-opacity="0.69803923" stroke="#aeded2"/>
+        <path fill="none" stroke-width="0.055944055"
+              d="M 417.179199,-5.676945 C 340.002472,45.042149 148.158783,5.355721 97.439690,-71.820992"
+              class="M1 ENSZ" stroke-opacity="0.69803923" stroke="#b9e3da"/>
+        <path fill="none" stroke-width="0.02897103"
+              d="M 417.179199,-5.676945 C 341.788757,105.879387 61.368546,160.128174 -50.187786,84.737724"
+              class="M1 MSZP" stroke-opacity="0.69803923" stroke="#b7e2d8"/>
+        <path fill="none" stroke-width="0.017982017"
+              d="M 417.179199,-5.676945 C 392.638428,14.510848 325.545593,7.981380 305.357788,-16.559391"
+              class="M1 Facebook" stroke-opacity="0.69803923" stroke="#cceae6"/>
+        <path fill="none" stroke-width="0.021978023"
+              d="M 417.179199,-5.676945 C 408.181793,196.284637 91.743195,485.730896 -110.218391,476.733459"
+              class="M1 Jobbik" stroke-opacity="0.69803923" stroke="#b1e0d4"/>
+        <path fill="none" stroke-width="0.008991009"
+              d="M 417.179199,-5.676945 C 297.007721,127.573326 -83.124832,147.191559 -216.375107,27.020107"
+              class="M1 BBC" stroke-opacity="0.69803923" stroke="#ceebe7"/>
+        <path fill="none" stroke-width="0.00999001"
+              d="M 417.179199,-5.676945 C 314.746826,111.379791 -14.486828,133.316345 -131.543564,30.883968"
+              class="M1 LMP" stroke-opacity="0.69803923" stroke="#c5e8e1"/>
+        <path fill="none" stroke-width="0.00999001"
+              d="M 417.179199,-5.676945 C 443.211395,-3.744829 479.361481,38.201626 477.429382,64.233818"
+              class="M1 DK" stroke-opacity="0.69803923" stroke="#c3e7e0"/>
+        <path fill="none" stroke-width="0.005994006"
+              d="M 417.179199,-5.676945 C 232.950058,95.084290 -194.535522,-30.117584 -295.296753,-214.346741"
+              class="M1 ellenzéki párt" stroke-opacity="0.69803923"
+              stroke="#c8e9e3"/>
+        <path fill="none" stroke-width="0.6953047"
+              d="M 417.179199,-5.676945 C 364.045013,174.312164 14.360031,364.594513 -165.629074,311.460327"
+              class="M1 MTI" stroke-opacity="0.69803923" stroke="#60a985"/>
+        <path fill="none" stroke-width="0.006993007"
+              d="M 417.179199,-5.676945 C 343.791107,172.654694 -33.788525,330.069977 -212.120163,256.681854"
+              class="M1 Google" stroke-opacity="0.69803923" stroke="#ccebe6"/>
+        <path fill="none" stroke-width="0.002997003"
+              d="M 417.179199,-5.676945 C 296.071228,121.724739 -76.693306,131.165268 -204.094986,10.057278"
+              class="M1 KDNP" stroke-opacity="0.69803923" stroke="#cfece7"/>
+        <path fill="none" stroke-width="0.003996004"
+              d="M 97.439690,-71.820992 C 72.184029,-5.483345 -65.205917,56.139629 -131.543564,30.883968"
+              class="ENSZ LMP" stroke-opacity="0.69803923" stroke="#bfe5dd"/>
+        <path fill="none" stroke-width="0.02097902"
+              d="M 97.439690,-71.820992 C 150.075638,-102.352295 274.826477,-69.195328 305.357788,-16.559391"
+              class="ENSZ Facebook" stroke-opacity="0.69803923" stroke="#c5e8e2"/>
+        <path fill="none" stroke-width="0.015984016"
+              d="M 97.439690,-71.820992 C 165.618958,79.421509 41.024109,408.554199 -110.218391,476.733459"
+              class="ENSZ Jobbik" stroke-opacity="0.69803923" stroke="#abddd0"/>
+        <path fill="none" stroke-width="1.0"
+              d="M 97.439690,-71.820992 C 121.482201,57.449028 -36.359055,287.417816 -165.629074,311.460327"
+              class="ENSZ MTI" stroke-opacity="0.69803923" stroke="#59a781"/>
+        <path fill="none" stroke-width="0.0939061"
+              d="M 97.439690,-71.820992 C 54.444954,10.710182 -133.843933,70.014847 -216.375107,27.020107"
+              class="ENSZ BBC" stroke-opacity="0.69803923" stroke="#c8e9e3"/>
+        <path fill="none" stroke-width="0.006993007"
+              d="M 97.439690,-71.820992 C 200.648590,-120.607971 428.642426,-38.975082 477.429382,64.233818"
+              class="ENSZ DK" stroke-opacity="0.69803923" stroke="#bde5dc"/>
+        <path fill="none" stroke-width="0.003996004"
+              d="M 97.439690,-71.820992 C 99.225945,-10.983753 10.649452,82.951477 -50.187786,84.737724"
+              class="ENSZ MSZP" stroke-opacity="0.69803923" stroke="#b1e0d4"/>
+        <path fill="none" stroke-width="0.005994006"
+              d="M 97.439690,-71.820992 C -9.612757,-21.778847 -245.254608,-107.294289 -295.296753,-214.346741"
+              class="ENSZ ellenzéki párt" stroke-opacity="0.69803923"
+              stroke="#c2e7df"/>
+        <path fill="none" stroke-width="0.015984016"
+              d="M 97.439690,-71.820992 C 101.228287,55.791538 -84.507629,252.893265 -212.120163,256.681854"
+              class="ENSZ Google" stroke-opacity="0.69803923" stroke="#c6e8e2"/>
+        <path fill="none" stroke-width="0.001998002"
+              d="M 97.439690,-71.820992 C 53.508415,4.861595 -127.412399,53.988556 -204.094986,10.057278"
+              class="ENSZ KDNP" stroke-opacity="0.69803923" stroke="#c8e9e3"/>
+        <path fill="none" stroke-width="0.2027972"
+              d="M -131.543564,30.883968 C -104.501656,25.383566 -55.688187,57.695816 -50.187786,84.737724"
+              class="LMP MSZP" stroke-opacity="0.69803923" stroke="#bde4dc"/>
+        <path fill="none" stroke-width="0.008991009"
+              d="M -131.543564,30.883968 C -53.651962,-65.984978 208.488831,-94.450989 305.357788,-16.559391"
+              class="LMP Facebook" stroke-opacity="0.69803923" stroke="#d1ece9"/>
+        <path fill="none" stroke-width="0.1938062"
+              d="M -131.543564,30.883968 C -38.108620,115.788841 -25.313522,383.298492 -110.218391,476.733459"
+              class="LMP Jobbik" stroke-opacity="0.69803923" stroke="#b7e2d8"/>
+        <path fill="none" stroke-width="0.13786213"
+              d="M -131.543564,30.883968 C -82.245399,93.816338 -102.696693,262.162170 -165.629074,311.460327"
+              class="LMP MTI" stroke-opacity="0.69803923" stroke="#65ab88"/>
+        <path fill="none" stroke-width="0.018981019"
+              d="M -131.543564,30.883968 C -102.499313,92.158867 -150.845261,227.637604 -212.120163,256.681854"
+              class="LMP Google" stroke-opacity="0.69803923" stroke="#d2ede9"/>
+        <path fill="none" stroke-width="0.0959041"
+              d="M -131.543564,30.883968 C -3.079000,-84.240654 362.304779,-64.230743 477.429382,64.233818"
+              class="LMP DK" stroke-opacity="0.69803923" stroke="#c9e9e3"/>
+        <path fill="none" stroke-width="0.04195804"
+              d="M -131.543564,30.883968 C -213.340347,14.588463 -311.592255,-132.549957 -295.296753,-214.346741"
+              class="LMP ellenzéki párt" stroke-opacity="0.69803923"
+              stroke="#ceebe7"/>
+        <path fill="none" stroke-width="0.027972028"
+              d="M -131.543564,30.883968 C -150.219193,41.228912 -193.750046,28.732901 -204.094986,10.057278"
+              class="LMP KDNP" stroke-opacity="0.69803923" stroke="#d4eeeb"/>
+        <path fill="none" stroke-width="0.08591408"
+              d="M -295.296753,-214.346741 C -186.458069,-203.551636 -39.392689,-24.100956 -50.187786,84.737724"
+              class="ellenzéki párt MSZP" stroke-opacity="0.69803923"
+              stroke="#c0e6de"/>
+        <path fill="none" stroke-width="0.001998002"
+              d="M -295.296753,-214.346741 C -135.608368,-294.920166 224.784363,-176.247772 305.357788,-16.559391"
+              class="ellenzéki párt Facebook" stroke-opacity="0.69803923"
+              stroke="#d4eeeb"/>
+        <path fill="none" stroke-width="0.17982018"
+              d="M -295.296753,-214.346741 C -120.065018,-113.146362 -9.018021,301.501709 -110.218391,476.733459"
+              class="ellenzéki párt Jobbik" stroke-opacity="0.69803923"
+              stroke="#bae3da"/>
+        <path fill="none" stroke-width="0.0"
+              d="M -295.296753,-214.346741 C -231.239044,-181.857697 -183.886063,-37.037594 -216.375107,27.020107"
+              class="ellenzéki párt BBC" stroke-opacity="0.69803923"
+              stroke="#d7efec"/>
+        <path fill="none" stroke-width="0.050949052"
+              d="M -295.296753,-214.346741 C -85.035416,-313.175842 378.600281,-146.027527 477.429382,64.233818"
+              class="ellenzéki párt DK" stroke-opacity="0.69803923"
+              stroke="#ccebe5"/>
+        <path fill="none" stroke-width="0.17382617"
+              d="M -295.296753,-214.346741 C -164.201813,-135.118866 -86.401199,180.365387 -165.629074,311.460327"
+              class="ellenzéki párt MTI" stroke-opacity="0.69803923"
+              stroke="#68ad8a"/>
+        <path fill="none" stroke-width="0.001998002"
+              d="M -295.296753,-214.346741 C -184.455719,-136.776337 -134.549759,145.840820 -212.120163,256.681854"
+              class="ellenzéki párt Google" stroke-opacity="0.69803923"
+              stroke="#d5eeeb"/>
+        <path fill="none" stroke-width="0.007992008"
+              d="M -295.296753,-214.346741 C -232.175598,-187.706299 -177.454529,-53.063881 -204.094986,10.057278"
+              class="ellenzéki párt KDNP" stroke-opacity="0.69803923"
+              stroke="#d7efed"/>
+        <path fill="none" stroke-width="0.051948052"
+              d="M -204.094986,10.057278 C -158.377441,-5.788073 -66.033134,39.020195 -50.187786,84.737724"
+              class="KDNP MSZP" stroke-opacity="0.69803923" stroke="#c6e8e2"/>
+        <path fill="none" stroke-width="0.004995005"
+              d="M -204.094986,10.057278 C -107.527771,-97.156601 198.143906,-113.126602 305.357788,-16.559391"
+              class="KDNP Facebook" stroke-opacity="0.69803923" stroke="#dbf0ef"/>
+        <path fill="none" stroke-width="0.053946055"
+              d="M -204.094986,10.057278 C -91.984436,84.617195 -35.658478,364.622894 -110.218391,476.733459"
+              class="KDNP Jobbik" stroke-opacity="0.69803923" stroke="#c0e6de"/>
+        <path fill="none" stroke-width="0.007992008"
+              d="M -204.094986,10.057278 C -156.375107,60.987228 -161.190201,208.961975 -212.120163,256.681854"
+              class="KDNP Google" stroke-opacity="0.69803923" stroke="#dbf1ef"/>
+        <path fill="none" stroke-width="0.008991009"
+              d="M -204.094986,10.057278 C -56.954807,-115.412285 351.959808,-82.906357 477.429382,64.233818"
+              class="KDNP DK" stroke-opacity="0.69803923" stroke="#d2ede9"/>
+        <path fill="none" stroke-width="0.08391608"
+              d="M -204.094986,10.057278 C -136.121201,62.644707 -113.041641,243.486542 -165.629074,311.460327"
+              class="KDNP MTI" stroke-opacity="0.69803923" stroke="#6faf8e"/>
+        <path fill="none" stroke-width="0.008991009"
+              d="M -216.375107,27.020107 C -120.744423,-86.042374 192.295303,-112.190071 305.357788,-16.559391"
+              class="BBC Facebook" stroke-opacity="0.69803923" stroke="#daf0ef"/>
+        <path fill="none" stroke-width="0.007992008"
+              d="M -216.375107,27.020107 C -105.201103,95.731430 -41.507072,365.559448 -110.218391,476.733459"
+              class="BBC Jobbik" stroke-opacity="0.69803923" stroke="#c0e5dd"/>
+        <path fill="none" stroke-width="9.99001E-4"
+              d="M -216.375107,27.020107 C -70.171455,-104.298065 346.111206,-81.969833 477.429382,64.233818"
+              class="BBC DK" stroke-opacity="0.69803923" stroke="#d2ede9"/>
+        <path fill="none" stroke-width="0.1918082"
+              d="M -216.375107,27.020107 C -149.337860,73.758949 -118.890228,244.423080 -165.629074,311.460327"
+              class="BBC MTI" stroke-opacity="0.69803923" stroke="#6eaf8e"/>
+        <path fill="none" stroke-width="0.006993007"
+              d="M -216.375107,27.020107 C -169.591782,72.101463 -167.038803,209.898529 -212.120163,256.681854"
+              class="BBC Google" stroke-opacity="0.69803923" stroke="#dbf0ef"/>
+        <path fill="none" stroke-width="0.16583416"
+              d="M 477.429382,64.233818 C 376.006714,173.858032 59.436432,186.160370 -50.187786,84.737724"
+              class="DK MSZP" stroke-opacity="0.69803923" stroke="#bbe4da"/>
+        <path fill="none" stroke-width="0.01998002"
+              d="M 477.429382,64.233818 C 426.856445,82.489494 323.613464,34.013573 305.357788,-16.559391"
+              class="DK Facebook" stroke-opacity="0.69803923" stroke="#cfece8"/>
+        <path fill="none" stroke-width="0.14185815"
+              d="M 477.429382,64.233818 C 442.399750,264.263306 89.811104,511.763092 -110.218391,476.733459"
+              class="DK Jobbik" stroke-opacity="0.69803923" stroke="#b5e1d6"/>
+        <path fill="none" stroke-width="0.16783217"
+              d="M 477.429382,64.233818 C 398.263000,242.290802 12.427917,390.626709 -165.629074,311.460327"
+              class="DK MTI" stroke-opacity="0.69803923" stroke="#63ab87"/>
+        <path fill="none" stroke-width="0.021978023"
+              d="M 477.429382,64.233818 C 378.009064,240.633331 -35.720646,356.102173 -212.120163,256.681854"
+              class="DK Google" stroke-opacity="0.69803923" stroke="#d0ece8"/>
+        <path fill="none" stroke-width="0.030969031"
+              d="M -212.120163,256.681854 C -214.122513,189.906555 -116.963089,86.740074 -50.187786,84.737724"
+              class="Google MSZP" stroke-opacity="0.69803923" stroke="#c4e7e0"/>
+        <path fill="none" stroke-width="0.032967035"
+              d="M -212.120163,256.681854 C -163.272812,98.538002 147.213928,-65.406738 305.357788,-16.559391"
+              class="Google Facebook" stroke-opacity="0.69803923"
+              stroke="#d8efee"/>
+        <path fill="none" stroke-width="0.03996004"
+              d="M -212.120163,256.681854 C -147.729492,280.311829 -86.588432,412.342773 -110.218391,476.733459"
+              class="Google Jobbik" stroke-opacity="0.69803923" stroke="#bee5dc"/>
+        <path fill="none" stroke-width="0.14285715"
+              d="M -212.120163,256.681854 C -191.866257,258.339325 -163.971603,291.206421 -165.629074,311.460327"
+              class="Google MTI" stroke-opacity="0.69803923" stroke="#6cae8d"/>
+        <path fill="none" stroke-width="0.02997003"
+              d="M -50.187786,84.737724 C 0.661903,-6.630814 213.989243,-67.409081 305.357788,-16.559391"
+              class="MSZP Facebook" stroke-opacity="0.69803923" stroke="#c3e7e0"/>
+        <path fill="none" stroke-width="0.3216783"
+              d="M -50.187786,84.737724 C 16.205238,175.142990 -19.813126,410.340454 -110.218391,476.733459"
+              class="MSZP Jobbik" stroke-opacity="0.69803923" stroke="#a9dccf"/>
+        <path fill="none" stroke-width="0.2927073"
+              d="M -50.187786,84.737724 C -27.931526,153.170502 -97.196297,289.204071 -165.629074,311.460327"
+              class="MSZP MTI" stroke-opacity="0.69803923" stroke="#57a67f"/>
+        <path fill="none" stroke-width="0.037962038"
+              d="M -110.218391,476.733459 C -125.761726,294.959656 123.583977,-1.016060 305.357788,-16.559391"
+              class="Jobbik Facebook" stroke-opacity="0.69803923"
+              stroke="#bde4dc"/>
+        <path fill="none" stroke-width="0.35864136"
+              d="M -110.218391,476.733459 C -154.355164,454.760956 -187.601563,355.597076 -165.629074,311.460327"
+              class="Jobbik MTI" stroke-opacity="0.69803923" stroke="#51a37b"/>
+        <path fill="none" stroke-width="0.14585415"
+              d="M -165.629074,311.460327 C -137.035645,151.658997 145.556458,-45.152828 305.357788,-16.559391"
+              class="MTI Facebook" stroke-opacity="0.69803923" stroke="#6cae8d"/>
+    </g>
+    <g id="nodes">
+        <circle fill-opacity="1.0" fill="#7ecbb3" r="10.0" cx="250.27538"
+                class="Fidesz" cy="-335.41986" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c0e6de" r="10.0" cx="417.1792"
+                class="M1" cy="-5.676945" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#b3e1d6" r="10.0" cx="97.43969"
+                class="ENSZ" cy="-71.82099" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#cbeae5" r="10.0" cx="-131.54356"
+                class="LMP" cy="30.883968" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#d1ede9" r="10.0" cx="-295.29675"
+                class="ellenzéki párt" cy="-214.34674" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#def2f1" r="10.0" cx="-204.09499"
+                class="KDNP" cy="10.057278" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#ddf1f0" r="10.0" cx="-216.3751"
+                class="BBC" cy="27.020107" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#c7e9e2" r="10.0" cx="477.42938"
+                class="DK" cy="64.23382" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#d9f0ee" r="10.0" cx="-212.12016"
+                class="Google" cy="256.68185" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#afdfd3" r="10.0" cx="-50.187786"
+                class="MSZP" cy="84.737724" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#a3dacb" r="10.0" cx="-110.21839"
+                class="Jobbik" cy="476.73346" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#006d2c" r="10.0" cx="-165.62907"
+                class="MTI" cy="311.46033" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#d8efee" r="10.0" cx="305.3578"
+                class="Facebook" cy="-16.559391" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+    </g>
+    <g id="node-labels">
+        <text font-size="24" x="250.27538" y="-330.77533" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Fidesz">
+            Fidesz
+        </text>
+        <text font-size="24" x="417.1792" y="-1.3019452" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="M1">
+            M1
+        </text>
+        <text font-size="24" x="97.43969" y="-67.28193" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="ENSZ">
+            ENSZ
+        </text>
+        <text font-size="24" x="-131.54356" y="35.25897" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="LMP">
+            LMP
+        </text>
+        <text font-size="24" x="-295.29675" y="-208.29987" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="ellenzéki párt">
+            ellenzéki párt
+        </text>
+        <text font-size="24" x="-204.09499" y="14.432278" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="KDNP">
+            KDNP
+        </text>
+        <text font-size="24" x="-216.3751" y="31.55917" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="BBC">
+            BBC
+        </text>
+        <text font-size="24" x="477.42938" y="68.60882" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="DK">
+            DK
+        </text>
+        <text font-size="24" x="-212.12016" y="262.4885" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Google">
+            Google
+        </text>
+        <text font-size="24" x="-50.187786" y="89.27679" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="MSZP">
+            MSZP
+        </text>
+        <text font-size="24" x="-110.21839" y="482.49323" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Jobbik">
+            Jobbik
+        </text>
+        <text font-size="24" x="-165.62907" y="315.83533" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="MTI">
+            MTI
+        </text>
+        <text font-size="24" x="305.3578" y="-11.91486" fill="#ffffff"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="Facebook">
+            Facebook
+        </text>
+    </g>
+</svg>

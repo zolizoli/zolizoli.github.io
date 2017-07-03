@@ -56,19 +56,19 @@
                         <a class="page-scroll" href="#intro">Bevezetés</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#topics">Topikok</a>
+                        <a class="page-scroll" href="#topic-title">Topikok</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#pyldavis">Pyldavis</a>
+                        <a class="page-scroll" href="#demographics-title">Demográfiai jellemzők</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#pyramids">Demográfiai adatok</a>
+                        <a class="page-scroll" href="#emotions-title">Emóciók</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#radars">Emóciók</a>
+                        <a class="page-scroll" href="#tools-title">Eszközök, források</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#credits">Készítők</a>
+                        <a class="page-scroll" href="#credits">Impresszum</a>
                     </li>
                 </ul>
             </div>
@@ -84,8 +84,8 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">A migráció arcai</h1>
-                        <p class="intro-text">Ide jön valami kis bevezető szöveg.
-                            <br>TODO: Majd kell egy szebb háttérkép.</p>
+                        <p class="intro-text">Képi tartalomelemzés
+                            <br>Az online médiában 2014.09.27. és 2016.06.11. megjelent 42.845 cikkből kinyert 10330 kép elemzése.</p>
                         <a href="#intro" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -99,8 +99,39 @@
     <section id="intro" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Milyen képek jelentek meg a migránsokról az online médiában?</h2>
-                <p>Blablabal, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla, blablabla</p>
+                <h1>Milyen képek jelentek meg a migránsokról az online médiában?</h1>
+                <p>Az elmúlt években napjaink részévé váltak a migránsokról szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmakat azért tartjuk külön elemzésre érdemesnek, mert a téma meghatározó volta ellenére honfitársaink többsége kizárólag a médiában megjelenő képeken találkozik migránsokkal, ezért úgy gondoljuk, gondolkodásukat nagyban befolyásolja, mit látnak.</p>
+                
+                <h2>Az adatokról</h2>
+                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+     <!-- Topics Title -->
+    <section id="topic-title" class="content-section text-center">
+        <div class="topic-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>Topik modell</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+     <section id="topic-intro" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1>Mi az a topik modell</h1>
+                <p>Az elmúlt években napjaink részévé váltak a migránsokról szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmakat azért tartjuk külön elemzésre érdemesnek, mert a téma meghatározó volta ellenére honfitársaink többsége kizárólag a médiában megjelenő képeken találkozik migránsokkal, ezért úgy gondoljuk, gondolkodásukat nagyban befolyásolja, mit látnak.</p>
+                
+                <h2>Hogyan lesz a képből szöveg?</h2>
+                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                
+                <h2>A mi topikjaink</h2>
+                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
             </div>
         </div>
     </section>
@@ -113,11 +144,11 @@
                 <table style="color:white;">
 	
 	<tr>
-		<td>Topic</td>
-		<td>Title</td>
-		<td>Words</td>
-		<td>Pictures</td>
-		<td>Faces</td>
+		<td>Topik száma</td>
+		<td>Topik neve</td>
+		<td>Címkék</td>
+		<td>Képek száma</td>
+		<td>Kinyert arcok száma</td>
 	</tr>
 	<tr>
 		<td>0</td>
@@ -178,15 +209,56 @@
     <section id="pyldavis" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>A topikokban található szavak eloszlása - vagy valami ilyesmi</h2>
-                <p>Ide jön valami szöveg arról, hogy mi a fene az az LDA, meg mit mutat ez a vizu</p>
+                <h2>A topikokra jellemző címkék</h2>
             </div>
         </div>
         <iframe src="iframes/ldaviz.html" style="height: 50vw; width: 50vw;" frameBorder="0" scrolling="no"></iframe>
         </div>
     </section>
 
+     <!-- Topic Graph -->
+    <div class="row-container">
+    <section id="pyldavis" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Hogy kapcsolódnak egymáshoz az egyes topikok?</h2>
+            </div>
+        </div>
+            <object data="img/ize.svg" type="image/svg+xml" style="width: 70vw; height: 50vw;">
+                <img src="yourfallback.jpg" />
+            </object>
+        </div>
+    </section>
 
+    
+    <!-- Demographics Title -->
+    <section id="demographics-title" class="content-section text-center">
+        <div class="demographics-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>Demográfiai jellemzők</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Demographics Intro -->
+    <section id="demographics-intro" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1>Az egyes topikokhoz tartozó képek demográfiai jellemzői</h1>
+                <p>Az elmúlt években napjaink részévé váltak a migránsokról szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmakat azért tartjuk külön elemzésre érdemesnek, mert a téma meghatározó volta ellenére honfitársaink többsége kizárólag a médiában megjelenő képeken találkozik migránsokkal, ezért úgy gondoljuk, gondolkodásukat nagyban befolyásolja, mit látnak.</p>
+                
+                <h2>Arcfelismerés, kor- és nemazonosítás - egy kis gépi tanulás és mesterséges intelligencia</h2>
+                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                
+                <h2>Mit tudunk a regisztrált menekültek demográfiai jellemzőiről?</h2>
+                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+            </div>
+        </div>
+    </section>
+    
+    
      <!-- Population Pyramids Carousel -->
     <div class="pop-container">
     <section id="pyramids" class="container content-section text-center">
@@ -237,6 +309,47 @@
         </div>
     </section>
     
+    
+    <!-- UHNCR data -->
+    <div class="pop-container">
+    <section id="uhncr" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Mennyire mutat valós képet a média?</h2>
+                <p>Az UHNCR által gyűjtött dmeográfiai adatok és a menekülteket bemutató X, Y, Z topikok demográfiai jellemzőinek összevetése</p>
+            </div>
+        </div>
+        <iframe src="iframes/test.html" style="height: 80vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+        </div>
+    </section>
+    
+    <!-- Emotions Title -->
+    <section id="emotions-title" class="content-section text-center">
+        <div class="emotions-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>Emóciók</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <!-- Emotions Intro -->
+    <section id="demographics-intro" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1>Az egyes topikban talált arcokon azonosított emóciók</h1>
+                <p>Az elmúlt években napjaink részévé váltak a migránsokról szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmakat azért tartjuk külön elemzésre érdemesnek, mert a téma meghatározó volta ellenére honfitársaink többsége kizárólag a médiában megjelenő képeken találkozik migránsokkal, ezért úgy gondoljuk, gondolkodásukat nagyban befolyásolja, mit látnak.</p>
+                
+                <h2>Hazudj ha tudsz - mi az az emóciófelismerés</h2>
+                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                
+                <h2>Arc- és emóciófelismerés - egy kis gépi tanulás és mesterséges intelligencia</h2>
+                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- Radar Charts for Emotions -->
     <div class="emo-container">
     <section id="radars" class="container content-section text-center">
@@ -263,7 +376,80 @@
             <iframe src="iframes/sonic.html" style="height: 100vw; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
         </div>
     </section>
-
+    
+    <!-- Tools Title -->
+    <section id="tools-title" class="content-section text-center">
+        <div class="tools-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>Eszközök, források</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <!-- Tools Intro -->
+    <section id="tools-intro" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Az adatgyűjtés és előfeldolgozás során használt eszközök</h2>
+                <p>
+                    <ul>
+                        <li>Egy eszköz</li>
+                        <li>Két eszköz</li>
+                        <li>Három eszköz</li>
+                        <li>Négy eszköz</li>
+                        <li>Öt eszköz</li>
+                    </ul>
+                </p>
+                
+                <h2>Topik modellezéshez használt eszközök</h2>
+                <p>
+                    <ul>
+                        <li>Egy eszköz</li>
+                        <li>Két eszköz</li>
+                        <li>Három eszköz</li>
+                        <li>Négy eszköz</li>
+                        <li>Öt eszköz</li>
+                    </ul>
+                </p>
+                
+                <h2>A képfeldolgozáshoz használt eszközök</h2>
+                <p>
+                    <ul>
+                        <li>Egy eszköz</li>
+                        <li>Két eszköz</li>
+                        <li>Három eszköz</li>
+                        <li>Négy eszköz</li>
+                        <li>Öt eszköz</li>
+                    </ul>
+                </p>
+                
+                <h2>Az adatvizualizációhoz használt eszközök</h2>
+                <p>
+                    <ul>
+                        <li>Egy eszköz</li>
+                        <li>Két eszköz</li>
+                        <li>Három eszköz</li>
+                        <li>Négy eszköz</li>
+                        <li>Öt eszköz</li>
+                    </ul>
+                </p>
+                
+                <h2>A felhasznált képek forrásai</h2>
+                <p>
+                    <ul>
+                        <li>Egy eszköz</li>
+                        <li>Két eszköz</li>
+                        <li>Három eszköz</li>
+                        <li>Négy eszköz</li>
+                        <li>Öt eszköz</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+   
     <!-- Credits -->
     <section id="credits" class="content-section text-center">
         <div class="download-section">
@@ -273,6 +459,14 @@
                     <p><a href="https://www.linkedin.com/in/n%C3%B3ra-f%C3%BCl%C3%B6p-6467a8133/">Fülöp Nóra</a></p>
                     <p><a href="https://www.linkedin.com/in/ily%C3%A9s-vir%C3%A1g-aa131392/">Ilyés Virág</a>, <a href="http://precognox.com/">Precognox</a></p>
                     <p><a href="https://www.linkedin.com/in/zoltanvarju/">Varjú Zoltán</a>, <a href="http://precognox.com/">Precognox</a></p>
+                    <h2>Az adatfeldolgozásban segítettek:</h2>
+                    <ul>
+                        <li>Lázár Bernadett</li>
+                        <li>Nyíri Zsófi</li>
+                        <li>Morvay Gergely</li>
+                        <li>Szabó Martina Katalin</li>
+                        <li>és még sokan mások(?), akiknek majd ide fogom írni a nevét</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -285,7 +479,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Precognox 2017</p>
+            <p>Copyright &copy; Precognox, Nyelv és Tudomány 2017</p>
         </div>
     </footer>
 
