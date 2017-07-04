@@ -114,7 +114,7 @@
         <div class="topic-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h1>Topik modell</h1>
+                    <h1>Topikok</h1>
                 </div>
             </div>
         </div>
@@ -124,14 +124,16 @@
      <section id="topic-intro" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h1>Mi az a topik modell</h1>
-                <p>Az elmúlt években napjaink részévé váltak a migránsokról szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmakat azért tartjuk külön elemzésre érdemesnek, mert a téma meghatározó volta ellenére honfitársaink többsége kizárólag a médiában megjelenő képeken találkozik migránsokkal, ezért úgy gondoljuk, gondolkodásukat nagyban befolyásolja, mit látnak.</p>
-                
+                <h1>Mi az a topik modell?</h1>
+                <h2>Metaforák</h2>
+                <p>Ide lehetne arról írni, hogy milyen metaforákat találtak mások, ezeket akartuk mi is automatice keresni, azonosítani, másokat találni</p>
+                <h2>Mi az a topik modell</h2>
+                <p>Ide jön, hogy az LDA-t tekinthetjük egy klaszterezésnek, ami több címkét is ad.</p>
                 <h2>Hogyan lesz a képből szöveg?</h2>
-                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                <p>Ahhoz, hogy topik modellt építhessünk a képekre, szükségünk volt a képi információ szövegesre "konvertálására". Ehhez a <a>Clarifai</a> címkéző szolgáltatását vettük igénybe, ami miden képhez tartalmilag releváns címkéket ad konfidencia értékkel. A címkék közül csak a legalább 0.75-ös konfidenciaértékűeket tartottuk meg, továbbá kizártuk azokat, melyek kevesebb mint 25 képhez tartoztak. A címkék egy része elsőre nem tűnt relevánsnak, pl. nagyon gyakori elem volt a "fesztivál", "koncert", "strand". A képeket megvizsgálva arra jutottunk, hogy ezeket szisztematikusan alkalmazza a Clarifai, csak éppen korpuszunk sajátosságait nem tudja figyelembe venni, mivel a legtöbb képcímkéző algoritmus nem menekülteket ábrázoló adathalmazon tanítják be. A "fesztivál" esetében pl. általában kordon előtti tömeget, vagy sátrakat láthatunk, ezért a címkét átneveztük "tömegjelenetek"-re és hasonlóan jártunk el a többi problémás címkével is.</p>
                 
                 <h2>A mi topikjaink</h2>
-                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                <p>Hét topikra optimalizáltuk, ezek azonosítót kaptak, nevet adtunk nekik, mert az algoritmus szavakat ad vissza, ezeket mutatjuk az első táblázatban. A pyldavis mutatja a szavak eloszlását és arányát az egyes topikokban. Az osztályozás során a legjellemzőbb topikot használtuk, de ez multilabeling, a gráf mutatja hogy mennyire járnak együtt az egyes topikok.</p>
             </div>
         </div>
     </section>
@@ -222,6 +224,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Hogy kapcsolódnak egymáshoz az egyes topikok?</h2>
+                <p>Nyilván ez itten most egy totál más gráf.</p>
             </div>
         </div>
             <object data="img/ize.svg" type="image/svg+xml" style="width: 70vw; height: 50vw;">
@@ -247,13 +250,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Az egyes topikokhoz tartozó képek demográfiai jellemzői</h1>
-                <p>Az elmúlt években napjaink részévé váltak a migránsokról szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmakat azért tartjuk külön elemzésre érdemesnek, mert a téma meghatározó volta ellenére honfitársaink többsége kizárólag a médiában megjelenő képeken találkozik migránsokkal, ezért úgy gondoljuk, gondolkodásukat nagyban befolyásolja, mit látnak.</p>
+                <p>Az egyik toposz a mobilozó fiatal fiúk, a katonaság elől elszaladók, stb. A UNHCR adatai alapján igaz az, hogy inkább fiatal férfiak a migránsok (na jó, amiket nézegettem adatok, az alapján igaz ez, de nem szedtem le még az EU-27 adatait), de vajon a médiában megjelenő képek mennyire mutatják a valós arányokat?</p>
                 
                 <h2>Arcfelismerés, kor- és nemazonosítás - egy kis gépi tanulás és mesterséges intelligencia</h2>
-                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                <p>Arcfelismerésre Python OpenCV Haar Cascade, kor- és nemazonosításhoz IMDB dataset-re Kerasban épített CNN. A kiértékelés alapján azt mondhatjuk, hogy adataink inkább tájékoztató jellegűek, de ekkora képmennyiségnél örülünk, hogy ez pár óra alatt lefut és nem kell átnézni a képeket magunknak.</p>
                 
                 <h2>Mit tudunk a regisztrált menekültek demográfiai jellemzőiről?</h2>
-                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                <p>Ide jöhez hogy a statisztika 18-59 meg egyéb kategóriákat használ.</p>
             </div>
         </div>
     </section>
@@ -265,8 +268,6 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Az egyes topikokban található képekről kinyert arcok demográfiai jellemzői</h2>
-                <p>Ide jöhetne egy kis szöveg arról, hogyan nyertük ki az arcokat és az age and gender detection mi fán terem.</p>
-                <p>TODO: Ugyanaz a topik van most mindenegyik carouselben, majd cserélni kell!!!</p>
             </div>
             </div>
             
@@ -338,14 +339,14 @@
     <section id="demographics-intro" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h1>Az egyes topikban talált arcokon azonosított emóciók</h1>
-                <p>Az elmúlt években napjaink részévé váltak a migránsokról szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmakat azért tartjuk külön elemzésre érdemesnek, mert a téma meghatározó volta ellenére honfitársaink többsége kizárólag a médiában megjelenő képeken találkozik migránsokkal, ezért úgy gondoljuk, gondolkodásukat nagyban befolyásolja, mit látnak.</p>
+                <h1>Az egyes topikokban talált arcokon azonosított emóciók</h1>
+                <p>Egyes topikokban, mint például az "Átkelés" és az "Úton" a felismert arcok száma kevesebb mint a képek 10%-a, de a "Nagyobb csoportok" esetében is csupán harmada, még a "Kisebb csoportok: menekültek, médiaszemélyiségek, vallási vezetők", "Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai" és "Egyéni portrék, kis csoportok" esetében a képekhez viszonyítva sok arcot azonosított algoritmusunk. Az "Átkelés" és "Úton" topikokban inkább menekülteket, az "Egyéni potrék, kis csoportok" esetében főleg hazai és európai politikusokat láthatunk, a két kisebb csoportokat tartalmazó topik pedig vegyes. A menekülteket mozgásban mutató képek esetében tehát igazolódni látszik, hogy arctalan tömegként szereti őket mutatni a média. </p>
                 
-                <h2>Hazudj ha tudsz - mi az az emóciófelismerés</h2>
-                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                <h2>Emóciófelismerés</h2>
+                <p>Darwin, Ekmann és a szokásos duma</p>
                 
                 <h2>Arc- és emóciófelismerés - egy kis gépi tanulás és mesterséges intelligencia</h2>
-                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                <p>Python OpenCV Haar Cascade arcra, fer2013 adaton Kerasban trénelt CNN klasszifikációra. Kiértékelés. Téved: semlegesnek tippeli inkább a negatívat, meglepődés inkább öröm</p>
             </div>
         </div>
     </section>
@@ -355,8 +356,7 @@
     <section id="radars" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Az egyes topikokban található képekről kinyert arcokon felismerhető emóciók - jelenleg fake adatokkal</h2>
-                <p>Ide jöhetne egy kis szöveg arról, hogyan ismerjük fel az emóciókat.</p>
+                <h2>Az egyes topikokban talált arcokon azonosított emóciók - jelenleg fake adatokkal</h2>
                 <p>TODO: középre igazítani valahogy, felvenni az összes topikot, lehet csak szám kell a legendbe</p>
             </div>
         </div>
