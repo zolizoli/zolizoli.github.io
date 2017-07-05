@@ -1,0 +1,108 @@
+[
+ 
+   {
+      "key":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+      "values":[
+         {
+            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "reason":"Düh",
+            "value":47.8
+         },
+         {
+            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "reason":"Szomorúság",
+            "value":20.1
+         },
+         {
+            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "reason":"Semleges",
+            "value":11.4
+         },
+         {
+            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "reason":"Öröm",
+            "value":8.5
+         },
+         {
+            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "reason":"Félelem",
+            "value":7.1
+         },
+         {
+            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "reason":"Undor",
+            "value":4.3
+         }
+      ]
+   },
+   {
+      "key":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+      "values":[
+         {
+            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "reason":"Düh",
+            "value":71.3
+         },
+         {
+            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "reason":"Szomorúság",
+            "value":7.7
+         },
+         {
+            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "reason":"Semleges",
+            "value":5.8
+         },
+         {
+            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "reason":"Öröm",
+            "value":5.1
+         },
+         {
+            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "reason":"Félelem",
+            "value":5.1
+         },
+         {
+            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "reason":"Undor",
+            "value":4.9
+         }
+      ]
+   },
+   {
+      "key":"Úton: vonat, busz, hajó, gyalog",
+      "values":[
+         {
+            "device":"Úton: vonat, busz, hajó, gyalog",
+            "reason":"Düh",
+            "value":61.0
+         },
+         {
+            "device":"Úton: vonat, busz, hajó, gyalog",
+            "reason":"Szomorúság",
+            "value":9.9
+         },
+         {
+            "device":"Úton: vonat, busz, hajó, gyalog",
+            "reason":"Semleges",
+            "value":8.5
+         },
+         {
+            "device":"Úton: vonat, busz, hajó, gyalog",
+            "reason":"Öröm",
+            "value":8.0
+         },
+         {
+            "device":"Úton: vonat, busz, hajó, gyalog",
+            "reason":"Félelem",
+            "value":8.0
+         },
+         {
+            "device":"Úton: vonat, busz, hajó, gyalog",
+            "reason":"Undor",
+            "value":4.2
+         }
+      ]
+   }
+]

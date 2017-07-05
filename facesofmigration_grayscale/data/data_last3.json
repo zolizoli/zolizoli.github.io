@@ -1,0 +1,107 @@
+[
+   {
+      "key":"Átkelés: kerítésnél, határon, tengeren",
+      "values":[
+         {
+            "device":"Átkelés: kerítésnél, határon, tengeren",
+            "reason":"Düh",
+            "value":67.6
+         },
+         {
+            "device":"Átkelés: kerítésnél, határon, tengeren",
+            "reason":"Szomorúság",
+            "value":10.5
+         },
+         {
+            "device":"Átkelés: kerítésnél, határon, tengeren",
+            "reason":"Semleges",
+            "value":8.1
+         },
+         {
+            "device":"Átkelés: kerítésnél, határon, tengeren",
+            "reason":"Öröm",
+            "value":5.9
+         },
+         {
+            "device":"Átkelés: kerítésnél, határon, tengeren",
+            "reason":"Félelem",
+            "value":5.2
+         },
+         {
+            "device":"Átkelés: kerítésnél, határon, tengeren",
+            "reason":"Undor",
+            "value":2.5
+         }
+      ]
+   },
+   {
+      "key":"Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek",
+      "values":[
+         {
+            "device":"Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek",
+            "reason":"Düh",
+            "value":35.7
+         },
+         {
+            "device":"Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek",
+            "reason":"Szomorúság",
+            "value":29.8
+         },
+         {
+            "device":"Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek",
+            "reason":"Semleges",
+            "value":9.7
+         },
+         {
+            "device":"Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek",
+            "reason":"Öröm",
+            "value":9.6
+         },
+         {
+            "device":"Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek",
+            "reason":"Félelem",
+            "value":8.2
+         },
+         {
+            "device":"Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek",
+            "reason":"Undor",
+            "value":5.6
+         }
+      ]
+   },
+   {
+      "key":"Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+      "values":[
+         {
+            "device":"Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+            "reason":"Düh",
+            "value":44.2
+         },
+         {
+            "device":"Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+            "reason":"Szomorúság",
+            "value":16.7
+         },
+         {
+            "device":"Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+            "reason":"Semleges",
+            "value":13.8
+         },
+         {
+            "device":"Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+            "reason":"Öröm",
+            "value":11.3
+         },
+         {
+            "device":"Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+            "reason":"Félelem",
+            "value":8.2
+         },
+         {
+            "device":"Kisebb csoportok: egyéni portrék: menekültek, média személyiségek, vallási vezetők",
+            "reason":"Undor",
+            "value":4.8
+         }
+      ]
+   }
+]
