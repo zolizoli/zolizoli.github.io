@@ -67,9 +67,11 @@
                     <li>
                         <a class="page-scroll" href="#emotions-title">Emóciók</a>
                     </li>
+<!--
                     <li>
                         <a class="page-scroll" href="#tools-title">Eszközök, források</a>
                     </li>
+-->
                     <li>
                         <a class="page-scroll" href="#credits">Impresszum</a>
                     </li>
@@ -88,7 +90,9 @@
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">A migráció arcai</h1>
                         <p class="intro-text">Képi tartalomelemzés
-                            <br>Az online médiában 2014.09.27. és 2016.06.11. megjelent 42.845 cikkből kinyert 10330 kép elemzése.</p>
+                            <br>Az online médiában 2014.09.27. és 2016.06.11. megjelent 42.845 cikkből kinyert 10330 kép elemzése.
+                            <br>Nyelvtechnológia, képfeldolgozás, gépi tanulás, deep learning
+                        </p>
                         <a href="#intro" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -105,8 +109,11 @@
                 <h1>Milyen képek jelentek meg a migráció kapcsán az online médiában?</h1>
                 <p>Az elmúlt években napjaink részévé váltak a migránsokról szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmakat azért tartjuk külön elemzésre érdemesnek, mert a téma meghatározó volta ellenére honfitársaink többsége kizárólag a médiában megjelenő képeken találkozik migránsokkal, ezért úgy gondoljuk, gondolkodásukat nagyban befolyásolja, mit látnak.</p>
                 
-                <h2>Az adatokról</h2>
+                <h2>Az adatok</h2>
                 <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek XXXXX alkalommal fordulnak elő a cikkekben.</p>
+                
+                <h2>Eredményeink értelmezéséhez</h2>
+                <p>A begyűjtött képeket automatikusan dolgoztuk fel, hiszen több mint tízezer kép alapos megvizsgálása rengeteg időt venne igénybe. Az alkalmazott algoritmusok jellemzője, hogy nem adnak 100%-os eredményt. Fontos kiemelni, hogy mind a demográfiai jellemzők, mind az emóciók kinyerése nagyban függ az arcfelismerő algoritmustól, hiszen feltételezik, hogy egy emberi arcot ábrázoló képet kapnk. Így nem tudnak számot adni a ki nem nyert arcokról, de a hibásan arcként azonosított alakzatokra is eredményt adnak. Az automatikus tartalomelemzés nem helyettesítheti az emberi munkát, csupán segítheti azzal, hogy jól előfeldolgozott adatokat ad értő kezekbe. Vizsgálatunkban erőforrások hiányában a minimális a humán értelmezés, éppen ezért az itt közölt eredmények csak tájékoztató jellegűek.</p>
             </div>
         </div>
     </section>
@@ -230,7 +237,9 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Hogy kapcsolódnak egymáshoz az egyes topikok?</h2>
-                <p>Az egyes topikok közötti kapcsolat alapja az, hogy hányszor fordultak elő együtt egy-egy kép első három, leginkább jellemző topikjaként.</p>
+                <p>Az egyes topikok közötti kapcsolat alapja az, hogy hányszor fordultak elő együtt egy-egy kép első három, leginkább jellemző topikjaként. <br />
+                Az "Adatok" topik központi szerepének oka egyszertű; sokszor szerepel valamilyen felirat a képeken, legyen az útjelzőtábla, felirat egy pólón, vagy egy névtábla egy előadó előtt.
+                </p>
             </div>
         </div>
             <object data="img/topic_graph.svg" type="image/svg+xml" style="width: 70vw; height: 50vw;">
@@ -255,12 +264,18 @@
     <section id="pictures-intro" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h1>Hogyan dolgoztuk fel a képeket</h1>
-                <p>blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla </p>
+                <h1>Képfeldolgozás</h1>
                 
-                <h2>A Deep Learningről</h2>
-                <p>blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla </p>
+                <h2>Arcfelismerés</h2>
+                <p>Kipróbáltunk több szabadon elérhető arcfelismerő eszközt is, de végül az <a href="http://opencv.org/">OpenCV</a> könyvtár előre trénelt Haar Cascade modellje mellett döntöttünk. Döntésünk során figyelembe kellett vennünk, hogy képeink többsége "spontán" pillanatokat ábrázol, azaz a rajtuk látható emberek gyakran nem a kamera felé néznek éppen, fejükön kalap, kapucni, vagy fejkendő van, esetleg éppen esznek s kezüket szájuk előtt tartják. A Haar Cascade a szakirodalom szerint akár 90%-os pontosságú is lehet, ezt esetünkben bizonyosan meg sem közelíti, de a többi vizsgált algoritmussal szemben sokkal kisebb fals pozitív eredményt adott, ezért választottuk ki.</p>
                 
+                <h2>Nem- és kormeghatározás</h2>
+                <p>Több szabadon elérhető eszköz megvizsgálása után úgy döntöttünk, hogy saját osztályozót készítünk a nem- és kormeghatározáshoz. Tanítadathalmazunk az <a href="https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/">IMDB-WIKI-500k</a> adathalmaz volt, ami az IMDB adatbázisban szereplő színészek képeit és a róluk elérhető adatokat (nem, kor) tartalmazza. Az adatokon a <a href="https://keras.io/">Keras</a> deep learning keretrendszer segítségével egy-egy <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">konvolúciós neurális hálót</a> tréneltünk nem- és kormeghatározásra. A kormeghatározás pontossága 81%-os, osztályozónk főleg a 14 évesnél fiatalabb és a hatvannál idősebb emberek esetében téved, illetve a 30-40 közötti kategórákban. A nemazonosítás pontossága 77%, itt a 14 alattiak esetében szinte mindig férfi, a 60 felettieknél miding női címkét ad vissza algoritmusunk. Ha öszevetjük a kor és nem adatokat, azt látjuk, hogy a nők esetében +/- 5 évet, a férfiak esetében +/- 3 évet téved átlagosan algoritmusunk.</p>
+                
+                <h2>Emóciók</h2>
+                <p> IDE JÖN GERGŐ SZÖVEGE MAJD blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla </p>
+                
+                <p>A szabadon elérhető emóciófelismerő eszközök áttekintése után úgy döntöttünk, hogy saját algoritmust tanítunk be, amihez a <a href="https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data">fer2013 adathalmazt</a> használtuk. Ehhez a feladathoz is a <a href="https://keras.io/">Keras</a> deep learning keretrendszer segítségével  tréneltünk egy <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">konvolúciós neurális hálót</a>, mely pontossága 70% (azaz az adott emócióként azonosított képek ekkora hányadára valós a megállapítása), felidézése pedig 58% (azaz adott emócióhoz tartozó képek ekkora hányadát azonosítja). Eredményeink nem a legjobbak, de figyelembe véve, hogy egy ember számára is nehézséget jelent pusztán egy arc alapján azonosítani ey emóciót, megelégedhetünk az elért teljesítménnyel. Algoritmusunk szeret biztosra menni, ezért ha hibázik, akkor neutrálisnak tippeli az adott arckifejezést. Szintén gyakori hiba a meglepődés örömként történő azonosítása, illetve a negatív érzelmek összekeverése. Ha a nem és kor adatokkal is kiegészítjük vizsgálódásunkat, azt találjuk, hogy nők és húszév alattiak esetében sokkal gyakoribbak a hibák, a legjobban középkorú férfiaknál tippeli meg algoritmusunk az adott arckifejezés mögött rejlő emóciót.</p>
             </div>
         </div>
     </section>
@@ -456,9 +471,6 @@
                 <h1>Az egyes topikokhoz tartozó képek demográfiai jellemzői</h1>
                 <p>Az egyik toposz a mobilozó fiatal fiúk, a katonaság elől elszaladók, stb. A UNHCR adatai alapján igaz az, hogy inkább fiatal férfiak a migránsok (na jó, amiket nézegettem adatok, az alapján igaz ez, de nem szedtem le még az EU-27 adatait), de vajon a médiában megjelenő képek mennyire mutatják a valós arányokat?</p>
                 
-                <h2>Arcfelismerés, kor- és nemazonosítás - egy kis gépi tanulás és mesterséges intelligencia</h2>
-                <p>Arcfelismerésre Python OpenCV Haar Cascade, kor- és nemazonosításhoz IMDB dataset-re Kerasban épített CNN. A kiértékelés alapján azt mondhatjuk, hogy adataink inkább tájékoztató jellegűek, de ekkora képmennyiségnél örülünk, hogy ez pár óra alatt lefut és nem kell átnézni a képeket magunknak.</p>
-                
                 <h2>Mit tudunk a regisztrált menekültek demográfiai jellemzőiről?</h2>
                 <p>Ide jöhez hogy a statisztika 18-59 meg egyéb kategóriákat használ.</p>
             </div>
@@ -481,22 +493,54 @@
       <li data-target="#myCarousel" data-slide-to="Topik 0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <iframe src="iframes/test.html" style="height: 80vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
-
+          <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+           <div class="carousel-caption">
+      	         <h3>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h3>
+            </div>
       </div>
 
       <div class="item">
-        <iframe src="iframes/test.html" style="height: 80vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
-
+        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+         <div class="carousel-caption">
+      	         <h3>Kisebb csoportok, egyéni portrék: menekültek, média személyiségek, vallási vezetők</h3>
+            </div>
       </div>
     
       <div class="item">
-        <iframe src="iframes/test.html" style="height: 80vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+           <div class="carousel-caption">
+      	         <h3>Úton: vonat, busz, hajó, gyalog</h3>
+            </div>
+      </div>
+        
+        <div class="item">
+        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+           <div class="carousel-caption">
+      	         <h3>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h3>
+            </div>
+      </div>
+        
+        <div class="item">
+        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+           <div class="carousel-caption">
+      	         <h3>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h3>
+            </div>
+      </div>
+        
+        <div class="item">
+        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+           <div class="carousel-caption">
+      	         <h3>Átkelés: kerítésnél, határon, tengeren	ut</h3>
+            </div>
       </div>
     </div>
 
@@ -546,11 +590,6 @@
                 <h1>Az egyes topikokban talált arcokon azonosított emóciók</h1>
                 <p>Egyes topikokban, mint például az "Átkelés" és az "Úton" a felismert arcok száma kevesebb mint a képek 10%-a, de a "Nagyobb csoportok" esetében is csupán harmada, még a "Kisebb csoportok: menekültek, médiaszemélyiségek, vallási vezetők", "Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai" és "Egyéni portrék, kis csoportok" esetében a képekhez viszonyítva sok arcot azonosított algoritmusunk. Az "Átkelés" és "Úton" topikokban inkább menekülteket, az "Egyéni potrék, kis csoportok" esetében főleg hazai és európai politikusokat láthatunk, a két kisebb csoportokat tartalmazó topik pedig vegyes. A menekülteket mozgásban mutató képek esetében tehát igazolódni látszik, hogy arctalan tömegként szereti őket mutatni a média. Az arcfelismerés azonban nem csak azért hasznos, mert lehetővé teszi a nem és kor beazonosítását (alogritmikusan bizonyos határok között), de arcunkon óhatatlanul is megjelennek érzelmeink. Érdemes megvizsgálni, hogy a különböző topikokban a történet különböző szereplői milyen érzelmeket nyilvánítanak ki. A szakasz első vizualizációja szertné a különböző topikokban megjelnő hat alapvető érzelmet és a semlegességet összevethetővé tenni.</p>
                 
-                <h2>Emóciófelismerés</h2>
-                <p>Darwin, Ekmann és a szokásos duma</p>
-                
-                <h2>Arc- és emóciófelismerés - egy kis gépi tanulás és mesterséges intelligencia</h2>
-                <p>Python OpenCV Haar Cascade arcra, fer2013 adaton Kerasban trénelt CNN klasszifikációra. Kiértékelés. Téved: semlegesnek tippeli inkább a negatívat, meglepődés inkább öröm</p>
                 
                 <h2>Hogyan alakultak az érzelmek időben? - Szonifikáció</h2>
                 <p>Mivel ismerjük minden egyes cikk publikálásának dátumát, ismerjük a képek (első) megjelnésének idejét is. Az egyes emóciók idősoraiból MIDI hangsávot generáltunk egy-egy hangszerre, a megszólaló hangok erőssége az adott emócióval arányos. A hat (hét, ha semlegesre is megcsináljuk) hangsávot külön-külön mutatja a szekció második vizualizációja, ami valójában szonifikáció, hiszen le is lehet játszani az adatokat.</p>
@@ -570,7 +609,8 @@
         </div>
     </section>
 
-    <!-- Sonification -->
+<!--
+     Sonification 
     <div class="sonic-container">
     <section id="sonic" class="container content-section text-center">
         <div class="row">
@@ -581,8 +621,9 @@
             <iframe src="iframes/sonic.html" style="height: 100vw; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
         </div>
     </section>
+-->
+<!--    
     
-    <!-- Tools Title -->
     <section id="tools-title" class="content-section text-center">
         <div class="tools-section">
             <div class="container">
@@ -593,7 +634,6 @@
         </div>
     </section>
     
-     <!-- Tools Intro -->
     <section id="tools-intro" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
@@ -641,6 +681,7 @@
                     </ul>
                 </p>
                 
+
                 <h3>A felhasznált képek forrásai</h3>
                 <p>
                     <ul>
@@ -654,7 +695,7 @@
             </div>
         </div>
     </section>
-   
+-->
     <!-- Credits -->
     <section id="credits" class="content-section text-center">
         <div class="download-section">
@@ -662,14 +703,14 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Készítették:</h2>
                     <p><a href="https://www.linkedin.com/in/n%C3%B3ra-f%C3%BCl%C3%B6p-6467a8133/">Fülöp Nóra</a></p>
-                    <p><a href="https://www.linkedin.com/in/ily%C3%A9s-vir%C3%A1g-aa131392/">Ilyés Virág</a>, <a href="http://precognox.com/">Precognox</a></p>
-                    <p><a href="https://www.linkedin.com/in/gergely-morvay-8134a813a/">Morvay Gergely</a>, <a href="http://precognox.com/">Precognox</a></p>
-                    <p><a href="https://www.linkedin.com/in/zoltanvarju/">Varjú Zoltán</a>, <a href="http://precognox.com/">Precognox</a></p>
+                    <p><a href="https://www.linkedin.com/in/ily%C3%A9s-vir%C3%A1g-aa131392/">Ilyés Virág</a></p>
+                    <p><a href="https://www.linkedin.com/in/gergely-morvay-8134a813a/">Morvay Gergely</a></p>
+                    <p><a href="https://www.linkedin.com/in/zoltanvarju/">Varjú Zoltán</a></p>
                     <h3>Az adatfeldolgozásban segítettek:</h3>
                     
-                        <p>Lázár Bernadett</p>
-                        <p>Nyíri Zsófi</p>
-                        <p>Szabó Martina Katalin</p>                    
+                        <p><a href="https://www.linkedin.com/in/bernadett-l%C3%A1z%C3%A1r-215678129/">Lázár Bernadett</a></p>
+                        <p><a href="https://www.linkedin.com/in/zsofi-nyiri-158530b2/">Nyíri Zsófi</a></p>
+                        <p><a href="https://www.linkedin.com/in/szab%C3%B3-martina-katalin-650a0a124/">Szabó Martina Katalin</a></p>                    
                 </div>
             </div>
         </div>
@@ -682,7 +723,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Precognox, Nyelv és Tudomány 2017</p>
+            <p>Copyright &copy; <a href="http://precognox.com/">Precognox</a>, <a href="https://www.nyest.hu/">Nyelv és Tudomány</a> 2017</p>
         </div>
     </footer>
 

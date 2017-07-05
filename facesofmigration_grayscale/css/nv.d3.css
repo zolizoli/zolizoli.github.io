@@ -63,7 +63,7 @@
 }
 
 .nvd3 .nv-bars .hover text {
-    fill: rgba(0,0,0,1);
+    fill: rgba(0,0,0,0);
 }
 
 .nvd3 .nv-multibar .nv-groups rect,
@@ -112,7 +112,7 @@
 .nvd3.nv-bullet .nv-measure { fill-opacity: .8; }
 .nvd3.nv-bullet .nv-measure:hover { fill-opacity: 1; }
 .nvd3.nv-bullet .nv-marker { stroke: #000; stroke-width: 2px; }
-.nvd3.nv-bullet .nv-markerTriangle { stroke: #000; fill: #fff; stroke-width: 1.5px; }
+.nvd3.nv-bullet .nv-markerTriangle { stroke: #000; fill: #000; stroke-width: 1.5px; }
 .nvd3.nv-bullet .nv-markerLine { stroke: #000; stroke-width: 1.5px; }
 .nvd3.nv-bullet .nv-tick line { stroke: #666; stroke-width: .5px; }
 .nvd3.nv-bullet .nv-range.nv-s0 { fill: #eee; }
@@ -272,6 +272,7 @@ svg.nvd3-svg {
 
 .nvd3 text {
     font: normal 12px Arial, sans-serif;
+    fill: white;
 }
 
 .nvd3 .title {
@@ -322,9 +323,9 @@ svg.nvd3-svg {
 }
 
 .nvd3 .nv-brushBackground rect {
-    stroke: #000;
+    stroke: white;
     stroke-width: .4;
-    fill: #fff;
+    fill: white;
     fill-opacity: .7;
 }
 
@@ -336,6 +337,7 @@ svg.nvd3-svg {
     .nvd3 text {
         stroke-width: 0;
         fill-opacity: 1;
+        color: white;
     }
 }
 
