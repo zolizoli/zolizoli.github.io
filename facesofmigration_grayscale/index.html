@@ -143,7 +143,7 @@
                 <p>Ahhoz, hogy topik modellt építhessünk a képekre, szükségünk volt a képi információ szövegesre "konvertálására". Ehhez a <a>Clarifai</a> címkéző szolgáltatását vettük igénybe, ami miden képhez tartalmilag releváns címkéket ad konfidencia értékkel. A címkék közül csak a legalább 0.75-ös konfidenciaértékűeket tartottuk meg, továbbá kizártuk azokat, melyek kevesebb mint 25 képhez tartoztak. A címkék egy része elsőre nem tűnt relevánsnak, pl. nagyon gyakori elem volt a "fesztivál", "koncert", "strand". A képeket megvizsgálva arra jutottunk, hogy ezeket szisztematikusan alkalmazza a Clarifai, csak éppen korpuszunk sajátosságait nem tudja figyelembe venni, mivel a legtöbb képcímkéző algoritmus nem menekülteket ábrázoló adathalmazon tanítják be. A "fesztivál" esetében pl. általában kordon előtti tömeget, vagy sátrakat láthatunk, ezért a címkét átneveztük "tömegjelenetek"-re és hasonlóan jártunk el a többi problémás címkével is.</p>
                 
                 <h2>Mi az a topik modell</h2>
-                <p>A topik modellek közül a látens Dirichlet allokáció módszerét használtuk, ami a korpusz minden dokumentumát (esetünkben ez a képekhez tartozó címkék) előre megadott n számú topik "keverékének" tartja, kimenetei így a topikokat jellemző szavak listája és a dokumentumokat felépítő topikok arányai. Mint minden gépi tanulási feladatban, itt is az algoritmus paramétereinek (topikok száma, alfa és éta paraméterek beállítása, stb.) beállítása jelentette. Az optimalizálás során először nyolc topikot azonosítottunk, de észrevettük, hogy az egyik topik ún. szemét (junk) topik, a témához nem kapcsolódó képeket tartalmazott, ezért ezeket a képeket kizártuk és újrafutatttuk az LDA-t a korpuszon, immár a képek hét topikba rendezését kérve. Bővebben a topik modellek hátteréről a <a href="http://labs.precognox.com/kuruc-info-visualization/">Kuruc.info romaellenes témáit bemutató vizualizációnkon</a></p>
+                <p>A topik modell tulajdonképp olyan statisztikai módszert takar, melynek segítségével felfedezhetjük, hogy milyen absztrakt témák jelennek meg dokumentumainkban.  A modell legfőbb feltételezése, hogy minden egyes szöveg adott n különböző téma keverékéből tevődik össze, valamint hogy minden a dokumentumokban előforduló téma jól meghatározható szókészlettel rendelkezik: bizonyos szavak nagyobb valószínűséggel, mások kisebb eséllyel fordulnak elő benne. Esetünkben a dokumentumokat a képekhez tartozó címkék jelentették, melyekből a topikokat – pontosabban az azokat jellemző szavak listáját, illetve a dokumentumokat felépítő topikok arányait – látens Dirichlet allokáció (LDA) segítségével nyertük ki. Mint minden gépi tanulási feladatban, a legnagyobb kihívást itt is az algoritmus paramétereinek (topikok száma, alfa és éta stb.) beállítása jelentette. Az optimalizálás során először nyolc topikot azonosítottunk, ám hamar észrevettük, hogy az egyik ún. szemét (junk) topik, mely a témához nem kapcsolódó képeket tartalmaz. E képeket kizártuk és az LDA-t újrafuttattuk korpuszon, immár a képek hét topikba rendezését kérve. Bővebben a topik modellek hátteréről a <a href="http://labs.precognox.com/kuruc-info-visualization/">Kuruc.info romaellenes témáit bemutató vizualizációnkon</a></p>
                 
                 <h2>A mi topikjaink</h2>
                 <p>A topik modell eredményeit használva a képeket a rájuk leginkább jellemző topikok szerint hét csoportba válogattuk szét. Az egyes topikoknak a csoportba tartozó képek egy jelentős részét megtekintve és a címkéket figyelembe véve neveket is adtunk, hogy ne csak számmal és a topikokhoz tartozó szavakkal hivatkozzunk rájuk. Ez látható a szakasz első táblázatában. A második vizualizáció segít megérteni, hogy egy-egy topikra jellemző címke milyen arányban fordul elő a teljes korpuszban. Nem árt észben tartani, hogy az LDA minden dokumentum esetében megadja az összes topik arányát. Harmadik vizualizációnk azt szemlélteti, hogy milyen erősen kapcsolódnak egymáshoz az egyes topikok, azaz hányszor voltak egy-egy kép esetében a három legjellemzőbb topik között. </p>
@@ -469,10 +469,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Az egyes topikokhoz tartozó képek demográfiai jellemzői</h1>
-                <p>Az egyik toposz a mobilozó fiatal fiúk, a katonaság elől elszaladók, stb. A UNHCR adatai alapján igaz az, hogy inkább fiatal férfiak a migránsok (na jó, amiket nézegettem adatok, az alapján igaz ez, de nem szedtem le még az EU-27 adatait), de vajon a médiában megjelenő képek mennyire mutatják a valós arányokat?</p>
-                
+
                 <h2>Mit tudunk a regisztrált menekültek demográfiai jellemzőiről?</h2>
-                <p>Ide jöhez hogy a statisztika 18-59 meg egyéb kategóriákat használ.</p>
+                <p>A kor- és nemazonosítás eredményét ábrázoló korfák alább láthatók minden egyes topikra nézve. Néhány jellegzetesség szembetűnő az összes korfán, melyek közül az egyik, hogy sokkal több férfi szerepel az altalunk gyűjtött képeken, mint nő – jobban megfigyelve a korábban látott képmontázsokat, ez intuitíve is reálisnak tűnik. Érdekes azonban, hogy a topikok közt halvány különbség figyelhető meg annak tekintetében, hogy az azokat alkotó képek hány százalékában láthatunk férfiakat és nőket. Legnagyobb arányban a hatodik topik esetén láthatunk férfiakat (Átkelés: kerítésnél, határon, tengeren: 74%), melyet a második (Úton: vonat, busz, hajó, gyalog: 72%) és a negyedik topik követ (Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert embereket: 71%). Utóbbi nem meglepő fordulat, hiszen a politikai életben többnyire felülreprezentáltak a férfi tisztségviselők, ám ez első kettő érdekes tanulsággal szolgálhat. Mikor átkelést, határátlépést, utazást ábrázoló képeket láthattunk a médiában többnyire férfi arcokkal találkozhattunk, a nők inkább a csoportos képeken, a tömegben jelentekben meg a legfiatalabb (15 év alatti) korosztályokkal együtt. Életkor tekintetében mindegyik topiknál jellemző, hogy a munkaképes korúak vannak többségben, legnagyobb arányban mindenhol a 30-34 éves korcsoport. Ez utóbbi észrevétel összecseng az UNHCR (valamint az Eurostat) adataival is.</p>
+                
+                <h2>UNHCR</h2>
+                <p>Az <a href="http://www.unhcr.org/">UNHCR (The UN Refugee Agency)</a> folyamatosan követi a hazájukat elhagyni kényszerülők számának alakulását, s immáron kiterjedt adatbázissal rendelkezik az 1951 – 2016 közötti időperiódusra vonatkozóan. Az adatok viszonylag széles bázisra vonatkoznak, többek között menekültekre, menedékkérőkre, hontalan valamint lakóhelyüket elhagyni kényszerült személyekre is. Az adatbázis <a href="http://popstats.unhcr.org">online ingyenesen elérhető</a>, s részletes információkat tartalmaz többek között az említett egyének korára, nemére vonatkozóan. Az EU tagállamok korfáját az alábbi ábra mutatja – korcsoportok tekintetében a bontás sajnos kevésbé precíz, az aktív korosztályra vonatkozóan az adatbázisban csupán egy 18-59 éves ömlesztett kategóriát különítettek el.</p>
             </div>
         </div>
     </section>
@@ -502,42 +504,42 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-          <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+          <iframe src="iframes/korfa_00_nvd3.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
       	         <h3>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h3>
             </div>
       </div>
 
       <div class="item">
-        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_01_nvd3.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
          <div class="carousel-caption">
       	         <h3>Kisebb csoportok, egyéni portrék: menekültek, média személyiségek, vallási vezetők</h3>
             </div>
       </div>
     
       <div class="item">
-        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_02_nvd3.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
       	         <h3>Úton: vonat, busz, hajó, gyalog</h3>
             </div>
       </div>
         
         <div class="item">
-        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_03_nvd3.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
       	         <h3>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h3>
             </div>
       </div>
         
         <div class="item">
-        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_04_nvd3.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
       	         <h3>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h3>
             </div>
       </div>
         
         <div class="item">
-        <iframe src="iframes/test.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_06_nvd3.html" style="height: 50vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
       	         <h3>Átkelés: kerítésnél, határon, tengeren	ut</h3>
             </div>
@@ -568,7 +570,7 @@
                 <p>Az UNHCR által gyűjtött dmeográfiai adatok és a menekülteket bemutató X, Y, Z topikok demográfiai jellemzőinek összevetése</p>
             </div>
         </div>
-        <iframe src="iframes/test.html" style="height: 80vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/unhcr.html" style="height: 80vw; width: 80vw;" frameBorder="0" scrolling="no"></iframe>
         </div>
     </section>
     
@@ -590,9 +592,6 @@
                 <h1>Az egyes topikokban talált arcokon azonosított emóciók</h1>
                 <p>Egyes topikokban, mint például az "Átkelés" és az "Úton" a felismert arcok száma kevesebb mint a képek 10%-a, de a "Nagyobb csoportok" esetében is csupán harmada, még a "Kisebb csoportok: menekültek, médiaszemélyiségek, vallási vezetők", "Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai" és "Egyéni portrék, kis csoportok" esetében a képekhez viszonyítva sok arcot azonosított algoritmusunk. Az "Átkelés" és "Úton" topikokban inkább menekülteket, az "Egyéni potrék, kis csoportok" esetében főleg hazai és európai politikusokat láthatunk, a két kisebb csoportokat tartalmazó topik pedig vegyes. A menekülteket mozgásban mutató képek esetében tehát igazolódni látszik, hogy arctalan tömegként szereti őket mutatni a média. Az arcfelismerés azonban nem csak azért hasznos, mert lehetővé teszi a nem és kor beazonosítását (alogritmikusan bizonyos határok között), de arcunkon óhatatlanul is megjelennek érzelmeink. Érdemes megvizsgálni, hogy a különböző topikokban a történet különböző szereplői milyen érzelmeket nyilvánítanak ki. A szakasz első vizualizációja szertné a különböző topikokban megjelnő hat alapvető érzelmet és a semlegességet összevethetővé tenni.</p>
                 
-                
-                <h2>Hogyan alakultak az érzelmek időben? - Szonifikáció</h2>
-                <p>Mivel ismerjük minden egyes cikk publikálásának dátumát, ismerjük a képek (első) megjelnésének idejét is. Az egyes emóciók idősoraiból MIDI hangsávot generáltunk egy-egy hangszerre, a megszólaló hangok erőssége az adott emócióval arányos. A hat (hét, ha semlegesre is megcsináljuk) hangsávot külön-külön mutatja a szekció második vizualizációja, ami valójában szonifikáció, hiszen le is lehet játszani az adatokat.</p>
             </div>
         </div>
     </section>
@@ -605,7 +604,16 @@
                 <h2>Az egyes topikokban talált arcokon azonosított emóciók</h2>
             </div>
         </div>
-            <iframe src="iframes/radarChart.html" style="height: 100vw; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
+            <iframe src="iframes/radarChart_first3.html" style="height: 100vw; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
+        </div>
+    </section>
+    <div class="emo-container">
+    <section id="radars" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+            </div>
+        </div>
+            <iframe src="iframes/radarChart_last3.html" style="height: 100vw; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
         </div>
     </section>
 

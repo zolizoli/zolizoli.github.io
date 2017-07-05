@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="../css/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="../js/d3.min.js" charset="utf-8"></script>
+    <script src="../js/nv.d3.js"></script>
+    <script src="../lib/stream_layers.js"></script>
+
+    <style>
+        text {
+            font: 12px sans-serif;
+        }
+        svg {
+            display: block;
+        }
+        html, body, #chart1, svg {
+            margin: 0px;
+            padding: 10px;
+            height: 50vw;
+            width: 70vw;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div id="chart1" class='with-3d-shadow with-transitions'>
+    <svg></svg>
+</div>
+
+<script>
+
+
+    var long_short_data = [
+        {
+        key: 'Nő',
+        values: [
+{
+"label":  "Bizonytalan",
+"value": 251334},
+{
+"label":  "60+",
+"value": 153620},
+{
+"label":  "18-59",
+"value": 1181255},
+{
+"label":  "5-17",
+"value": 1098},
+{
+"label":  "0-4",
+"value": 139575}
+        ]
+},
+        {key: 'Férfi',
+         values: [
+{
+"label":  "Bizonytalan",
+"value": -494889},
+{
+"label":  "60+",
+"value": -143694},
+{
+"label":  "18-59",
+"value": -2262521},
+{
+"label":  "5-17",
+"value": -1723},
+{
+"label":  "0-4",
+"value": -150692},
+
+]}];
+
+
+
+
+    var chart;
+    nv.addGraph(function() {
+        chart = nv.models.multiBarHorizontalChart()
+            .x(function(d) { return d.label })
+            .y(function(d) { return d.value })
+            //.yErr(function(d) { return [-Math.abs(d.value * Math.random() * 0.3), Math.abs(d.value * Math.random() * 0.3)] })
+            //.barColor(d3.scale.category20().range())
+            .duration(250)
+            .showControls(true)
+            .showLegend(true)
+            .legendPosition("bottom")
+            .controlsPosition("bottom")
+            .margin({left: 100})
+            .stacked(true)
+	    .yDomain([-2500000,2500000]); 
+
+        chart.yAxis.tickFormat(function(d){
+        return d3.format(',f')(Math.abs(d)); });
+
+        chart.yAxis.axisLabel('Személyek száma');
+        chart.xAxis.axisLabel('Korcsoport').axisLabelDistance(20);
+
+        d3.select('#chart1 svg')
+            .datum(long_short_data)
+            .call(chart);
+        
+
+        nv.utils.windowResize(chart.update);
+
+        chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+        chart.state.dispatch.on('change', function(state){
+            nv.log('state', JSON.stringify(state));
+        });
+        return chart;
+    });
+
+</script>
+</body>
+</html>
