@@ -506,12 +506,12 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("width", barguide.width/2)
             .style("fill", color2)
             .attr("opacity", 0.8);
-//        d3.select("#" + barFreqsID).append("text")
-//            .attr("x", barguide.width/2 + 5)
-//            .attr("y", mdsheight + 10 + (3/2)*barguide.height + 5)
-//            .style("dominant-baseline", "middle")
-//            .text("Estimated term frequency within the selected topic")
-//            .attr("fill", "white");
+        d3.select("#" + barFreqsID).append("text")
+            .attr("x", barguide.width/2 + 5)
+            .attr("y", mdsheight + 10 + (3/2)*barguide.height + 5)
+            .style("dominant-baseline", "middle")
+            .text("Estimated term frequency within the selected topic")
+            .attr("fill", "white");
 
         // footnotes:
         d3.select("#" + barFreqsID)
