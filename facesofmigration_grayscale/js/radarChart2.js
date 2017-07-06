@@ -131,7 +131,7 @@ function RadarChart(id, data, options) {
 	   .attr("x", 4)
 	   .attr("y", function(d){return -d*radius/cfg.levels;})
 	   .attr("dy", "12em")
-	   .style("font-size", "10px")
+	   .style("font-size", "0px")
 	   .attr("fill", "white")
 	   .text(function(d,i) { return Format(maxValue * d/cfg.levels); });
 

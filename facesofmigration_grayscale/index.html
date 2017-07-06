@@ -109,7 +109,7 @@
                 <h1>Milyen képek jelentek meg a migráció kapcsán az online médiában?</h1>
                 <p>Az elmúlt években napjaink részévé váltak a migránsokról szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmakat azért tartjuk külön elemzésre érdemesnek, mert a téma meghatározó volta ellenére honfitársaink többsége kizárólag a médiában megjelenő képeken találkozik migránsokkal, ezért úgy gondoljuk, gondolkodásukat nagyban befolyásolja, mit látnak.</p>
                 
-                <p>Az online médiában a tartalomba beszúrt képek szerepe nem csupán az illusztráció. Egy képpel ki lehet emelni, vagy alá lehet támasztani a cikk mondandóját, gyakran ez kerül a közösségi médiában megosztott posztok előnézeti képébe is. Az elmélyült olvasást megelőző, vagy éppen helyettesítő pásztázó olvasás során a képeknek nagy jelentősége van. Több mint tízezer kép alapos áttekintése nagyon idő- és költségigényes feladat lenne, ezért fordultunk az automatikus tartalomelemzés eszköztárához. Projektünk célja, hogy képet adjunk arról, milyen témákba szerveződik a képi információ. Képeink egyik legjellemzőbb tulajdonsága, hogy emberek szerepelnek rajtuk. Vannak olyanok, főleg politikusok, akiket a szövegben nevesítenek. Másokat (főleg a migránsokat, a velük kapcsolatba kerülő szervezetek tagjait) csak gyűjtőfogalommal említenek (pl. migránsok, rendőrök, civilek, hivatalnokok), de a képeken megjelennek. Arcfelismerésre alapozott elemzéseinkkel őket szeretnénk bemutatni.</p>
+                <p>Az online médiában a tartalomba beszúrt képek szerepe nem csupán az illusztráció. Egy képpel ki lehet emelni, vagy alá lehet támasztani a cikk mondandóját, gyakran ez kerül a közösségi médiában megosztott posztok előnézeti képébe is. Az elmélyült olvasást megelőző, vagy éppen helyettesítő pásztázó olvasás során a képeknek nagy jelentősége van. Több mint tízezer kép alapos áttekintése nagyon idő- és költségigényes feladat lenne, ezért fordultunk az automatikus tartalomelemzés eszköztárához. Projektünk célja, hogy képet adjunk arról, milyen témákba szerveződik a képi információ. Képeink egyik legjellemzőbb tulajdonsága, hogy emberek szerepelnek rajtuk. Vannak olyanok, főleg politikusok, akiket a szövegben nevesítenek. Másokat (főleg a migránsokat, a velük kapcsolatba kerülő szervezetek tagjait) csak gyűjtőfogalommal említenek (pl. migránsok, rendőrök, civilek, hivatalnokok), de a képeken megjelennek. Arcfelismerésre alapozott elemzéseinkkel róluk is szeretnénk szólni.</p>
                 
                 <h2>Az adatok</h2>
                 <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrűre kattintva). Az egyes oldalak keresőit használva migrációval kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett. A cikkekből kinyertük a képeket, ennek eredménye 42.311 darab kép lett, azonban ennek jelentős része nem releváns. Ezek egy részét egyszerű heurisztikával tudtuk szűrni, mivel bizonyos méret alatt képek általában céges logók, vagy az adott oldal nevét jelenítik meg. A szövegekhez hasonlóan itt is hasonlósági hasonló csoportokat képeztünk (a simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is tudunk azonosítani nem releváns képeket, így 10330 egyedi képünk maradt, melyek 30.009 alkalommal fordulnak elő a cikkekben.</p>
@@ -313,42 +313,42 @@
       <div class="item active">
         <img src="img/img_topics/topic00.jpg" style="width: 65vw; height: 33vw;">
          <div class="carousel-caption">
-      	     <h3>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h3>
+      	     <h4>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h4>
         </div>
       </div>
 
         <div class="item">
             <img src="img/img_topics/topic01.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-                <h3>Kisebb csoportok: egyéni portrék, menekültek, média személyiségek, vallási vezetők</h3>
+                <h4>Kisebb csoportok: egyéni portrék, menekültek, média személyiségek, vallási vezetők</h4>
             </div>
         </div>
         
         <div class="item">
             <img src="img/img_topics/topic02.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-      	         <h3>Úton: vonat, busz, hajó, gyalog</h3>
+      	         <h4>Úton: vonat, busz, hajó, gyalog</h4>
             </div>
         </div>
         
         <div class="item">
             <img src="img/img_topics/topic03.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-      	         <h3>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h3>
+      	         <h4>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h4>
             </div>
         </div>
         
         <div class="item">
             <img src="img/img_topics/topic04.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-      	         <h3>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h3>
+      	         <h4>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h4>
             </div>
         </div>
 
         <div class="item">
             <img src="img/img_topics/topic05.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-      	         <h3>Adatok: táblázatok, térképek, grafikonok, screenshotok, rajzok, illusztrációk</h3>
+      	         <h4>Adatok: táblázatok, térképek, grafikonok, screenshotok, rajzok, illusztrációk</h4>
             </div>
         </div>
 
@@ -356,7 +356,7 @@
         <div class="item">
             <img src="img/img_topics/topic06.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-      	         <h3>Átkelés: kerítésnél, határon, tengeren</h3>
+      	         <h4>Átkelés: kerítésnél, határon, tengeren</h4>
             </div>
         </div>
     </div>
@@ -384,7 +384,7 @@
     <section id="pyramids" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Az egyes topikokból kinyert arcok</h2>
+                <h2>Válogatás az egyes topikokból kinyert arcképekből</h2>
             </div>
             </div>
             
@@ -404,42 +404,42 @@
       <div class="item active">
         <img src="img/face_topics/topic00.jpg" style="width: 65vw; height: 33vw;">
          <div class="carousel-caption">
-      	     <h3>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h3>
+      	     <h4>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h4>
         </div>
       </div>
 
         <div class="item">
             <img src="img/face_topics/topic01.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-                <h3>Kisebb csoportok: egyéni portrék, menekültek, média személyiségek, vallási vezetők</h3>
+                <h4>Kisebb csoportok: egyéni portrék, menekültek, média személyiségek, vallási vezetők</h4>
             </div>
         </div>
         
         <div class="item">
             <img src="img/face_topics/topic02.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-      	         <h3>Úton: vonat, busz, hajó, gyalog</h3>
+      	         <h4>Úton: vonat, busz, hajó, gyalog</h4>
             </div>
         </div>
         
         <div class="item">
             <img src="img/face_topics/topic03.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-      	         <h3>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h3>
+      	         <h4>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h4>
             </div>
         </div>
         
         <div class="item">
             <img src="img/face_topics/topic04.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-      	         <h3>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h3>
+      	         <h4>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h4>
             </div>
         </div>
         
         <div class="item">
             <img src="img/face_topics/topic06.jpg" style="width: 65vw; height: 33vw;">
             <div class="carousel-caption">
-      	         <h3>Átkelés: kerítésnél, határon, tengeren</h3>
+      	         <h4>Átkelés: kerítésnél, határon, tengeren</h4>
             </div>
         </div>
     </div>
@@ -510,42 +510,42 @@
       <div class="item active">
           <iframe src="iframes/korfa_00_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
-      	         <h3>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h3>
+      	         <h4>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h4>
             </div>
       </div>
 
       <div class="item">
         <iframe src="iframes/korfa_01_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
          <div class="carousel-caption">
-      	         <h3>Kisebb csoportok, egyéni portrék: menekültek, média személyiségek, vallási vezetők</h3>
+      	         <h4>Kisebb csoportok, egyéni portrék: menekültek, média személyiségek, vallási vezetők</h4>
             </div>
       </div>
     
       <div class="item">
         <iframe src="iframes/korfa_02_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
-      	         <h3>Úton: vonat, busz, hajó, gyalog</h3>
+      	         <h4>Úton: vonat, busz, hajó, gyalog</h4>
             </div>
       </div>
         
         <div class="item">
         <iframe src="iframes/korfa_03_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
-      	         <h3>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h3>
+      	         <h4>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h4>
             </div>
       </div>
         
         <div class="item">
         <iframe src="iframes/korfa_04_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
-      	         <h3>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h3>
+      	         <h4>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h4>
             </div>
       </div>
         
         <div class="item">
         <iframe src="iframes/korfa_06_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
            <div class="carousel-caption">
-      	         <h3>Átkelés: kerítésnél, határon, tengeren	ut</h3>
+      	         <h4>Átkelés: kerítésnél, határon, tengeren</h4>
             </div>
       </div>
     </div>

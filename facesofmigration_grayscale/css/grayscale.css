@@ -25,7 +25,7 @@ h6 {
   margin: 0 0 35px;
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 1px;
 }
 p {
@@ -119,6 +119,15 @@ p {
  }
 }
 
+.carousel-caption {
+    top: 90% !important;
+    transform: translateY(-50%);
+    font-size: 4px;
+    font-weight: 1500;
+    text-align: center;
+    bottom: initial;
+    color: coral;
+}
 
 a {
   color: coral;
