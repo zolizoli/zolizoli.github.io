@@ -68,7 +68,7 @@ var LDAvis = function(to_select, data_or_file_name) {
         highlight_opacity = 0.6;
 
     // topic/lambda selection names are specific to *this* vis
-    var topic_select = to_select + "-topic";
+    var topic_select = to_select;
     var lambda_select = to_select + "-lambda";
 
     // get rid of the # in the to_select (useful) for setting ID values
@@ -82,7 +82,7 @@ var LDAvis = function(to_select, data_or_file_name) {
 
     var leftPanelID = visID + "-leftpanel";
     var barFreqsID = visID + "-bar-freqs";
-    var topID = visID + "-top";
+    var topID = visID;
     var lambdaInputID = visID + "-lambdaInput";
     var lambdaZeroID = visID + "-lambdaZero";
     var sliderDivID = visID + "-sliderdiv";
@@ -310,8 +310,8 @@ var LDAvis = function(to_select, data_or_file_name) {
 
         // new definitions based on fixing the sum of the areas of the default topic circles:
         var newSmall = Math.sqrt(0.02*mdsarea*circle_prop/Math.PI);
-        var newMedium = Math.sqrt(0.05*mdsarea*circle_prop/Math.PI);
-        var newLarge = Math.sqrt(0.10*mdsarea*circle_prop/Math.PI);
+        var newMedium = Math.sqrt(0.02*mdsarea*circle_prop/Math.PI);
+        var newLarge = Math.sqrt(0.02*mdsarea*circle_prop/Math.PI);
         var cx = 10 + newLarge,
             cx2 = cx + 1.5 * newLarge;
 
@@ -336,12 +336,12 @@ var LDAvis = function(to_select, data_or_file_name) {
                 .style("opacity", 0.3);
         };
 
-        circleGuide(newSmall, "Small");
-        circleGuide(newMedium, "Medium");
+        circleGuide(newSmall, "Large");
+        circleGuide(newMedium, "Large");
         circleGuide(newLarge, "Large");
 
-        var defaultLabelSmall = "2%";
-        var defaultLabelMedium = "5%";
+        var defaultLabelSmall = "10%";
+        var defaultLabelMedium = "10%";
         var defaultLabelLarge = "10%";
 
         d3.select("#" + leftPanelID).append("text")
@@ -378,7 +378,14 @@ var LDAvis = function(to_select, data_or_file_name) {
         var points = mdsplot.selectAll("points")
                 .data(mdsData)
                 .enter();
-
+        var topicnames = {1 : "Nagyobb csoportok",
+                         2 : "Családok, stb.",
+                         3 : "Úton",
+                         4 : "Kisebb csoportok",
+                         5 : "Egyéni portrék",
+                         6 : "Adatok",
+                         7 : "Átkelés",};
+        
         // text to indicate topic
         points.append("text")
             .attr("class", "txt")
@@ -388,14 +395,14 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("y", function(d) {
                 return (yScale(+d.y) + 4);
             })
-            .attr("stroke", "black")
+            .attr("stroke", "white")
             .attr("opacity", 1)
             .style("text-anchor", "middle")
-            .style("font-size", "30px")
+            .style("font-size", "15px")
             .style("fontWeight", 100)
             .attr("fill", "white")
             .text(function(d) {
-                return d.topics;
+                return topicnames[d.topics];
             });
 
         // draw circles
@@ -433,7 +440,7 @@ var LDAvis = function(to_select, data_or_file_name) {
                     topic_off(document.getElementById(old_topic));
                 }
                 // make sure topic input box value and fragment reflects clicked selection
-                document.getElementById(topicID).value = vis_state.topic = d.topics;
+                document.getElementById(topicID).value = vis_state.topic = topicnames[d.topics];
                 state_save(true);
                 topic_on(this);
             })
@@ -624,7 +631,7 @@ var LDAvis = function(to_select, data_or_file_name) {
 
             var topicLabel = document.createElement("label");
             topicLabel.setAttribute("for", topicID);
-            topicLabel.setAttribute("style", "font-family: sans-serif; font-size: 14px");
+            topicLabel.setAttribute("style", "font-family: sans-serif; font-size: 50x");
             //topicLabel.innerHTML = "Selected Topic: <span id='" + topicID + "-value'></span>";
             topicDiv.appendChild(topicLabel);
 
@@ -1273,9 +1280,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             d3.selectAll(to_select + " .txt")
                 .data(size)
                 .transition()
-                .style("font-size", function(d) {
-                    return 13;
-                });
+                .style("font-size", "15px");
 
             // Alter the guide
             d3.select(to_select + " .circleGuideTitle")
@@ -1297,7 +1302,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             // Change sizes of topic numbers:
             d3.selectAll(to_select + " .txt")
                 .transition()
-                .style("font-size", "13px");
+                .style("font-size", "15px");
 
             // Go back to the default guide
             d3.select(to_select + " .circleGuideTitle")
