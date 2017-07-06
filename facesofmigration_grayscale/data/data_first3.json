@@ -1,105 +1,105 @@
 [
  
    {
-      "key":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+      "key":"Kisebb csoportok: családok, stb",
       "values":[
          {
-            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "device":"Kisebb csoportok: családok, stb",
             "reason":"Düh",
             "value":47.8
          },
          {
-            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "device":"Kisebb csoportok: családok, stb",
             "reason":"Szomorúság",
             "value":20.1
          },
          {
-            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "device":"Kisebb csoportok: családok, stb",
             "reason":"Semleges",
             "value":11.4
          },
          {
-            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "device":"Kisebb csoportok: családok, stb",
             "reason":"Öröm",
             "value":8.5
          },
          {
-            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "device":"Kisebb csoportok: családok, stb",
             "reason":"Félelem",
             "value":7.1
          },
          {
-            "device":"Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai",
+            "device":"Kisebb csoportok: családok, stb",
             "reason":"Undor",
             "value":4.3
          }
       ]
    },
    {
-      "key":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+      "key":"Nagyobb csoportok",
       "values":[
          {
-            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "device":"Nagyobb csoportok",
             "reason":"Düh",
             "value":71.3
          },
          {
-            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "device":"Nagyobb csoportok",
             "reason":"Szomorúság",
             "value":7.7
          },
          {
-            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "device":"Nagyobb csoportok",
             "reason":"Semleges",
             "value":5.8
          },
          {
-            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "device":"Nagyobb csoportok",
             "reason":"Öröm",
             "value":5.1
          },
          {
-            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "device":"Nagyobb csoportok",
             "reason":"Félelem",
             "value":5.1
          },
          {
-            "device":"Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton",
+            "device":"Nagyobb csoportok",
             "reason":"Undor",
             "value":4.9
          }
       ]
    },
    {
-      "key":"Úton: vonat, busz, hajó, gyalog",
+      "key":"Úton",
       "values":[
          {
-            "device":"Úton: vonat, busz, hajó, gyalog",
+            "device":"Úton",
             "reason":"Düh",
             "value":61.0
          },
          {
-            "device":"Úton: vonat, busz, hajó, gyalog",
+            "device":"Úton",
             "reason":"Szomorúság",
             "value":9.9
          },
          {
-            "device":"Úton: vonat, busz, hajó, gyalog",
+            "device":"Úton",
             "reason":"Semleges",
             "value":8.5
          },
          {
-            "device":"Úton: vonat, busz, hajó, gyalog",
+            "device":"Úton",
             "reason":"Öröm",
             "value":8.0
          },
          {
-            "device":"Úton: vonat, busz, hajó, gyalog",
+            "device":"Úton",
             "reason":"Félelem",
             "value":8.0
          },
          {
-            "device":"Úton: vonat, busz, hajó, gyalog",
+            "device":"Úton",
             "reason":"Undor",
             "value":4.2
          }

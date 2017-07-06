@@ -69,7 +69,7 @@ function RadarChart(id, data, options) {
 	var allAxis = (data[0].map(function(d, i){ return d[axisName] })),	//Names of each axis
 		total = allAxis.length,					//The number of different axes
 		radius = Math.min(cfg.w/2, cfg.h/2), 			//Radius of the outermost circle
-		Format = d3.format('s'),			 	//Percentage formatting
+		Format = d3.format('.f1'),			 	//Percentage formatting
 		angleSlice = Math.PI * 2 / total;			//The width in radians of each "slice"
 
 	//Scale for the radius
@@ -130,9 +130,9 @@ function RadarChart(id, data, options) {
 	   .attr("class", "axisLabel")
 	   .attr("x", 4)
 	   .attr("y", function(d){return -d*radius/cfg.levels;})
-	   .attr("dy", "0.4em")
+	   .attr("dy", "12em")
 	   .style("font-size", "10px")
-	   .attr("fill", "#737373")
+	   .attr("fill", "white")
 	   .text(function(d,i) { return Format(maxValue * d/cfg.levels); });
 
 	/////////////////////////////////////////////////////////
@@ -262,9 +262,11 @@ function RadarChart(id, data, options) {
 			tooltip
 				.attr('x', newX)
 				.attr('y', newY)
+                .style('fill', 'coral')
+                .style("font-size", "20px")
 				.text(Format(d[value]))
 				.transition().duration(200)
-				.style('opacity', 1);
+				.style('opacity', 10);
 		})
 		.on("mouseout", function(){
 			tooltip.transition().duration(200)
@@ -274,6 +276,7 @@ function RadarChart(id, data, options) {
 	//Set up the small tooltip for when you hover over a circle
 	var tooltip = g.append("text")
 		.attr("class", "tooltip")
+        .attr("fill", "white")
 		.style("opacity", 0);
 	
 	/////////////////////////////////////////////////////////
@@ -313,6 +316,7 @@ function RadarChart(id, data, options) {
 			//Dim all blobs
 			d3.selectAll(".radarArea")
 				.transition().duration(200)
+                .attr("fill", "white")
 				.style("fill-opacity", 0.1); 
 			//Bring back the hovered over blob
 			d3.select("." + data[d][0][areaName].replace(/\s+/g, ''))
