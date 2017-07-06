@@ -140,10 +140,10 @@
      <section id="topic-intro" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h1>Hogyan kerültek a képek topikokba?</h1>
+                <h1>A képi tartalomelemzésről</h1>
                 
                 <h2>Metaforák</h2>
-                <p>Ide lehetne arról írni, hogy milyen metaforákat találtak mások, ezeket akartuk mi is automatice keresni, azonosítani, másokat találni</p>
+                <p>IDE JÖN MAJD NÓRA RÉESZE</p>
                 
                 <h2>Hogyan lesz a képből szöveg?</h2>
                 <p>Ahhoz, hogy topik modellt építhessünk a képekre, szükségünk volt a képi információ szövegesre "konvertálására". Ehhez a <a href="https://www.clarifai.com/">Clarifai</a> címkéző szolgáltatását vettük igénybe, ami miden képhez tartalmilag releváns címkéket ad konfidencia értékkel. A címkék közül csak a legalább 0.75-ös konfidenciaértékűeket tartottuk meg, továbbá kizártuk azokat, melyek kevesebb mint 25 képhez tartoztak. A címkék egy része elsőre nem tűnt relevánsnak, pl. nagyon gyakori elem volt a "fesztivál", "koncert", "strand". A képeket megvizsgálva arra jutottunk, hogy ezeket szisztematikusan alkalmazza a Clarifai, csak éppen korpuszunk sajátosságait nem tudja figyelembe venni, mivel a legtöbb képcímkéző algoritmus nem menekülteket ábrázoló adathalmazon tanítják be. A "fesztivál" esetében pl. általában kordon előtti tömeget, vagy sátrakat láthatunk, ezért a címkét átneveztük "tömegjelenetek"-re és hasonlóan jártunk el a többi problémás címkével is.</p>
