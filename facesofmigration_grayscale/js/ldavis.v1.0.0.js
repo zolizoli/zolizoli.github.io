@@ -1274,7 +1274,7 @@ var LDAvis = function(to_select, data_or_file_name) {
                 .data(size)
                 .transition()
                 .style("font-size", function(d) {
-                    return +d;
+                    return 13;
                 });
 
             // Alter the guide
