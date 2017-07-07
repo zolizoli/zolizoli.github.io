@@ -76,7 +76,6 @@ p {
     flex-direction: column;
     background-color: black;
     flex-wrap: wrap;
-    overflow: hidden;
 
  }
 }
@@ -89,7 +88,6 @@ p {
     flex-direction: row;
     background-color: black;
     flex-wrap: wrap;
-    overflow: hidden;
 
  }
 }
