@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
 
@@ -12,7 +12,7 @@
     <title>A migráció arcai</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -234,13 +234,13 @@
                 <h2>A topikokra jellemző címkék</h2>
             </div>
         </div>
-        <iframe src="iframes/ldaviz.html" style="height: 55vw; width: 75vw;" frameBorder="0" scrolling="no"></iframe>
-        </div>
+        <iframe src="iframes/ldaviz.html" style="height: 55vw; width: 75vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
     </section>
-
+    </div>
+    
      <!-- Topic Graph -->
     <div class="row-container">
-    <section id="pyldavis" class="container content-section text-center">
+    <section id="gephi" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Hogy kapcsolódnak egymáshoz az egyes topikok?</h2>
@@ -252,9 +252,9 @@
             <object data="img/topic_graph.svg" type="image/svg+xml" style="width: 70vw; height: 50vw;">
                 <img src="img/fallback_graph.png" />
             </object>
-        </div>
     </section>
-
+    </div>
+    
     <!-- Pictures Title -->
     <section id="picture-title" class="content-section text-center">
         <div class="picture-section">
@@ -501,7 +501,7 @@
        <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="Topik 0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
@@ -513,42 +513,42 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-          <iframe src="iframes/korfa_00_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
+          <iframe src="iframes/korfa_00_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
            <div class="carousel-caption">
       	         <h4>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h4>
             </div>
       </div>
 
       <div class="item">
-        <iframe src="iframes/korfa_01_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_01_nvd3.html" style="height: 100vh; width: 100vw" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
          <div class="carousel-caption">
       	         <h4>Kisebb csoportok, egyéni portrék: menekültek, média személyiségek, vallási vezetők</h4>
             </div>
       </div>
     
       <div class="item">
-        <iframe src="iframes/korfa_02_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_02_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
            <div class="carousel-caption">
       	         <h4>Úton: vonat, busz, hajó, gyalog</h4>
             </div>
       </div>
         
         <div class="item">
-        <iframe src="iframes/korfa_03_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_03_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
            <div class="carousel-caption">
       	         <h4>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h4>
             </div>
       </div>
         
         <div class="item">
-        <iframe src="iframes/korfa_04_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_04_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
            <div class="carousel-caption">
       	         <h4>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h4>
             </div>
       </div>
         
         <div class="item">
-        <iframe src="iframes/korfa_06_nvd3.html" style="height: 50vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
+        <iframe src="iframes/korfa_06_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
            <div class="carousel-caption">
       	         <h4>Átkelés: kerítésnél, határon, tengeren</h4>
             </div>
@@ -564,12 +564,11 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
-</div>
-        </div>
-    </section>
-    
-    
+    </div>
+    </div>
+    </div>
+    </section>    
+
     <!-- UNHCR data -->
     <div class="uhncr-container">
     <section id="unhcr" class="container content-section text-center">
@@ -579,9 +578,10 @@
                 <p>Az <a href="http://www.unhcr.org/">UNHCR (The UN Refugee Agency)</a> folyamatosan követi a hazájukat elhagyni kényszerülők számának alakulását, s immáron kiterjedt adatbázissal rendelkezik az 1951 – 2016 közötti időperiódusra vonatkozóan. Az adatok viszonylag széles bázisra vonatkoznak, többek között menekültekre, menedékkérőkre, hontalan valamint lakóhelyüket elhagyni kényszerült személyekre is. Az adatbázis <a href="http://popstats.unhcr.org">online ingyenesen elérhető</a>, s részletes információkat tartalmaz többek között az említett egyének korára, nemére vonatkozóan. Az EU tagállamok korfáját az alábbi ábra mutatja – korcsoportok tekintetében a bontás sajnos kevésbé precíz, az aktív korosztályra vonatkozóan az adatbázisban csupán egy 18-59 éves ömlesztett kategóriát különítettek el.</p>
         </div>
         </div>    
-        <iframe src="iframes/unhcr.html" style="height: 80vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
-        </div>
+        <iframe src="iframes/unhcr.html" style="height: 80vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+        
     </section>
+    </div>
 
     <!-- Eurostat data -->
     <div class="euro-container">
@@ -592,9 +592,9 @@
                 <p>Az <a href="http://ec.europa.eu">Eurostat oldalán</a> szintén találhatunk a migrációhoz kapcsolódó adatokat a 2008 és 2017 közti időperiódusra vonatkozóan. Az oldalon havi bontásban vizsgálhatjuk a menedékkérők számát országonként, melyen belül egyéb szempontok szerinti megoszlásokat is nézhetünk (például nem, korcsoport, nemzetiség). Az alábbi ábra elkészítésénél az Eurostat adatok Magyarországra vonatkozó részére koncentráltunk: kumuláltuk a 2015-2016 során menedéket kérők számát nem-korcsoport kategóriák szerint, valamint kiszámoltuk, hogy az egyes kategóriák hogyan aránylanak a menedékkérők teljes számához. Hasonló mintára, a korábban látott 6 topiknál is elkészítettük az Eurostatnál használt korcsoportokat, s megvizsgáltuk összesítve az egyes nem-korcsoport kategóriák arányait. Jól látható, hogy a 18-34 éves korcsoport nem csupán a képek alapján tekinthető hangsúlyosnak, hanem az Eurostat adatok alapján is domináns részét képezi a menedékkérőknek. E csoporton belül azonban némi eltérés tapasztalható a nők arányát tekintve: az e csoportba tartozó nők a képeken felülreprezentáltak a tényleges menedékkérők arányához viszonyítva. Szintén érdemes szemügyre venni, hogy a fiatalabb korcsoportok alulreprezentáltak a képek esetében, ám a menedékkérők közt viszonylag magas arányban fordulnak elő – a kettő közti különbség azonban részben annak is köszönhető, hogy a korcsoport osztályozónk a 14 évesnél fiatalabb emberek esetében hajlamos tévedni.</p>
         </div>
         </div>
-        <iframe src="iframes/eurostat.html" style="height: 100vw; width: 100vw;" frameBorder="0" scrolling="no"></iframe>
-        </div>
+        <iframe src="iframes/eurostat.html" style="height: 80vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
     </section>
+    </div>
 
     <!-- Emotions Title -->
     <section id="emotions-title" class="content-section text-center">
@@ -626,106 +626,21 @@
                 <h2>Az egyes topikokban talált arcokon azonosított emóciók</h2>
             </div>
         </div>
-            <iframe src="iframes/radarChart_first3.html" style="height: 100vw; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
-        </div>
+            <iframe src="iframes/radarChart_first3.html" style="height: 80vh; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
     </section>
+    </div>
+    
     <div class="emo-container">
     <section id="radars" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
             </div>
         </div>
-            <iframe src="iframes/radarChart_last3.html" style="height: 100vw; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
-        </div>
+            <iframe src="iframes/radarChart_last3.html" style="height: 80vh; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
     </section>
+    </div>
 
-<!--
-     Sonification 
-    <div class="sonic-container">
-    <section id="sonic" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Az emóciók alakulása időben - szonifikáció</h2>
-            </div>
-        </div>
-            <iframe src="iframes/sonic.html" style="height: 100vw; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
-        </div>
-    </section>
--->
-<!--    
-    
-    <section id="tools-title" class="content-section text-center">
-        <div class="tools-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h1>Eszközök, források</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="tools-intro" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h3>Az adatgyűjtés és előfeldolgozás során használt eszközök</h3>
-                <p>
-                    <ul>
-                        <li>Egy eszköz</li>
-                        <li>Két eszköz</li>
-                        <li>Három eszköz</li>
-                        <li>Négy eszköz</li>
-                        <li>Öt eszköz</li>
-                    </ul>
-                </p>
-                
-                <h3>Topik modellezéshez használt eszközök</h3>
-                <p>
-                    <ul>
-                        <li>Egy eszköz</li>
-                        <li>Két eszköz</li>
-                        <li>Három eszköz</li>
-                        <li>Négy eszköz</li>
-                        <li>Öt eszköz</li>
-                    </ul>
-                </p>
-                
-                <h3>A képfeldolgozáshoz használt eszközök</h3>
-                <p>
-                    <ul>
-                        <li>Egy eszköz</li>
-                        <li>Két eszköz</li>
-                        <li>Három eszköz</li>
-                        <li>Négy eszköz</li>
-                        <li>Öt eszköz</li>
-                    </ul>
-                </p>
-                
-                <h3>Az adatvizualizációhoz használt eszközök</h3>
-                <p>
-                    <ul>
-                        <li>Egy eszköz</li>
-                        <li>Két eszköz</li>
-                        <li>Három eszköz</li>
-                        <li>Négy eszköz</li>
-                        <li>Öt eszköz</li>
-                    </ul>
-                </p>
-                
 
-                <h3>A felhasznált képek forrásai</h3>
-                <p>
-                    <ul>
-                        <li>Egy eszköz</li>
-                        <li>Két eszköz</li>
-                        <li>Három eszköz</li>
-                        <li>Négy eszköz</li>
-                        <li>Öt eszköz</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-    </section>
--->
     <!-- Credits -->
     <section id="credits" class="content-section text-center">
         <div class="download-section">
