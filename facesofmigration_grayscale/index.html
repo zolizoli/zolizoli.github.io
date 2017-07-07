@@ -145,7 +145,8 @@
                 <h2>Metaforák</h2>
                 <p>IDE JÖN MAJD NÓRA RÉESZE</p>
                 
-                <h2>Hogyan lesz a képből szöveg?</h2>
+                <h2>Hogyan lesz a<br />
+                    képből szöveg?</h2>
                 <p>Ahhoz, hogy topik modellt építhessünk a képekre, szükségünk volt a képi információ szövegesre "konvertálására". Ehhez a <a href="https://www.clarifai.com/">Clarifai</a> címkéző szolgáltatását vettük igénybe, ami miden képhez tartalmilag releváns címkéket ad konfidencia értékkel. A címkék közül csak a legalább 0.75-ös konfidenciaértékűeket tartottuk meg, továbbá kizártuk azokat, melyek kevesebb mint 25 képhez tartoztak. A címkék egy része elsőre nem tűnt relevánsnak, pl. nagyon gyakori elem volt a "fesztivál", "koncert", "strand". A képeket megvizsgálva arra jutottunk, hogy ezeket szisztematikusan alkalmazza a Clarifai, csak éppen korpuszunk sajátosságait nem tudja figyelembe venni, mivel a legtöbb képcímkéző algoritmus nem menekülteket ábrázoló adathalmazon tanítják be. A "fesztivál" esetében pl. általában kordon előtti tömeget, vagy sátrakat láthatunk, ezért a címkét átneveztük "tömegjelenetek"-re és hasonlóan jártunk el a többi problémás címkével is.</p>
                 
                 <h2>Mi az a topik modell</h2>
@@ -243,7 +244,9 @@
     <section id="gephi" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Hogy kapcsolódnak egymáshoz az egyes topikok?</h2>
+                <h2>Hogyan kapcsolódnak<br />
+                    egymáshoz az<br />
+                    egyes topikok?</h2>
                 <p>Az egyes topikok közötti kapcsolat alapja az, hogy hányszor fordultak elő együtt egy-egy kép első három, leginkább jellemző topikjaként. <br />
                 Az "Adatok" topik központi szerepének oka egyszertű; sokszor szerepel valamilyen felirat a képeken, legyen az útjelzőtábla, felirat egy pólón, vagy egy névtábla egy előadó előtt.
                 </p>
@@ -276,7 +279,7 @@
                 <h2>Arcfelismerés</h2>
                 <p>Kipróbáltunk több szabadon elérhető arcfelismerő eszközt is, de végül az <a href="http://opencv.org/">OpenCV</a> könyvtár előre trénelt Haar Cascade modellje mellett döntöttünk. Döntésünk során figyelembe kellett vennünk, hogy képeink többsége "spontán" pillanatokat ábrázol, azaz a rajtuk látható emberek gyakran nem a kamera felé néznek éppen, fejükön kalap, kapucni, vagy fejkendő van, esetleg éppen esznek s kezüket szájuk előtt tartják. A Haar Cascade a szakirodalom szerint akár 90%-os pontosságú is lehet, ezt esetünkben bizonyosan meg sem közelíti, de a többi vizsgált algoritmussal szemben sokkal kisebb fals pozitív eredményt adott, ezért választottuk ki.</p>
                 
-                <h2>Nem- és kormeghatározás</h2>
+                <h2>Nem- és<br />kormeghatározás</h2>
                 <p>Több szabadon elérhető eszköz megvizsgálása után úgy döntöttünk, hogy saját osztályozót készítünk a nem- és kormeghatározáshoz. Tanító adathalmazunk az <a href="https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/">IMDB-WIKI-500k</a> adathalmaz volt, ami az IMDB adatbázisban szereplő színészek képeit és a róluk elérhető adatokat (nem, kor) tartalmazza. Az adatokon a <a href="https://keras.io/">Keras</a> deep learning keretrendszer segítségével egy-egy <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">konvolúciós neurális hálót</a> tréneltünk nem- és kormeghatározásra. A kormeghatározás pontossága 81%-os, osztályozónk főleg a 14 évesnél fiatalabb és a hatvannál idősebb emberek esetében téved, illetve a 30-40 közötti kategórákban. A nemazonosítás pontossága 77%, itt a 14 alattiak esetében szinte mindig férfi, a 60 felettieknél miding női címkét ad vissza algoritmusunk. Ha öszevetjük a kor és nem adatokat, azt látjuk, hogy a nők esetében +/- 5 évet, a férfiak esetében +/- 3 évet téved átlagosan algoritmusunk.</p>
                 
                 <h2>Emóciók</h2>
@@ -498,7 +501,7 @@
             </div>
             </div>
             
-       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+       <div id="myCarousel" data-script="vendor/bootstrap/js/bootstrap.min.js" class="carousel lazyload" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
