@@ -117,8 +117,14 @@
                 <h2>Eredményeink értelmezéséhez</h2>
                 <p>A begyűjtött képeket automatikusan dolgoztuk fel, hiszen több mint tízezer kép alapos megvizsgálása rengeteg időt venne igénybe. Az alkalmazott algoritmusok jellemzője, hogy nem adnak 100%-os eredményt. Fontos kiemelni, hogy mind a demográfiai jellemzők, mind az emóciók kinyerése nagyban függ az arcfelismerő algoritmustól, hiszen feltételezik, hogy egy emberi arcot ábrázoló képet kapnk. Így nem tudnak számot adni a ki nem nyert arcokról, de a hibásan arcként azonosított alakzatokra is eredményt adnak. Az automatikus tartalomelemzés nem helyettesítheti az emberi munkát, csupán segítheti azzal, hogy jól előfeldolgozott adatokat ad értő kezekbe. Vizsgálatunkban erőforrások hiányában minimális a humán értelmezés, éppen ezért az itt közölt eredmények csak tájékoztató jellegűek.</p>
                 
-                <h2>Technikai megjegyzés</h2>
-                <p>Gyűlölöm a Firefox-ot, ha abban akarod nézni ezt, akkor nem tudok veled mihez kezdeni. Használj Chrome-ot...</p>
+                <h2>TODOs</h2>
+                <p>
+                    <ul>
+                        <li>Firefoxban továbbra sem megy az iframe-s carousel</li>
+                        <li>A pyldavis-ben meg kellene találni a topikokat, most találomra vannak elnevezve</li>
+                        <li>Szövegeket átnézni</li>
+                    </ul>
+                </p>
 
             </div>
         </div>
@@ -515,47 +521,47 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active">
-          <iframe src="iframes/korfa_00_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
-           <div class="carousel-caption">
-      	         <h4>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h4>
-            </div>
+        <div class="item active">
+        <iframe src="iframes/korfa_00_nvd3.html" style="width: 100vw; height: 60vw;" frameborder="0" scrolling="0"></iframe>
+         <div class="carousel-caption">
+      	     <h4>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h4>
+        </div>
       </div>
 
-      <div class="item">
-        <iframe src="iframes/korfa_01_nvd3.html" style="height: 100vh; width: 100vw" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
-         <div class="carousel-caption">
-      	         <h4>Kisebb csoportok, egyéni portrék: menekültek, média személyiségek, vallási vezetők</h4>
+        <div class="item">
+            <iframe src="iframes/korfa_01_nvd3.html" style="width: 100vw; height: 60vw;"  frameborder="0" scrolling="0"></iframe>
+            <div class="carousel-caption">
+                <h4>Kisebb csoportok: egyéni portrék, menekültek, média személyiségek, vallási vezetők</h4>
             </div>
-      </div>
-    
-      <div class="item">
-        <iframe src="iframes/korfa_02_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
-           <div class="carousel-caption">
+        </div>
+        
+        <div class="item">
+            <iframe src="iframes/korfa_02_nvd3.html" style="width: 100vw; height: 60vw;"  frameborder="0" scrolling="0"></iframe>
+            <div class="carousel-caption">
       	         <h4>Úton: vonat, busz, hajó, gyalog</h4>
             </div>
-      </div>
+        </div>
         
         <div class="item">
-        <iframe src="iframes/korfa_03_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
-           <div class="carousel-caption">
+            <iframe src="iframes/korfa_03_nvd3.html" style="width: 100vw; height: 60vw;" frameborder="0" scrolling="0"></iframe>
+            <div class="carousel-caption">
       	         <h4>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h4>
             </div>
-      </div>
+        </div>
         
         <div class="item">
-        <iframe src="iframes/korfa_04_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
-           <div class="carousel-caption">
+            <iframe src="iframes/korfa_04_nvd3.html" style="width: 100vw; height: 60vw;" frameborder="0" scrolling="0"></iframe>
+            <div class="carousel-caption">
       	         <h4>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h4>
             </div>
-      </div>
+        </div>
         
         <div class="item">
-        <iframe src="iframes/korfa_06_nvd3.html" style="height: 100vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
-           <div class="carousel-caption">
+            <iframe src="iframes/korfa_06_nvd3.html" style="width: 100vw; height: 60vw;" frameborder="0" scrolling="0"></iframe>
+            <div class="carousel-caption">
       	         <h4>Átkelés: kerítésnél, határon, tengeren</h4>
             </div>
-      </div>
+        </div>
     </div>
 
     <!-- Left and right controls -->
@@ -571,6 +577,8 @@
     </div>
     </div>
     </section>    
+
+
 
     <!-- UNHCR data -->
     <div class="uhncr-container">
@@ -683,10 +691,8 @@
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
+    
+    
     <!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
 

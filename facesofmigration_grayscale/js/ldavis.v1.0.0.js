@@ -350,7 +350,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr('class', "circleGuideTitle")
             .style("text-anchor", "left")
             .style("fontWeight", "bold")
-            .text("Marginal topic distribtion")
+            .text("Marginális eloszlás")
             .attr("fill", "white");
         d3.select("#" + leftPanelID).append("text")
             .attr("x", cx2 + 10)
@@ -496,7 +496,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", barguide.width + 5)
             .attr("y", mdsheight + 10 + barguide.height/2)
             .style("dominant-baseline", "middle")
-            .text("Overall term frequency")
+            .text("A címke gyakorisága a teljes korpuszban")
             .attr("fill", "white");
 
         d3.select("#" + barFreqsID).append("rect")
@@ -510,7 +510,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", barguide.width/2 + 5)
             .attr("y", mdsheight + 10 + (3/2)*barguide.height + 5)
             .style("dominant-baseline", "middle")
-            .text("Estimated term frequency within the selected topic")
+            .text("A címke gyakorisága a kiválasztott topikban")
             .attr("fill", "white");
 
         // footnotes:
@@ -522,7 +522,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", 0)
             .attr("y", mdsheight + 10 + (6/2)*barguide.height + 5)
             .style("dominant-baseline", "middle")
-            .text("1. saliency(term w) = frequency(w) * [sum_t p(t | w) * log(p(t | w)/p(t))] for topics t; see Chuang et. al (2012)")
+            .text("")
             .attr("fill", "white");
         d3.select("#" + barFreqsID)
             .append("a")
@@ -532,7 +532,7 @@ var LDAvis = function(to_select, data_or_file_name) {
             .attr("x", 0)
             .attr("y", mdsheight + 10 + (8/2)*barguide.height + 5)
             .style("dominant-baseline", "middle")
-            .text("2. relevance(term w | topic t) = \u03BB * p(w | t) + (1 - \u03BB) * p(w | t)/p(w); see Sievert & Shirley (2014)")
+            .text("")
             .attr("fill", "white");
 
         // Bind 'default' data to 'default' bar chart
@@ -1284,7 +1284,7 @@ var LDAvis = function(to_select, data_or_file_name) {
 
             // Alter the guide
             d3.select(to_select + " .circleGuideTitle")
-                .text("Conditional topic distribution given term = '" + term.innerHTML + "'");
+                .text("A '" + term.innerHTML + "' kifejezés feltételes eloszlása");
         }
 
         function term_off(term) {
@@ -1306,7 +1306,7 @@ var LDAvis = function(to_select, data_or_file_name) {
 
             // Go back to the default guide
             d3.select(to_select + " .circleGuideTitle")
-                .text("Marginal topic distribution")
+                .text("Marginális eloszlás")
                 .attr("fill", "white");
             d3.select(to_select + " .circleGuideLabelLarge")
                 .text(defaultLabelLarge)
