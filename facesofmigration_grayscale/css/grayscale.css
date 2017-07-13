@@ -312,6 +312,21 @@ a:focus {
   -o-background-size: cover;
 }
 
+.metaphores-section {
+  width: 100%;
+  height: 130%;
+  padding: 300px 0;
+  color: coral;
+  background: url(../img/04tools_g.jpg) no-repeat center center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+
+
 .topic-section {
   width: 100%;
   height: 130%;
