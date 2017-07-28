@@ -204,7 +204,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/headerpicg.jpg) no-repeat bottom center scroll;
+  background: url(../img/header/bevezetes.jpg) no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -304,7 +304,7 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: coral;
-  background: url(../img/img_topics/topic06.jpg) no-repeat center center scroll;
+  background: url(../img/header/impresszum.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -317,7 +317,7 @@ a:focus {
   height: 130%;
   padding: 300px 0;
   color: coral;
-  background: url(../img/04tools_g.jpg) no-repeat center center scroll;
+  background: url(../img/header/metaforak.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -332,7 +332,7 @@ a:focus {
   height: 130%;
   padding: 300px 0;
   color: coral;
-  background: url(../img/picturesg.jpg) no-repeat center center scroll;
+  background: url(../img/header/topikok.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -346,7 +346,7 @@ a:focus {
   height: 130%;
   padding: 300px 0;
   color: coral;
-  background: url(../img/01topicmodels.jpg) no-repeat center center scroll;
+  background: url(../img/header/kepek.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -360,7 +360,7 @@ a:focus {
   height: 130%;
   padding: 300px 0;
   color: coral;
-  background: url(../img/02demographics.jpg) no-repeat center center scroll;
+  background: url(../img/header/demografia.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -373,7 +373,7 @@ a:focus {
   height: 130%;
   padding: 300px 0;
   color: coral;
-  background: url(../img/03emotions_g.jpg) no-repeat center center scroll;
+  background: url(../img/header/emociok.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
