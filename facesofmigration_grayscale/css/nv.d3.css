@@ -257,8 +257,8 @@ svg.nvd3-svg {
         -ms-user-select: none;
             user-select: none;
     display: block;
-    width:80%;
-    height:80%;
+    width:60%;
+    height:60%;
 }
 
 /********************

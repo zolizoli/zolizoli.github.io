@@ -13,12 +13,12 @@
         }
         svg {
             display: block;
+			margin: auto;
         }
         html, body, #chart1, svg {
-            margin: 0px;
             padding: 10px;
             height: 50vw;
-            width: 70vw;
+            width: 90vw;
             color: white;
         }
     </style>
@@ -133,7 +133,9 @@
         chart.yAxis.axisLabel('Képek száma');
         chart.xAxis.axisLabel('Korcsoport').axisLabelDistance(20);
 
-        d3.select('#chart1 svg')
+        d3.select('#chart1 svg').attr("align","center")
+			.attr("width", "30%")
+			.attr("height", "30%")
             .datum(long_short_data)
             .call(chart);
         
