@@ -1,0 +1,6 @@
+import os
+from http.server import SimpleHTTPRequestHandler, HTTPServer
+os.chdir("D:/Precognox/Projects/facesofmigration_grayscale")
+server_address = ('', 8000)
+httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
+httpd.serve_forever()
