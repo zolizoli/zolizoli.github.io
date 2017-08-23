@@ -29,6 +29,9 @@ path {
     opacity: 1;
 }
 
+@charset "utf-8";
+
+
 /* IPython Notebook CSS to allow visualization to fit */
 /* I'm open to a better way of accomplishing this goal... */
 /*.container { width:1350px !important; }

@@ -379,12 +379,12 @@ var LDAvis = function(to_select, data_or_file_name) {
                 .data(mdsData)
                 .enter();
         var topicnames = {1 : "Nagyobb csoportok",
-                         2 : "Családok, stb.",
+                         2 : "Egyéni portrék, kis csoportok",
                          3 : "Úton",
-                         4 : "Kisebb csoportok",
-                         5 : "Egyéni portrék",
-                         6 : "Adatok",
-                         7 : "Átkelés",};
+                         4 : "Adatok",
+                         5 : "Kisebb csoportok: egyéni portrék",
+                         6 : "Átkelés",
+                         7 : "Kisebb csoportok: családok, egyének",};
         
         // text to indicate topic
         points.append("text")
@@ -396,10 +396,10 @@ var LDAvis = function(to_select, data_or_file_name) {
                 return (yScale(+d.y) + 4);
             })
             .attr("stroke", "white")
-            .attr("opacity", 10)
+		    .attr("opacity", 20)
             .style("text-anchor", "middle")
-            .style("font-size", "12px")
-            .style("fontWeight", 100)
+            .style("font-size", "11px")
+            .style("fontWeight", 1)
             .attr("fill", "white")
             .text(function(d) {
                 return topicnames[d.topics];

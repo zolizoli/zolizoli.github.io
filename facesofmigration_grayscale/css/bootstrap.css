@@ -1118,8 +1118,8 @@ img {
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.carousel-inner > .item  > img,
+.carousel-inner > .item  > a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -6250,7 +6250,7 @@ button.close {
           transition: .6s ease-in-out left;
 }
 .carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.carousel-inner > .item  > a > img {
   line-height: 1;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
@@ -6750,8 +6750,14 @@ button.close {
   }
 }
 @media print {
-  .hidden-print {
+  .hidden-print f{
     display: none !important;
   }
 }
+
+
+
+
+
+
 /*# sourceMappingURL=bootstrap.css.map */

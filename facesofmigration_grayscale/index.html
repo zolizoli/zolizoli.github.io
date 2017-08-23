@@ -8,7 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+     <!-- facebook data -->
+    <meta property="og:title" content="A migráció arcai" />
+    <meta property="og:description" content="Az online médiában 2014.09.27. és 2016.06.11. megjelent 42.845 cikkből kinyert 10330 kép elemzése. 
+                                             Topikok * Demográfiai adatok * Emóciók" />
+    <meta property="og:image" content="https://gitlab.precognox.com/nlp_projects/facesofmigration_grayscale/blob/master/img/headerpicg.jpg"/>
+    <!-- end of facebook data -->
 
+    
     <title>A migráció arcai</title>
 
     <!-- Bootstrap Core CSS -->
@@ -33,6 +41,20 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+    
+    <!-- facebook data -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=1293217000755969";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- end of facebook data -->
+    
+    
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -110,22 +132,24 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Milyen képek jelentek meg a migráció kapcsán az online médiában?</h1>
-                <p>Az elmúlt években napjaink részévé váltak a menekültekről szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. között az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmak elemzését kiemelten fontosnak tartjuk, hiszen a menekültekkel való személyes találkozás hiányában a megjelenő vizuális tartalmak döntően alakítják a csoportról kialakított elképzeléseket és befolyásolják a menekültválsággal kapcsolatos közvéleményt.</p>
+                <p>Az elmúlt években napjaink részévé váltak a menekültekről szóló hírek. Elemzésünkben 2014.09.27. és 2016.06.11. között az online médiában megjelent cikkek képeit vizsgáljuk. Egy korábbi írásunkban már foglalkoztunk a cikkek szövegeivel a <a href="https://www.nyest.hu/hirek/migransok-menekulok-bevandorlok-mit-sulykol-a-media">nyesten</a> és készítettünk egy <a href="http://labs.precognox.com/migration-dashboard/#/dashboard">dashboardot</a> is, amivel bárki felfedezheti, milyen tartalmak jelentek meg a vizsgált időszak alatt. A képi tartalmak elemzését kiemelten fontosnak tartjuk, hiszen a menekültekkel való személyes találkozás hiányában a megjelenő vizuális tartalmak döntően alakítják a csoportról kialakított elképzeléseket és befolyásolják a menekültválsággal kapcsolatos közvéleményt. </p>
                 
-                <p>Az online médiatartalmakba beszúrt képek szerepe nem csupán az objektív illusztráció: egy kép alátámaszthatja a cikk állításait, vagy kiemelheti a tartalom bizonyos pontjait. Emellett gyakran ezek a képek kerülnek a közösségi médiában megosztott posztok előnézeti képébe is. Az elmélyült olvasást megelőző, vagy éppen helyettesítő pásztázó olvasás során a képeknek nagy jelentősége van. Több mint tízezer kép alapos áttekintése nagyon idő- és költségigényes feladat lenne, ezért fordultunk az automatikus tartalomelemzés eszköztárához. Projektünk célja, hogy képet adjunk arról, milyen témákba szerveződik a képi információ. Képeink egyik legjellemzőbb tulajdonsága, hogy emberek szerepelnek rajtuk. Vannak olyanok, főleg politikusok, akiket a szövegben nevesítenek. Másokat (főleg a menekülteket, a velük kapcsolatba kerülő szervezetek tagjait) csak gyűjtőfogalommal említenek (pl. migránsok, rendőrök, civilek, hivatalnokok), de a képeken megjelennek. Arcfelismerésre alapozott elemzéseinkkel róluk is szeretnénk szólni.</p>
+                <p>Az online médiatartalmakba beszúrt képek szerepe nem csupán az objektív illusztráció: egy kép alátámaszthatja a cikk állításait, vagy kiemelheti a tartalma bizonyos pontjait. Emellett gyakran ezek a képek kerülnek a közösségi médiában megosztott posztok előnézeti képébe is. Az elmélyült olvasást megelőző, vagy éppen helyettesítő pásztázó olvasás során a képeknek nagy jelentősége van. Több mint tízezer kép alapos áttekintése nagyon idő- és költségigényes feladat lenne, ezért fordultunk az automatikus tartalomelemzés eszköztárához. Projektünk célja, hogy képet adjunk arról, milyen témákba szerveződik a képi információ. Képeink egyik legjellemzőbb tulajdonsága, hogy emberek szerepelnek rajtuk. Vannak olyanok, főleg politikusok, akiket a szövegben nevesítenek. Másokat (főleg a menekülteket, a velük kapcsolatba kerülő szervezetek tagjait) csak gyűjtőfogalommal említenek (pl. migránsok, rendőrök, civilek, hivatalnokok), de a képeken megjelennek. Arcfelismerésre alapozott elemzéseinkkel róluk is szeretnénk szólni. </p>
                 
-                <p>Mielőtt bemutatjuk saját eredményeinket, összefoglaljuk, hogy a hagyományos kvalitatív kutatások milyen képi metaforákat találtak a migránsokkal foglalkozó cikkeket elemezve. A topik modellezés módszerével, ha nem is tudjuk ezeket tökéletesen azonosítani, értelmes csoportosítást sikerült kialakítani a használt módszerrel; erről szól az első szakasz. Ezután a képeken azonosítható arcokkal foglalkoztunk: elsőként a kinyert demográfiai jellemzőket vetettük össze a menekültekről elérhető statisztikai adatokkal, majd topikonként azonosítottuk milyen emóciók jelennek meg az arcokon.</p>
+                <p>Mielőtt bemutatjuk saját eredményeinket, összefoglaljuk, hogy a hagyományos kvalitatív kutatások milyen képi metaforákat találtak a migránsokkal foglalkozó cikkeket elemezve Az első szakaszban bemutatjuk, hogy bár a metaforákat nem tudtuk tökéletesen azonosítani, de topik modellezés módszerével sikerült értelmezhető csoportosítást kialakítani.Ezután a képeken azonosítható arcokkal foglalkoztunk: elsőként a kinyert demográfiai jellemzőket vetettük össze a menekültekről elérhető statisztikai adatokkal, majd topikonként azonosítottuk, milyen emóciók jelennek meg az arcokon. </p>
+
                 
                 <h2>Az adatok</h2>        
                 
-                <p>A korpusz begyűjtéséhez igyekeztünk összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrőre kattintva). Az egyes oldalak keresőit használva a menekültválsággal kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns, stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett, melyekből összesen 42.311 képet nyertünk ki. Ezek jelentős része nem volt releváns, nagy részüket egyszerű heurisztikával tudtuk szűrni: bizonyos méret alatti képek általában az adott oldal vagy egyéb cég logója. Ahogy a szövegeknél is, itt is hasonlóság alapján csoportokat képeztünk (simhash algoritmust használtuk), melyeket annotátoraink néztek át, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is számos olyan képet szűrtünk ki, mely számunkra nem volt releváns - így 10330 egyedi képünk maradt, melyek 30.009 alkalommal fordulnak elő a cikkekben.</p>
-                
+                <p>A korpusz begyűjtéséhez igyekeztük összeszedni a nagyobb hazai online híroldalakat (a teljes listát a dashboardon lehet megtekinteni, a domain szűrőre kattintva). Az egyes oldalak keresőit használva a menekültválsággal kapcsolatos kulcsszavakra kerestünk (pl. bevándorló, migráns stb.), majd a találati oldalakat felhasználva begyűjtöttük a cikkeket. A nyers adatokat hasonlósági metrikát használva csoportosítottuk, majd a kapott csoportokat annotátoraink megvizsgálták, így kiszűrtük a nem releváns tartalmak javát és a duplikátumokat is. A gyűjtés eredménye 42.845 cikk lett, melyekből összesen 42.311 képet nyertünk ki. Ezek jelentős része nem volt releváns, nagy részüket egyszerű heurisztikával tudtuk szűrni: bizonyos méret alatti képek általában az adott oldal vagy egyéb cég logói. Ahogy a szövegeknél is, itt is csoportokat képeztünk hasonlóság alapján (simhash algoritmust használtuk), melyeket annotátoraink átnéztek, hogy ki tudjuk szűrni a duplikátumokat és a nem releváns képeket. Végezetül a cikkünkben később leírt topik modellezés segítségével is számos olyan képet szűrtünk ki, melyek számunkra nem voltak relevánsak - így 10330 egyedi képünk maradt, melyek összesen 0.009 alkalommal fordulnak elő a cikkekben. </p>
+
                 <h2>Eredményeink értelmezéséhez</h2>
                 
-                <p>Vizsgálatunkat <a href="http://www.mediakutato.hu/cikk/2015_04_tel/01_menekultek_moralis_panik.pdf">Bernáth és Messing</a>, valamint a <a href="http://www.crcb.eu/wp-content/uploads/2016/10/rfg_2015_paper_161001_.pdf">CRCB tanulmánya</a> Azonban a hagyományos tartalomelemzés kvalitatív módszereivel ellentétben, arra törekedtünk, hogy a lehető legtöbb képet legyünk képesek megvizsgálni. A begyűjtött több mint tízezer képet automatikusan, algoritmusok segítségével dolgoztuk fel. Az alkalmazott algoritmusok jellemzője, hogy nem adnak 100%-os eredményt. Fontos megjegyezni, hogy mind a demográfiai jellemzők, mind az emóciók kinyerése nagyban függ az arcfelismerő algoritmustól, hiszen feltételezik, hogy egy emberi arcot ábrázoló képen dolgoznak. Ebből következik, hogy egy hibásan arcként azonosított alakzatra is eredményt adnak. Az automatikus tartalomelemzés nem helyettesítheti az emberi munkát, csupán segítheti azzal, hogy jól előfeldolgozott adatokat ad értő kezekbe. Vizsgálatunk során minimális emberi munkát volt lehetőségünk alkalmazni, ezért az itt közölt eredmények csak tájékoztató jellegűek.</p>
+                <p>Vizsgálatunkat <a href="http://www.mediakutato.hu/cikk/2015_04_tel/01_menekultek_moralis_panik.pdf">Bernáth Gábor és Messing Vera</a>, valamint a <a href="http://www.crcb.eu/wp-content/uploads/2016/10/rfg_2015_paper_161001_.pdf">CRCB tanulmánya</a> ihlették. Azonban a hagyományos tartalomelemzés kvalitatív módszereivel ellentétben arra törekedtünk, hogy a lehető legtöbb képet legyünk képesek megvizsgálni. A begyűjtött több mint tízezer képet automatikusan, algoritmusok segítségével dolgoztuk fel. Az alkalmazott algoritmusok jellemzője, hogy nem adnak 100%-os eredményt. Fontos megjegyezni, hogy mind a demográfiai jellemzők, mind az emóciók kinyerése nagyban függ az arcfelismerő algoritmustól, hiszen ezek feltételezik, hogy egy emberi arcot ábrázoló képen dolgoznak. Ebből következik, hogy egy hibásan arcként azonosított alakzatra is eredményt adnak. Az automatikus tartalomelemzés nem helyettesítheti az emberi munkát, csupán segítheti azzal, hogy jól előfeldolgozott adatokat ad értő kezekbe. Vizsgálatunk során minimális emberi munkát volt lehetőségünk alkalmazni, ezért az itt közölt eredmények csak tájékoztató jellegűek. </p>
+
                 
                 <h2>Technikai megjegyzés</h2>
-                <p>A beágyazott interaktív vizualizációk miatt írásunk megtekintéséhez a Chrome böngészőt ajánljuk. Minden vizualizációnál megadjuk a linket annak különálló változatához, ha nem töltődik be a beágyazott verizó, érdemes a linket követni.</p>
+                <p>A beágyazott interaktív vizualizációk miatt írásunk megtekintéséhez a Chrome böngészőt ajánljuk. Minden vizualizációnál megadjuk a linket annak különálló változatához, ha nem töltődik be a beágyazott verzió, érdemes a linket követni. </p>
 
             </div>
         </div>
@@ -147,13 +171,14 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 
-                <p>Milyennek képzelünk egy átlagos menekültet? Milyennek képzeljük ruházatát, arcát? Miről árulkodik arckifejezése? Milyen szituációban látjuk magunk előtt? Milyen a testtartása? Fiatalként vagy idősként jelenik meg képzeletünkben, nőként vagy esetleg férfiként? Melyik etnikai csoporthoz tartozik? Vannak-e és ha vannak, hol vannak a hozzátartozói? Mit gondolunk, mi lehet a foglalkozása? Mi történhetett vele a múltban és mik a jelenlegi céljai?</p>
+                <p>Milyennek képzelünk egy átlagos menekültet? Milyennek képzeljük ruházatát, arcát? Miről árulkodik arckifejezése? Milyen szituációban látjuk magunk előtt? Milyen a testtartása? Fiatalként vagy idősként jelenik meg képzeletünkben, nőként vagy esetleg férfiként? Melyik etnikai csoporthoz tartozik? Vannak-e és ha vannak, hol vannak a hozzátartozói? Mit gondolunk, mi lehet a foglalkozása? Mi történhetett vele a múltban és mik a jelenlegi céljai? </p>
                 
-                <p>Az elmúlt két évben sokat hallottuk a <i>menekült, menedékkérő, migráns, bevándorló</i> szavakat. Általában a Közel-Kelet vagy Afrika háborús zónáiból vagy katasztrófa sújtotta övezeteiből tömegesen érkező szír, afgán, iraki, szomáliai, pakisztáni állampolgárokat értjük a felsorolt szavak alatt. Nagyjából rájuk gondolunk, őket látjuk magunk előtt: küllemükkel és feltételezett céljaikkal együtt. Ahhoz, hogy a menekültet elképzeljük többféle forrásból merítünk, ezek között a leglényegesebb tájékozódási pontot a média szolgáltatja. Egy képen a testtartás, a látható alak neme, életkora, ruházata, az őt körülvevő környezet jelekként állnak előttünk, amelyeket előzetes ismereteink alapján dekódolunk.  <i>Benyomásunk van az illetőről, hiszen úgy néz ki, mint egy másik alak, akivel már volt dolgunk.</i></p>
+                <p>Az elmúlt két évben sokat hallottuk a <i>menekült, menedékkérő, migráns, bevándorló</i> szavakat. Általában a Közel-Kelet vagy Afrika háborús zónáiból vagy katasztrófa sújtotta övezeteiből tömegesen érkező szír, afgán, iraki, szomáliai, pakisztáni állampolgárokat értjük a felsorolt szavak alatt. Nagyjából rájuk gondolunk, őket látjuk magunk előtt: küllemükkel és feltételezett céljaikkal együtt. Ahhoz, hogy a menekültet elképzeljük, többféle forrásból merítünk, és ezek között a leglényegesebb tájékozódási pontot a média szolgáltatja. Egy képen a testtartás, a látható alak neme, életkora, ruházata, az őt körülvevő környezet jelekként állnak előttünk, amelyeket előzetes ismereteink alapján dekódolunk. <i>Benyomásunk van az illetőről, hiszen úgy néz ki, mint egy másik alak, akivel már volt dolgunk.</i></p>
                 
-                <p>Fontos ugyanakkor tudatosítanunk, hogy a menekült alakja közvetítve ér el hozzánk, a benyomást nem kizárólag valós külleme befolyásolja, hanem éppen annyira a megjelenítés módja is, azaz a médiában megjelenő fotók beállításai. Ezek a fotók pedig meghatározzák fantáziálásainkat, azt a kialakított képet, amit egy ismeretlen csoport tagjairól képzelünk. Ugyanígy, megfordítva is igaz, az előfeltevéseink meghatározzák, milyen képek készülnek és jelennek meg a csoportról. A fotók beállításánál a fotós – vagy a szerkesztő, aki megannyi kép közül választ – egy tisztán értelmezhető, jól ismert beállítás mellett dönt, amely képes arra, hogy alátámassza a többségi társadalom kisebbséggel kapcsolatos prekoncepcióit, vagy hogy a befogadóban bizonyos (előre sejthető) érzelmi reakciót indítson be.</p>
+                <p>Fontos ugyanakkor tudatosítanunk, hogy a menekült alakja közvetítve ér el hozzánk, a benyomást nem kizárólag valós külleme befolyásolja, hanem éppen annyira a megjelenítés módja is, azaz a médiában megjelenő fotók beállításai. Ezek a fotók pedig meghatározzák azt a kialakított képet, amit egy ismeretlen csoport tagjairól képzelünk. Ugyanígy megfordítva is igaz, az előfeltevéseink meghatározzák, milyen képek készülnek és jelennek meg a csoportról. A fotók beállításánál a fotós – vagy a szerkesztő, aki megannyi kép közül választ – egy tisztán értelmezhető, jól ismert beállítás mellett dönt, amely képes arra, hogy alátámassza a többségi társadalom kisebbséggel kapcsolatos prekoncepcióit, vagy hogy a befogadóban bizonyos (előre sejthető) érzelmi reakciót indítson be. </p>
                 
-                <p>A társadalomtudományi szakirodalom a médiában látható képek jellegzetes kompozícióit különíti el, egy kisebbségi csoport vizuális megjelenítésének tipikus stratégiáit, amelyek különféle érzelmi asszociációkat váltanak ki, vagy igazolják, támogatják a kisebbségi csoport jellemzőiről szóló (a szöveges tartalomban is megjelenő) feltevéseket. Ezekre kerestünk példákat a korpuszban.</p>
+                <p>A társadalomtudományi szakirodalom elkülöníti a médiában látható képek olyan jellegzetes kompozícióit, melyek egy kisebbségi csoport vizuális megjelenítésének tipikus stratégiáit ábrázolják. Ezek a kompozíciók különféle érzelmi asszociációkat váltanak ki, vagy igazolják, támogatják a kisebbségi csoport jellemzőiről szóló (a szöveges tartalomban is megjelenő) feltevéseket. Ezekre kerestünk példákat a korpuszban. </p>
+
             </div>
         </div>
     </section>
@@ -210,9 +235,11 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <p>Képek egy csoportja illusztrálja a menekültek Európába vezető viszontagságos útját. Láthatjuk a Földközi tengeren hánykódó lélekvesztőket, kisebb csoportokat mezőkön, erdőkön keresztül vagy sínek mellett gyalogolni.</p>
                 
-                <p>Az úton levő ember ábrázolása, a vándorlás jól ismert motívum a keresztény-zsidó kultúrkörben, egészen a 20. század irodalmáig rengeteg történetben és festményen megjelenik meg. A vándorlás egyben (például a mitologikus és bibliai eredetű történetekben) kiűzetés, bűnhődés (amelyet természetesen a bűn elkövetése előz meg). A későbbi (például a 20. századi) irodalmi példák a fizikai vándorlást a lélek fejlődésével, a viszontagságokból való okulással azonosítják.</p>
+                <p>Képek egy csoportja illusztrálja a menekültek Európába vezető viszontagságos útját. Láthatjuk a Földközi-tengeren hánykódó lélekvesztőket, kisebb csoportokat mezőkön, erdőkön keresztül vagy sínek mellett gyalogolni. </p>
+
+                <p>Az úton levő ember ábrázolása, a vándorlás jól ismert motívum a keresztény-zsidó kultúrkörben, egészen a 20. századig rengeteg történetben és festményen megjelent. A vándorlás egyben (például a mitologikus és bibliai eredetű történetekben) kiűzetés, bűnhődés (amelyet természetesen a bűn elkövetése előz meg). A későbbi (például a 20. századi) irodalmi példák a fizikai vándorlást a lélek fejlődésével, a viszontagságokból való okulással azonosítják. </p>
+
                 
                 <h2>Folyam</h2>
                 <div id="flodCarousel" class="carousel slide" data-ride="carousel">
@@ -268,7 +295,8 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <p>Szövegekben sokszor használják a bevándorlók tömegére a folyam, hullám, áradás szavakat. A képi megjelenítés támogatja ezt: menekültek tömegeit láthatjuk a fotókon, akik hosszú és széles sorokban menetelnek. A tömegben állók arca alig vagy egyáltalán nem látszik, személyiségük és személyes történetük elhanyagolható. Számosságuk és kinézetük miatt a menekültek nagy csoportjai veszélyesnek és fenyegetőnek látszanak, amit csak megerősít a szövegekben megjelenő természeti katasztrófa metaforája (folyam, áradás). Mindez a befogadóban félelmet kelt, a védtelenség és tehetetlenség érzését, amely az idegenellenesség növekedéséhez vezet.</p>
+                <p>Szövegekben sokszor használják a bevándorlók tömegére a folyam, hullám, áradás szavakat. A képi megjelenítés támogatja ezt: menekültek tömegeit láthatjuk a fotókon, akik hosszú és széles sorokban menetelnek. A tömegben állók arca alig vagy egyáltalán nem látszik, személyiségük és személyes történetük elhanyagolható. Számosságuk és kinézetük miatt a menekültek nagy csoportjai veszélyesnek és fenyegetőnek látszanak, amit csak megerősít a szövegekben megjelenő természeti katasztrófa metaforája (folyam, áradás). Mindez a befogadóban félelmet kelt, a védtelenség és tehetetlenség érzését, amely az idegenellenesség növekedéséhez vezet. </p>
+
                 <h2>Járványveszély</h2>
                 <div id="infectionCarousel" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
@@ -299,7 +327,7 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <p>A szöveges tartalomban és a menekültek, bevándorlókhoz kapcsolt félelmek okaiként is sokszor megjelenik a járványveszély és a közegészségügyi kockázat. Képeken is látható mindez: hatósági személyeket látunk kesztyűben és fehér ruhában menekültekkel dolgozni, vagy a menekülteket hasonló, az egészségügyi kockázatra utaló kiegészítőkkel. Ez a megjelenítési mód növeli a többségi társadalom félelmét és az idegennel szembeni távolságtartás indokoltságát, hiszen <i>ő nem csak más, ő az életünket is veszélyezteti</i>.</p>
+                <p>A szöveges tartalomban és a menekültekhez, bevándorlókhoz kapcsolt félelmek okaiként is sokszor megjelenik a járványveszély és a közegészségügyi kockázat. Képeken is látható mindez: hatósági személyeket látunk kesztyűben és fehér ruhában menekültekkel dolgozni, vagy a menekülteket hasonló, az egészségügyi kockázatra utaló kiegészítőkkel. Ez a megjelenítési mód növeli a többségi társadalom félelmét és az idegennel szembeni távolságtartás indokoltságát, hiszen ő nem csak más, ő az életünket is veszélyezteti. </p>
              
                 <h2>Kriminalizálás</h2>
                 <div id="criminalCarousel" class="carousel slide" data-ride="carousel">
@@ -371,10 +399,9 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                
-                <p>Gyakran láthatóak a menekültek olyan fotókon, amelyeket valamilyen rendőrségi eljárás során készítettek. Ezeken arcuk ki van takarva vagy háttal állnak, motozás közben láthatóak vagy megbilincselve. A beállítás ezáltal implicit vagy explicit azt az üzenetet közvetíti, hogy a menekültek bűnözők - annak ellenére, hogy lezárult bírósági eljárás igazolná a tényeket.</p>
-             
-                <p>A magyar sajtó előszeretettel közli a police.hu-n megjelent híreket és képeket, ahol a menekültek kriminalizáló bemutatása kizárólagos. Ezek a tartalmak a sajtóba kerülve sokszor leegyszerűsítőek, szenzációhajhászok és egyben erőteljesen növelik a menekültekkel szembeni előítéletességet, hiszen a potenciális veszély, bűnelkövetés, erőszakosság válik a csoport beazonosítható jellemzőjévé.</p>
+                <p>Gyakran láthatóak a menekültek olyan fotókon, amelyeket valamilyen rendőrségi eljárás során készítettek. Ezeken arcuk ki van takarva vagy háttal állnak, motozás közben láthatóak vagy megbilincselve. A beállítás ezáltal implicite vagy explicite azt az üzenetet közvetíti, hogy a menekültek bűnözők – anélkül, hogy lezárult bírósági eljárás igazolná a tényeket. </p>
+
+                <p>A magyar sajtó előszeretettel közli a police.hu-n megjelent híreket és képeket, ahol a menekültek kriminalizáló bemutatása kizárólagos. Ezek a tartalmak a sajtóba kerülve sokszor leegyszerűsítőek, szenzációhajhászok és egyben erőteljesen növelik a menekültekkel szembeni előítéletességet, hiszen a potenciális veszély, bűnelkövetés, erőszakosság válik a csoport beazonosítható jellemzőjévé. </p>
                 
                 <h2>Arc és személyiség nélkül</h2>
                 <div id="alienationCarousel" class="carousel slide" data-ride="carousel">
@@ -411,9 +438,9 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <p>Egy személy elidegenítő ábrázolásának hívható az, amikor nem látható (kitakart) vagy nem kivehető (homályos vagy messziről látható) egy képen az arca, így csupán egy csoport elmosódott alakjaként jelenik meg, emberi mivoltától és személyiségétől megfosztva. Gyakori stratégia kisebbségek ábrázolása esetében ez, legyen szó romákról, vagy bevándorlókról, esetleg menekültekről. A média hajlamos az adott kisebbség (vélt vagy valós) etnikai és kulturális különbségeit kihangsúlyozni, a csoportot egy társadalmi problémával vagy veszéllyel azonosítani. A megjelenítés során eltűnnek a csoport tagjai, a személyek esetében csakis a csoportba tartozás jellemző karaktere kerül előtérbe, összetett személyiségük, élettörténetük, céljaik eltörpülnek vagy eltűnnek a csoportosítás alapját képző jegy mellett és az általános probléma, veszély egydimenziós hordozóivá válnak. A befogadóban tárgyilagos viszony alakul ki a csoporttal és a csoport jellemzőivel rendelkező személyekkel szemben.</p>
-             
-                <p>Ilyen jellemző, elidegenítő és dehumanizáló beállítás még, amikor a menekülteket nagy csoportokban ábrázolják vagy passzív testhelyzetben (például földön fekve), hőkamerás felvételeken vagy grafikonokon számszerűsíthető adatokként.</p>
+                <p>Egy személy elidegenítő ábrázolásának hívható az, amikor nem látható (kitakart) vagy nem kivehető (homályos vagy messziről látható) egy képen az arca, így csupán egy csoport elmosódott alakjaként jelenik meg, emberi mivoltától és személyiségétől megfosztva. Gyakori stratégia kisebbségek ábrázolása esetében ez, legyen szó romákról vagy bevándorlókról, esetleg menekültekről. A média hajlamos az adott kisebbség (vélt vagy valós) etnikai és kulturális különbségeit kihangsúlyozni, a csoportot egy társadalmi problémával vagy veszéllyel azonosítani. A megjelenítés során eltűnnek a csoport tagjai, a személyek esetében csakis a csoportba tartozás jellemző karaktere kerül előtérbe, összetett személyiségük, élettörténetük, céljaik eltörpülnek vagy eltűnnek a csoportosítás alapját képző jegy mellett és az általános probléma, veszély egydimenziós hordozóivá válnak. A befogadóban tárgyilagos viszony alakul ki a csoporttal és a csoport jellemzőivel rendelkező személyekkel szemben. </p>
+
+                <p>Ilyen jellemző, elidegenítő és dehumanizáló beállítás még az is, amikor a menekülteket nagy csoportokban ábrázolják vagy passzív testhelyzetben (például földön fekve), hőkamerás felvételeken vagy grafikonokon számszerűsíthető adatokként. </p>
              
                 <h2>A menekült anya</h2>
                  <div id="motherCarousel" class="carousel slide" data-ride="carousel">
@@ -466,7 +493,8 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <p>A tömeges és arctalan beállítás a menekültek ábrázolásának egyik véglete, míg a másik véglet a legvédtelenebb csoportok - anyák és gyermekeik - megjelenítése. A képek sajnálatot és együttérzést váltanak ki a befogadóban. Míg fiatal férfiak csoportja inkább a veszély érzetét kelti a többségi társadalom tagjaiban, a nők és gyerekek esetében ez nem jut eszünkbe, ők egyértelmű áldozatai a viszontagságos körülményeknek. A megjelenítés triviális, mivel ismerős alakokat látunk rajta: egyszerű elképzelni a gyermekes anyák helyzetét, dilemmáikat, így velük szemben nagyon könnyen kialakul az empátia.</p>
+                <p>A tömeges és arctalan beállítás a menekültek ábrázolásának egyik véglete, míg a másik véglet a legvédtelenebb csoportok - anyák és gyermekeik - megjelenítése. A képek sajnálatot és együttérzést váltanak ki a befogadóban. Míg fiatal férfiak csoportja inkább a veszély érzetét kelti a többségi társadalom tagjaiban, a nők és gyerekek esetében ez nem jut eszünkbe, ők egyértelmű áldozatai a viszontagságos körülményeknek. A megjelenítés triviális, mivel ismerős alakokat látunk rajta: egyszerű elképzelni a gyermekes anyák helyzetét, dilemmáikat, így velük szemben nagyon könnyen kialakul az empátia. </p>
+
              
                 <h2>Fotóriport</h2>
                 <div id="picsCarousel" class="carousel slide" data-ride="carousel">
@@ -513,7 +541,7 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <p>Részletes, összetett és ennél fogva érzékeny megjelenítési mód a fotó riport. Ebben a kategóriában közeli képeket láthatunk egy személyről, a családjáról és mindennapi tevékenységeiről. Egészen közelről látható arca, a többségi társadalom számára is nagyon jól ismerhető, egyszerű helyzetekben látható (például étkezés vagy sportolás közben). A képek támogathatnak egy hosszabb írásos riportot, vagy a képek alatt látunk rövidebb szövegeket, amelyek értelmezik a látottakat. A menekült itt főszereplő, neve és arca is ismertté válik, részleteket tudhatunk meg arról, hogy például mi történt vele és családjával, hogy érzi magát és milyen jövőképpel rendelkezik.</p>
+                <p>Részletes, összetett és ennél fogva érzékeny megjelenítési mód a fotóriport. Ebben a kategóriában közeli képeket láthatunk egy személyről, a családjáról és mindennapi tevékenységeiről. Arca egészen közelről látható a többségi társadalom számára is nagyon jól ismerhető, egyszerű helyzetekben látható (például étkezés vagy sportolás közben). A képek támogathatnak egy hosszabb írásos riportot, vagy a képek alatt látunk rövidebb szövegeket, amelyek értelmezik a látottakat. A menekült itt főszereplő, neve és arca is ismertté válik, részleteket tudhatunk meg arról, hogy például mi történt vele és családjával, hogy érzi magát és milyen jövőképpel rendelkezik. </p>
              
                 <h2>Statisztikák</h2>
                 <div id="statsCarousel" class="carousel slide" data-ride="carousel">
@@ -548,7 +576,9 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <p>A kutatás során is elkülöníthetővé vált a képek egy bizonyos csoportja, amelyen grafikonok, térképek, kördiagramok és egyéb ábrák láthatóak. Ezek az ábrák, ha a menekültekkel kapcsolatos információt jelenítenek meg elidegenítően hatnak, hiszen az emberi arcok és történetek helyett csupán számok és trendek jelennek meg (például: hány ember érkezett az elmúlt 2 évben, mekkora összeget kell ellátásukra fordítani). Másrészt ezek az ábrák sokszor olyan cikkeket, témákat illusztrálnak, amelyek a humanitárius problémát gazdasági, politikai kérdésként interpretálják (amely természetesen része a menekültválság problémájának, de nem kizárólagos kontextusa), amely tovább erősíti a menekültek csoportjának tárgyiasító leírását.</p>
+                <p>A kutatás során is elkülöníthetővé vált a képek egy bizonyos csoportja, amelyen grafikonok, térképek, kördiagramok és egyéb ábrák láthatóak. Ezek az ábrák, ha a menekültekkel kapcsolatos információt jelenítenek meg, elidegenítően hatnak, hiszen az emberi arcok és történetek helyett csupán számok és trendek jelennek meg (például: hány ember érkezett az elmúlt 2 évben, mekkora összeget kell ellátásukra fordítani). Másrészt ezek az ábrák sokszor olyan cikkeket, témákat illusztrálnak, amelyek a humanitárius problémát gazdasági, politikai kérdésként interpretálják (amely természetesen része a menekültválság problémájának, de nem kizárólagos kontextusa), amely tovább erősíti a menekültek csoportjának tárgyiasító leírását. </p>
+
+                
                 <h2>Más, a kompetens szereplő megszólalása</h2>
                 <div id="expertCarousel" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
@@ -592,7 +622,7 @@
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                <p>Televíziós riportok során gyakori, hogy a kisebbségi csoport tagjai nem szólalnak meg, csupán vágóképeken illusztrálják a róluk szóló híradásokat. A problémáról megkérdezett szereplők – akiket a hírszerkesztő kompetensként ítél meg a kérdésben – a többségi társadalom tagjai: ismert emberek, befolyásos személyek, kormánytagok, politikusok. A média által tematizált, a kisebbséget érintő kérdéseket bemutató cikkek gyakori szereplői ők. Az általunk feldolgozott korpusz jelentős arányban tartalmaz képeket kormányzati politikusokról, más hazai és nemzetközi politikai szereplőkről.</p>
+                <p>Televíziós riportok során gyakori, hogy a kisebbségi csoport tagjai nem szólalnak meg, csupán vágóképeken illusztrálják a róluk szóló híradásokat. A problémáról megkérdezett szereplők – akiket a hírszerkesztő kompetensként ítél meg a kérdésben – a többségi társadalom tagjai: ismert emberek, befolyásos személyek, kormánytagok, politikusok. A média által tematizált, a kisebbséget érintő kérdéseket bemutató cikkek gyakori szereplői ők. Az általunk feldolgozott korpusz jelentős arányban tartalmaz képeket kormányzati politikusokról, más hazai és nemzetközi politikai szereplőkről. </p>
             </div>
         </div>   
     </section>
@@ -616,13 +646,14 @@
                 
                 <h2>Hogyan lesz a<br />
                     képből szöveg?</h2>
-                <p>Ahhoz, hogy topik modellt építhessünk a képekre, szükségünk volt a képi információ szövegesre "konvertálására". Ehhez a <a href="https://www.clarifai.com/">Clarifai</a> címkéző szolgáltatását vettük igénybe, ami minden képhez tartalmilag releváns címkéket ad konfidencia értékkel. A címkék közül csak a legalább 0.75-öt elérő értékkel rendelkezőket tartottuk meg, továbbá kizártuk azokat, melyek kevesebb mint 25 képhez tartoztak. A címkék egy része elsőre nem tűnt relevánsnak, például nagyon gyakori elem volt a "fesztivál", "koncert", "strand". A képeket megvizsgálva arra jutottunk, hogy ezeket szisztematikusan alkalmazza a Clarifai, és korpuszunk sajátosságait nem képes figyelembe venni. A képcímkéző algoritmus nem menekülteket ábrázoló adathalmazon lett betanítva, például gyakori volt, hogy kordon előtti tömeget vagy sátrakat a “fesztivál” taggel látott el. A problémás címkéket átneveztük, például a “fesztivál” taget kicseréltük “tömegjelenetekre”.</p>
+                <p>Ahhoz, hogy topik modellt építhessünk a képekre, szükségünk volt a képi információ szövegessé "konvertálására". Ehhez a <a href="https://www.clarifai.com/">Clarifai</a> címkéző szolgáltatását vettük igénybe, ami minden képhez tartalmilag releváns címkéket ad a relevanciát kifejező konfidencia értékekkel. A címkék közül csak a legalább 0.75-öt elérő értékkel rendelkezőket tartottuk meg, továbbá kizártuk azokat, melyek kevesebb mint 25 képhez tartoztak. A címkék egy része elsőre nem tűnt relevánsnak, például nagyon gyakori elem volt a "fesztivál", "koncert", "strand". A képeket megvizsgálva arra jutottunk, hogy ezeket szisztematikusan alkalmazza a Clarifai, és korpuszunk sajátosságait nem képes figyelembe venni. A képcímkéző algoritmus nem menekülteket ábrázoló adathalmazon lett betanítva, például gyakori volt, hogy kordon előtti tömeget vagy sátrakat a “fesztivál” címkével látott el. A problémás címkéket átneveztük, például a “fesztivál” címkét kicseréltük “tömegjelenetekre”. </p>
                 
                 <h2>Mi az a topik modell</h2>
-                <p>A topik modell tulajdonképp olyan statisztikai módszert takar, melynek segítségével felfedezhetjük, hogy milyen absztrakt témák jelennek meg dokumentumainkban. A modell legfőbb feltételezése, hogy minden egyes szöveg adott n különböző téma keverékéből tevődik össze, valamint hogy minden a dokumentumokban előforduló téma jól meghatározható szókészlettel rendelkezik: bizonyos szavak nagyobb valószínűséggel, mások kisebb eséllyel fordulnak elő benne. Esetünkben a dokumentumokat a képekhez tartozó címkék jelentették, melyekből a topikokat – pontosabban az azokat jellemző szavak listáját, illetve a dokumentumokat felépítő topikok arányait – látens Dirichlet allokáció (LDA) segítségével nyertük ki. Mint minden gépi tanulási feladatban, a legnagyobb kihívást itt is az algoritmus paramétereinek (topikok száma, alfa és éta stb.) beállítása jelentette. Az optimalizálás során először nyolc topikot azonosítottunk, ám hamar észrevettük, hogy az egyik ún. szemét (junk) topik, mely a témához nem kapcsolódó képeket tartalmaz. E képeket kizártuk és az LDA-t újrafuttattuk korpuszon, immár az adatok hét topikba rendezését kérve. Bővebben a topik modellek hátteréről a <a href="http://labs.precognox.com/kuruc-info-visualization/">Kuruc.info romaellenes témáit bemutató vizualizációnkon</a></p>
+                <p>A topik modell tulajdonképp olyan statisztikai módszert takar, melynek segítségével felfedezhetjük, hogy milyen absztrakt témák jelennek meg dokumentumainkban. A modell legfőbb feltételezése, hogy minden egyes szöveg adott n különböző téma keverékéből tevődik össze, valamint hogy minden, a dokumentumokban előforduló téma jól meghatározható szókészlettel rendelkezik: bizonyos szavak nagyobb valószínűséggel, mások kisebb eséllyel fordulnak elő benne. Esetünkben a dokumentumokat a képekhez tartozó címkék jelentették, melyekből a topikokat – pontosabban az azokat jellemző szavak listáját, illetve a dokumentumokat felépítő topikok arányait – látens Dirichlet allokáció (LDA) segítségével nyertük ki. Mint minden gépi tanulási feladatban, a legnagyobb kihívást itt is az algoritmus paramétereinek (topikok száma, alfa és éta stb.) beállítása jelentette. Az optimalizálás során először nyolc topikot azonosítottunk, ám hamar észrevettük, hogy az egyik ún. szemét (junk) topik, mely a témához nem kapcsolódó képeket tartalmaz. E képeket kizártuk és az LDA-t újrafuttattuk korpuszon, immár az adatok hét topikba rendezését kérve. Bővebben a topik modellek hátteréről a <a href="http://labs.precognox.com/kuruc-info-visualization/">Kuruc.info romaellenes témáit bemutató vizualizációnkon</a>.</p>
+
                 
                 <h2>A topikokról</h2>
-                <p> topik modell eredményeit használva a képeket a rájuk leginkább jellemző topikok szerint hét csoportba válogattuk szét. Az egyes topikoknak a csoportba tartozó képek egy jelentős részét megtekintve és a címkéket figyelembe véve neveket is adtunk, hogy ne csak számmal és a topikokhoz tartozó szavakkal hivatkozzunk rájuk. Ez látható a szakasz első táblázatában. Az első vizualizáció segít megérteni, hogy egy-egy topikra jellemző címke milyen arányban fordul elő a topikban és a teljes korpuszban. Nem árt észben tartani, hogy az LDA minden dokumentum esetében megadja az összes topik arányát. Második vizualizációnk azt szemlélteti, hogy milyen erősen kapcsolódnak egymáshoz az egyes topikok, azaz hányszor voltak egy-egy kép esetében a három legjellemzőbb topik között.</p>
+                <p>A topik modell eredményeit használva a képeket a rájuk leginkább jellemző topikok szerint hét csoportba válogattuk szét. Az egyes topikoknak a csoportba tartozó képek egy jelentős részét megtekintve és a címkéket figyelembe véve neveket is adtunk, hogy ne csak számmal és a topikokhoz tartozó szavakkal hivatkozzunk rájuk. Ez látható a szakasz első táblázatában. Az első vizualizáció segít megérteni, hogy egy-egy topikra jellemző címke milyen arányban fordul elő a topikban és a teljes korpuszban. Nem árt észben tartani, hogy az LDA minden dokumentum esetében megadja az összes topik arányát. Második vizualizációnk azt szemlélteti, hogy milyen erősen kapcsolódnak egymáshoz az egyes topikok, azaz hányszor voltak egy-egy kép esetében a három legjellemzőbb topik között. </p>
                 
             </div>
         </div>
@@ -716,9 +747,11 @@
                 <h2>Hogyan kapcsolódnak<br />
                     egymáshoz az<br />
                     egyes topikok?</h2>
-                <p>Az egyes topikok közötti kapcsolat alapja az, hogy hányszor fordultak elő együtt egy-egy kép első három, leginkább jellemző topikjaként. <br />
-                Az "Adatok" topik központi szerepének oka egyszerű: sokszor szerepel valamilyen felirat a képeken, legyen az útjelzőtábla, felirat egy pólón, vagy egy névtábla egy előadó előtt.
-                </p>
+                
+                <p>Az egyes topikok közötti kapcsolat alapja az, hogy hányszor fordultak elő együtt egy-egy kép első három, leginkább jellemző topikjaként. <br/>
+                Az "Adatok" topik központi szerepének oka egyszerű: sokszor szerepel valamilyen felirat a képeken, legyen az útjelzőtábla, felirat egy pólón, vagy egy névtábla egy előadó előtt. </p>
+
+                
             </div>
         </div>
             <object data="img/topic_graph.svg" type="image/svg+xml" style="width: 70vw; height: 40vw;">
@@ -746,20 +779,21 @@
                 <h1>Képek és arcok</h1>
                 
                 <h2>Arcfelismerés</h2>
-                <p>Kipróbáltunk több szabadon elérhető arcfelismerő eszközt is, de végül az <a href="http://opencv.org/">OpenCV</a> könyvtár előre trénelt Haar Cascade modellje mellett döntöttünk. Döntésünk során figyelembe kellett vennünk, hogy képeink többsége "spontán" pillanatokat ábrázol, azaz a rajtuk látható emberek gyakran nem a kamera felé néznek, fejükön kalap, kapucni, vagy fejkendő van, esetleg éppen esznek s kezüket szájuk előtt tartják. A Haar Cascade a szakirodalom szerint akár 90%-os pontosságú is lehet, ezt esetünkben bizonyosan meg sem közelíti, de a többi vizsgált algoritmussal szemben sokkal kisebb fals pozitív eredményt adott, ezért választottuk ezt.</p>
-                
+                <p>Kipróbáltunk több szabadon elérhető arcfelismerő eszközt is, de végül az <a href="http://opencv.org/">OpenCV</a> könyvtár előre trénelt Haar Cascade modellje mellett döntöttünk. Döntésünk során figyelembe kellett vennünk, hogy képeink többsége "spontán" pillanatokat ábrázol, azaz a rajtuk látható emberek gyakran nem a kamera felé néznek, fejükön kalap, kapucni, vagy fejkendő van, esetleg éppen esznek s kezüket szájuk előtt tartják. A Haar Cascade a szakirodalom szerint akár 90%-os pontosságú is lehet, ezt esetünkben bizonyosan meg sem közelíti, de a többi vizsgált algoritmussal szemben sokkal kevesebb fals pozitív eredményt adott, ezért választottuk ezt. </p>
+
                 <h2>Nem- és<br />kormeghatározás</h2>
-                <p>Több szabadon elérhető eszköz megvizsgálása után úgy döntöttünk, hogy saját osztályozót készítünk a nem- és kormeghatározáshoz. Tanító adathalmazunk az <a href="https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/">IMDB-WIKI-500k</a> adathalmaz volt, ami az IMDB adatbázisban szereplő színészek képeit és a róluk elérhető adatokat (nem, kor) tartalmazza. Az adatokon a <a href="https://keras.io/">Keras</a> deep learning keretrendszer segítségével egy-egy <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">konvolúciós neurális hálót</a> tréneltünk nem- és kormeghatározásra. A kormeghatározás pontossága 81%-os, osztályozónk főleg a 14 évesnél fiatalabb és a hatvannál idősebb emberek esetében téved, illetve a 30-40 közötti kategóriákban. A nemazonosítás pontossága 77%, itt a 14 alattiak esetében szinte mindig férfi, a 60 felettieknél mindig női címkét ad vissza algoritmusunk. Ha összevetjük a kor és nem adatokat, azt látjuk, hogy a nők esetében +/- 5 évet, a férfiak esetében +/- 3 évet téved átlagosan algoritmusunk.</p>
-                
+                <p>Több szabadon elérhető eszköz megvizsgálása után úgy döntöttünk, hogy saját osztályozót készítünk a nem- és kormeghatározáshoz. Tanító adathalmazunk az <a href="https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/">IMDB-WIKI-500k</a> adathalmaz volt, ami az IMDB adatbázisban szereplő színészek képeit és a róluk elérhető adatokat (nem, kor) tartalmazza. Az adatokon a <a href="https://keras.io/">Keras</a> deep learning keretrendszer segítségével egy-egy <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">konvolúciós neurális hálót</a> tréneltünk nem- és kormeghatározásra. A kormeghatározás pontossága 81%-os, osztályozónk főleg a 14 évesnél fiatalabb és a hatvannál idősebb emberek esetében téved, illetve a 30-40 közötti kategóriákban. A nemazonosítás pontossága 77%, itt a 14 alattiak esetében szinte mindig férfi, a 60 felettieknél mindig női címkét ad vissza algoritmusunk. Ha összevetjük a kor és nem adatokat, azt látjuk, hogy a nők esetében +/- 5 évet, a férfiak esetében +/- 3 évet téved átlagosan algoritmusunk. </p>
+
                 <h2>Emóciók</h2>
-                <p> Az automatikus emóciófelismerés alapjait maga Charles Darwin fektette le 1872-ben megjelent <i>Az érzelmek kifejezéséről embernél és állatoknál</i> című művében. Darwin ebben arról ír, hogy bizonyos, érzelmi állapotokat kísérő önkéntelen testi megnyilvánulások (mint pl. elpirulás, homlokráncolás stb.) genetikailag meghatározottak és akár a fajok közt átívelő módon univerzálisak. Magukat az emóciókat Darwin összekötő kapocsnak tartotta az érzelmi állapotok és testi megnyilvánulások között. Úgy vélte, ezek a testi reakciók funkcionális, a kiválasztódás során hasznos állati mozgásokból származnak (pl. ijedtségnél a szem és az orr kitágul - jobb érzékelés), és mivel minden embernél azonosak, az emberiség feltételezett közös ősével kapcsolatban is bizonyítékul szolgálhatnak.
-                </p>
-                <p>Ezután 100 évnek kellett eltelnie ahhoz, hogy az emóciókifejezések univerzalitása újra terítékre kerüljön, és az az antropológusok között általánosan elfogadott nézet, hogy érzelmeink kifejezése és mások érzelmeinek dekódolása tisztán társadalmilag meghatározott, vagyis kultúrspecifikus képesség, ismét meginogjon. 1971-ben jelent meg ugyanis Paul Ekman és Wallace Friesen <i>Constants across cultures in the face and emotion</i> című cikke, melyben egy hatalmas, egész világra kiterjedő kutatás eredményeit publikálták. A kutatás során különféle emóciókat kifejező személyekről készült fényképeket mutattak a lekülönbözőbb kultúrából érkező egészséges és pszichiátriai kezelés alatt álló alanyoknak (köztük egy izolált pápua új-guineai törzs tagjainak) és azt vizsgálták, hogy melyek azok az emóciók, amiket a fényképek alapján mindenki ugyanúgy azonosít. Ezek az emóciók lehetnek ugyanis azok, melyeknek arckifejezései genetikailag kódoltak, és így minden embernél azonosak.</p>
-                <p>Ekman és Friesen először hat ilyen emóciót talált, melyeket kivétel nélkül mindenki ugyanúgy azonosít: Bánat, Harag, Félelem, Meglepődés, Öröm, Undor és kicsit gyengébben, de hetedikként ott van még a Megvetés. Az első hatot szoktuk összefoglalóan Hat Alapemóciónak nevezni, utalva arra, hogy ezek minden embernél ugyanolyan módon jelennek meg. A kutatók később kidolgozták a mimikai mozgásoknak azt a katalógusát, amely mintegy 100 olyan mikromozgást tartalmaz, melyekből összeállnak az emóciókat kísérő arckifejezések. Ez a Facial Action Coding System, avagy FACS. Ennek segítségével az emóciók automatikus felismerése is jelentősen leegyszerűsödött, csakúgy, mint például a hiteles emóciókat kifejező animációk készítése is.
-                </p>
+                <p>Az automatikus emóciófelismerés alapjait maga Charles Darwin fektette le 1872-ben megjelent <i>Az érzelmek kifejezéséről embernél és állatoknál</i> című művében. Darwin ebben arról ír, hogy bizonyos, érzelmi állapotokat kísérő önkéntelen testi megnyilvánulások (mint pl. elpirulás, homlokráncolás stb.) genetikailag meghatározottak és akár a fajok közt átívelő módon univerzálisak. Magukat az emóciókat Darwin összekötő kapocsnak tartotta az érzelmi állapotok és testi megnyilvánulások között. Úgy vélte, ezek a testi reakciók funkcionális, a kiválasztódás során hasznos állati mozgásokból származnak (pl. ijedtségnél a szem és az orr kitágul - jobb érzékelés), és mivel minden embernél azonosak, az emberiség feltételezett közös ősével kapcsolatban is bizonyítékul szolgálhatnak. </p>
+
+                <p>Ezután 100 évnek kellett eltelnie ahhoz, hogy az emóciókifejezések univerzalitása újra terítékre kerüljön, és az az antropológusok között általánosan elfogadott nézet, hogy érzelmeink kifejezése és mások érzelmeinek dekódolása tisztán társadalmilag meghatározott, vagyis kultúrspecifikus képesség, ismét meginogjon. 1971-ben jelent meg ugyanis Paul Ekman és Wallace Friesen <i>Constants across cultures in the face and emotion</i> című cikke, melyben egy hatalmas, egész világra kiterjedő kutatás eredményeit publikálták. A kutatás során különféle emóciókat kifejező személyekről készült fényképeket mutattak a lekülönbözőbb kultúrából érkező egészséges és pszichiátriai kezelés alatt álló alanyoknak (köztük egy izolált pápua új-guineai törzs tagjainak) és azt vizsgálták, hogy melyek azok az emóciók, amiket a fényképek alapján mindenki ugyanúgy azonosít. Ezek az emóciók lehetnek ugyanis azok, melyeknek arckifejezései genetikailag kódoltak, és így minden embernél azonosak. </p>
+
+                <p>Ekman és Friesen először hat ilyen emóciót talált, melyeket kivétel nélkül mindenki ugyanúgy azonosít: Bánat, Harag, Félelem, Meglepődés, Öröm, Undor és kicsit gyengébben, de hetedikként ott van még a Megvetés. Az első hatot szoktuk összefoglalóan Hat Alapemóciónak nevezni, utalva arra, hogy ezek minden embernél ugyanolyan módon jelennek meg. A kutatók később kidolgozták a mimikai mozgásoknak azt a katalógusát, amely mintegy 100 olyan mikromozgást tartalmaz, melyekből összeállnak az emóciókat kísérő arckifejezések. Ez a Facial Action Coding System, avagy FACS. Ennek segítségével az emóciók automatikus felismerése is jelentősen leegyszerűsödött, csakúgy, mint például a hiteles emóciókat kifejező animációk készítése is. </p>
+
                 
                 <h2>Emóciófelismerés</h2>
-                <p>A szabadon elérhető emóciófelismerő eszközök áttekintése után úgy döntöttünk, hogy saját algoritmust tanítunk be, amihez a <a href="https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data">fer2013 adathalmazt</a> használtuk. Ehhez a feladathoz is a <a href="https://keras.io/">Keras</a> deep learning keretrendszer segítségével  tréneltünk egy <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">konvolúciós neurális hálót</a>, mely pontossága 70% (azaz az adott emócióként azonosított képek ekkora hányadára valós a megállapítása), felidézése pedig 58% (azaz adott emócióhoz tartozó képek közül ennyit ismer fel). Eredményeink nem a legjobbak, de figyelembe véve, hogy egy ember számára is nehézséget jelent pusztán egy arc alapján azonosítani egy emóciót, megelégedhetünk az elért teljesítménnyel. Algoritmusunk szeret biztosra menni, ezért ha hibázik, akkor neutrálisnak tippeli az adott arckifejezést. Szintén gyakori hiba a meglepődés örömként történő azonosítása, illetve a negatív érzelmek összekeverése. Ha a nem és kor adatokkal is kiegészítjük vizsgálódásunkat, azt találjuk, hogy nők és húsz év alattiak esetében sokkal gyakoribbak a hibák, a legjobban középkorú férfiaknál tippeli meg algoritmusunk az adott arckifejezés mögött rejlő emóciót.</p>
+                <p>A szabadon elérhető emóciófelismerő eszközök áttekintése után úgy döntöttünk, hogy saját algoritmust tanítunk be, amihez a <a href="https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data">fer2013 adathalmazt</a> használtuk. Ehhez a feladathoz is a <a href="https://keras.io/">Keras</a> deep learning keretrendszer segítségével tréneltünk egy <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">konvolúciós neurális hálót</a>, melyek pontossága 70% (azaz az adott emócióként azonosított képek ekkora hányadára valós a megállapítása), felidézése pedig 58% (azaz adott emócióhoz tartozó képek közül ennyit ismer fel). Eredményeink nem a legjobbak, de figyelembe véve, hogy egy ember számára is nehézséget jelent pusztán egy arc alapján azonosítani egy emóciót, megelégedhetünk az elért teljesítménnyel. Algoritmusunk szeret biztosra menni, ezért ha hibázik, akkor neutrálisnak tippeli az adott arckifejezést. Szintén gyakori hiba a meglepődés örömként történő azonosítása, illetve a negatív érzelmek összekeverése. Ha a nem és kor adatokkal is kiegészítjük vizsgálódásunkat, azt találjuk, hogy nők és húsz év alattiak esetében sokkal gyakoribbak a hibák, a legjobban középkorú férfiaknál tippeli meg algoritmusunk az adott arckifejezés mögött rejlő emóciót. </p>
             </div>
         </div>
     </section>
@@ -771,7 +805,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Válogatás az egyes topikokba tartozó képekből</h2>
             </div>
-            </div>
+        </div>
             
     <div id="topicCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -848,10 +882,9 @@
       <span class="sr-only">Next</span>
     </a>
         
-   </div>
-   </div>
-   </div>
-   </section>
+    </div>
+    </section>
+    </div>
     
 
     
@@ -931,11 +964,9 @@
       <span class="sr-only">Next</span>
     </a>
         
-   </div>
-   </div>
-   </div>
-   </section>
-    
+    </div>
+    </section>
+    </div>
     
     <!-- Demographics Title -->
     <section id="demographics-title" class="content-section text-center">
@@ -954,7 +985,8 @@
             <div class="col-lg-8 col-lg-offset-2">
 
                 <h2>Mit tudunk a regisztrált menekültek demográfiai jellemzőiről?</h2>
-                <p>A kor- és nemazonosítás eredményét ábrázoló korfák alább láthatók minden egyes topikra nézve. Néhány jellegzetesség szembetűnő az összes korfán, melyek közül az egyik, hogy sokkal több férfi szerepel az általunk gyűjtött képeken, mint nő – jobban megfigyelve a korábban látott képmontázsokat, ez intuitíve is reálisnak tűnik. Érdekes azonban, hogy a topikok közt halvány különbség figyelhető meg annak tekintetében, hogy az azokat alkotó képek hány százalékában láthatunk férfiakat és nőket. Legnagyobb arányban a hatodik topik esetén láthatunk férfiakat (Átkelés: kerítésnél, határon, tengeren: 74%), melyet a második (Úton: vonat, busz, hajó, gyalog: 72%) és a negyedik topik követ (Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert embereket: 71%). Utóbbi nem meglepő fordulat, hiszen a politikai életben többnyire felülreprezentáltak a férfi tisztségviselők, ám ez első kettő érdekes tanulsággal szolgálhat. Mikor átkelést, határátlépést, utazást ábrázoló képeket láthattunk a médiában többnyire férfi arcokkal találkozhattunk, a nők inkább a csoportos képeken, a tömegben jelennek meg, a legfiatalabb (15 év alatti) korosztállyal együtt. Életkor tekintetében mindegyik topiknál jellemző, hogy a munkaképes korúak vannak többségben, legnagyobb arányban mindenhol a 30-34 éves korcsoport. Ez utóbbi észrevétel összecseng az <a href="http://www.unhcr.org/">UNHCR</a> (The UN Refugee Agency), valamint az Eurostat adataival is.</p>
+                <p>Az alábbi korfákon topikonként ábrázoltuk a kor- és nemazonosítás eredményeit. Néhány jellegzetesség szembetűnő az összes korfán, melyek közül az egyik, hogy sokkal több férfi szerepel az általunk gyűjtött képeken, mint nő – jobban megfigyelve a korábban látott képmontázsokat, ez intuitíve is reálisnak tűnik. Érdekes azonban, hogy a topikok közt halvány különbség figyelhető meg annak tekintetében, hogy az azokat alkotó képek hány százalékában láthatunk férfiakat és nőket. Legnagyobb arányban a hatodik topik esetén láthatunk férfiakat (Átkelés: kerítésnél, határon, tengeren: 74%), melyet a második (Úton: vonat, busz, hajó, gyalog: 72%) és a negyedik topik követ (Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert embereket: 71%). Utóbbi nem meglepő fordulat, hiszen a politikai életben többnyire felülreprezentáltak a férfi tisztségviselők, ám az első kettő érdekes tanulsággal szolgálhat. Mikor átkelést, határátlépést, utazást ábrázoló képeket láthattunk a médiában, többnyire férfi arcokkal találkozhattunk, a nők inkább a csoportos képeken, a tömegben jelennek meg, a legfiatalabb (15 év alatti) korosztállyal együtt. Életkor tekintetében mindegyik topiknál jellemző, hogy a munkaképes korúak vannak többségben, legnagyobb arányban mindenhol a 30-34 éves korcsoport. Ez utóbbi észrevétel összecseng az <a href="http://www.unhcr.org/">UNHCR</a>, valamint a Eurostat adataival is. </p>
+
             </div>
         </div>
     </section>
@@ -968,7 +1000,7 @@
                 <h2>Az egyes topikokban található képekről kinyert arcok demográfiai jellemzői</h2>
                 <p>Ha nem jelenik meg az összes grafikon, <a href="standalone_demographics.html">ezen a linken</a> elérhetőek külön-külön is az ábrák.</p>
             </div>
-            </div>
+        </div>
             
        <div id="myCarousel" data-script="vendor/bootstrap/js/bootstrap.min.js" class="carousel lazyload" data-ride="carousel">
     <!-- Indicators -->
@@ -985,42 +1017,54 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-        <iframe src="iframes/korfa_00_nvd3.html" style="height: 80vh; width: 80vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
-         <div class="carousel-caption">
-      	     <h5>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h5>
+			<div class="new">			
+            	<iframe src="iframes/korfa_00_nvd3.html" style="width:100%;height:100%;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			</div>
+            <div class="carousel-caption">
+      	         <h5>Nagyobb csoportok: táborban, Keletinél, tüntetésen, fronton</h5>
+            </div>
         </div>
-      </div>
 
         <div class="item">
-            <iframe src="iframes/korfa_01_nvd3.html" style="height: 80vh; width: 80vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			<div class="new">
+            	<iframe src="iframes/korfa_01_nvd3.html" style="width:100%;height:100%;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			</div>
             <div class="carousel-caption">
                 <h5>Kisebb csoportok: egyéni portrék, menekültek, média személyiségek, vallási vezetők</h5>
             </div>
         </div>
         
         <div class="item">
-            <iframe src="iframes/korfa_02_nvd3.html" style="height: 80vh; width: 80vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			<div class="new">
+            	<iframe src="iframes/korfa_02_nvd3.html" style="width:100%;height:100%;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			</div>				
             <div class="carousel-caption">
       	         <h5>Úton: vonat, busz, hajó, gyalog</h5>
             </div>
         </div>
         
         <div class="item">
-            <iframe src="iframes/korfa_03_nvd3.html" style="height: 80vh; width: 80vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			<div class="new">
+            	<iframe src="iframes/korfa_03_nvd3.html" style="width:100%;height:100%;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
             <div class="carousel-caption">
+			</div>
       	         <h5>Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai</h5>
             </div>
         </div>
         
         <div class="item">
-            <iframe src="iframes/korfa_04_nvd3.html" style="height: 80vh; width: 80vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			<div class="new">
+            	<iframe src="iframes/korfa_04_nvd3.html" style="width:100%;height:100%;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			</div>			
             <div class="carousel-caption">
       	         <h5>Egyéni portrék, kis csoportok: politikusok, véleményformálók, ismert emberek</h5>
             </div>
         </div>
         
         <div class="item">
-            <iframe src="iframes/korfa_06_nvd3.html" style="height: 80vh; width: 80vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			<div class="new">
+            	<iframe src="iframes/korfa_06_nvd3.html" style="width:100%;height:100%;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+			</div>
             <div class="carousel-caption">
       	         <h5>Átkelés: kerítésnél, határon, tengeren</h5>
             </div>
@@ -1037,40 +1081,27 @@
       <span class="sr-only">Next</span>
     </a>
     </div>
-    </div>
-    </div>
     </section>    
-
-
-
-<!--
-     UNHCR data 
-    <div class="uhncr-container">
-    <section id="unhcr" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-               <h2>UNHCR</h2>
-                <p>Az <a href="http://www.unhcr.org/">UNHCR (The UN Refugee Agency)</a> folyamatosan követi a hazájukat elhagyni kényszerülők számának alakulását, s immáron kiterjedt adatbázissal rendelkezik az 1951 – 2016 közötti időperiódusra vonatkozóan. Az adatok viszonylag széles bázisra vonatkoznak, többek között menekültekre, menedékkérőkre, hontalan valamint lakóhelyüket elhagyni kényszerült személyekre is. Az adatbázis <a href="http://popstats.unhcr.org">online ingyenesen elérhető</a>, s részletes információkat tartalmaz többek között az említett egyének korára, nemére vonatkozóan. Az EU tagállamok korfáját az alábbi ábra mutatja – korcsoportok tekintetében a bontás sajnos kevésbé precíz, az aktív korosztályra vonatkozóan az adatbázisban csupán egy 18-59 éves ömlesztett kategóriát különítettek el.</p>
-        </div>
-        </div>    
-        <iframe src="iframes/unhcr.html" style="height: 80vh; width: 100vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
-        
-    </section>
     </div>
--->
 
     <!-- Eurostat data -->
     <div class="euro-container">
     <section id="unhcr" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-               <h2>Eurostat</h2>
-                <p>Az <a href="http://ec.europa.eu">Eurostat oldalán</a> szintén találhatunk a migrációhoz kapcsolódó adatokat a 2008 és 2017 közti időszakra vonatkozóan. Az oldalon havi bontásban vizsgálhatjuk a menedékkérők számát országonként, melyen belül egyéb szempontok szerinti megoszlásokat is nézhetünk (például nem, korcsoport, nemzetiség). Az alábbi ábra elkészítésénél az Eurostat adatok Magyarországra vonatkozó részére koncentráltunk: kumuláltuk a 2015-2016 során menedéket kérők számát nem-korcsoport kategóriák szerint, valamint kiszámoltuk, hogy az egyes kategóriák hogyan aránylanak a menedékkérők teljes számához. Hasonló mintára, a korábban látott 6 topiknál is elkészítettük az Eurostatnál használt korcsoportokat, s megvizsgáltuk összesítve az egyes nem-korcsoport kategóriák arányait. Jól látható, hogy a 18-34 éves korcsoport nem csupán a képek alapján tekinthető hangsúlyosnak, hanem az Eurostat adatok alapján is domináns részét képezi a menedékkérőknek. E csoporton belül azonban némi eltérés tapasztalható a nők arányát tekintve: a képeken felülreprezentáltak a tényleges menedékkérők arányához viszonyítva. Szintén érdemes szemügyre venni, hogy a fiatalabb korcsoportok alulreprezentáltak a képek esetében, ám a menedékkérők közt viszonylag magas arányban fordulnak elő – a kettő közti különbség azonban részben annak is köszönhető, hogy a korcsoport osztályozónk a 14 évesnél fiatalabb emberek esetében hajlamos tévedni.</p>
+                <h2>Eurostat</h2>
+                <p>A <a href="http://ec.europa.eu">Eurostat oldalán</a> szintén találhatunk a migrációhoz kapcsolódó adatokat a 2008 és 2017 közti időszakra vonatkozóan. Az oldalon havi bontásban vizsgálhatjuk a menedékkérők számát országonként, melyen belül egyéb szempontok szerinti megoszlásokat is nézhetünk (például nem, korcsoport, nemzetiség). Az alábbi ábra elkészítésénél a Eurostat adatok Magyarországra vonatkozó részére koncentráltunk: kumuláltuk a 2015-2016 során menedéket kérők számát nem-korcsoport kategóriák szerint, valamint kiszámoltuk, hogy az egyes kategóriák hogyan aránylanak a menedékkérők teljes számához. Hasonló mintára, a korábban látott 6 topiknál is elkészítettük a Eurostatnál használt korcsoportokat, s megvizsgáltuk összesítve az egyes nem-korcsoport kategóriák arányait. Jól látható, hogy a 18-34 éves korcsoport nem csupán a képek alapján tekinthető hangsúlyosnak, hanem a Eurostat adatok alapján is domináns részét képezi a menedékkérőknek. E csoporton belül azonban némi eltérés tapasztalható a nők arányát tekintve: a képeken felülreprezentáltak a tényleges menedékkérők arányához viszonyítva. Szintén érdemes szemügyre venni, hogy a fiatalabb korcsoportok alulreprezentáltak a képek esetében, ám a menedékkérők közt viszonylag magas arányban fordulnak elő – a kettő közti különbség azonban részben annak is köszönhető, hogy a korcsoport-osztályozónk a 14 évesnél fiatalabb emberek esetében hajlamos tévedni. </p>
+            </div>
         </div>
-        </div>
-        <iframe src="iframes/eurostat.html" style="height: 80vh; width: 80vw;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+		<div class="carousel-inner">
+		<div class="eur">
+        	<iframe src="iframes/eurostat.html" style="width:100%;height:100%;" frameBorder="0" scrolling="no" class="embed-responsive-item"></iframe>
+		</div>
+		</div>		
     </section>
     </div>
+
+
 
     <!-- Emotions Title -->
     <section id="emotions-title" class="content-section text-center">
@@ -1088,7 +1119,8 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h1>Dühösek</h1>
-                <p>Egyes topikokban, mint például az "Átkelés" és az "Úton" a felismert arcok száma kevesebb mint a képek 10%-a, de a "Nagyobb csoportok" esetében is csupán harmada, még a "Kisebb csoportok: menekültek, médiaszemélyiségek, vallási vezetők", "Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai" és "Egyéni portrék, kis csoportok" esetében a képekhez viszonyítva sok arcot azonosított algoritmusunk. Az "Átkelés" és "Úton" topikokban inkább menekülteket, az "Egyéni potrék, kis csoportok" esetében főleg hazai és európai politikusokat láthatunk, a két kisebb csoportokat tartalmazó topik pedig vegyes. A menekülteket mozgásban mutató képek esetében tehát igazolódni látszik, hogy arctalan tömegként szereti őket mutatni a média. Az arcfelismerés azonban nem csak azért hasznos, mert lehetővé teszi a nem és kor beazonosítását (alogritmikusan bizonyos határok között), de arcunkon óhatatlanul is megjelennek érzelmeink. Ahogy a <a href="#picture-title">Képek</a> szakaszban leírtuk, az emóciófelismerés még messze áll a tökéletestől, de ezt figyelembe véve is meglepő, hogy minden topik esetében a düh a leggyakrabban azonosított emóció, amit a második helyezett szomorúság messze lemaradva követ csak.</p>
+                <p>Egyes topikokban, mint például az "Átkelés" és az "Úton", a felismert arcok száma kevesebb mint a képek 10%-a, de a "Nagyobb csoportok" esetében is csupán harmada, míg a "Kisebb csoportok: menekültek, médiaszemélyiségek, vallási vezetők", "Kisebb csoportok: családok, egyének, menekültek, politikusok, fegyveres testületek tagjai" és "Egyéni portrék, kis csoportok" esetében a képekhez viszonyítva sok arcot azonosított algoritmusunk. Az "Átkelés" és "Úton" topikokban inkább menekülteket, az "Egyéni potrék, kis csoportok" esetében főleg hazai és európai politikusokat láthatunk, a két kisebb csoportokat tartalmazó topik pedig e tekintetben vegyes. A menekülteket mozgásban mutató képek esetében tehát igazolódni látszik, hogy arctalan tömegként szereti őket mutatni a média. Az arcfelismerés azonban nem csak azért hasznos, mert lehetővé teszi a nem és kor beazonosítását (alogritmikusan bizonyos határok között), de arcunkon óhatatlanul is megjelennek érzelmeink. Ahogy a <a href="#picture-title">Képek</a> szakaszban leírtuk, az emóciófelismerés még messze áll a tökéletestől, de ezt figyelembe véve is meglepő, hogy minden topik esetében a düh a leggyakrabban azonosított emóció, amit a második helyezett szomorúság messze lemaradva követ csak. </p>
+
                 
             </div>
         </div>
@@ -1102,7 +1134,7 @@
                 <h2>Az egyes topikokban talált arcokon azonosított emóciók</h2>
             </div>
         </div>
-            <iframe src="iframes/radarChart_first3.html" style="height: 80vh; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
+            <iframe src="iframes/radarChart_first3.html" style="height: 80vh; width: 70vw;"  frameBorder="0" scrolling="no"></iframe>
     </section>
     </div>
     
@@ -1112,7 +1144,7 @@
             <div class="col-lg-8 col-lg-offset-2">
             </div>
         </div>
-            <iframe src="iframes/radarChart_last3.html" style="height: 80vh; width: 70vw;" frameBorder="0" scrolling="no"></iframe>
+            <iframe src="iframes/radarChart_last3.html" style="height: 80vh; width: 70vw;"  frameBorder="0" scrolling="no"></iframe>	
     </section>
     </div>
 
@@ -1147,6 +1179,49 @@
         <div class="container text-center">
             <p>Copyright &copy; <a href="http://precognox.com/">Precognox</a>, <a href="https://www.nyest.hu/">Nyelv és Tudomány</a> 2017</p>
         </div>
+        
+        
+        <!-- Social media buttons -->
+        
+        <p> <br></p>
+        
+        <div class="container text-center">
+    
+            <div id="social">
+                <div id="cont">
+                    <ul>
+                
+                        <!-- facebook button -->
+                        <li><div class="fb-like" data-href="https://zolizoli.github.io/facesofmigration_grayscale/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
+
+                        <!-- twitter button -->
+                        <li><a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Faces of migration" data-url="https://zolizoli.github.io/facesofmigration_grayscale/" data-via="precognox">Tweet</a>
+                            <script>
+                                ! function (d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0],
+                                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                                    if (!d.getElementById(id)) {
+                                        js = d.createElement(s);
+                                        js.id = id;
+                                        js.src = p + '://platform.twitter.com/widgets.js';
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                    }
+                                }(document, 'script', 'twitter-wjs');
+                            </script>
+                        </li>
+
+                        <!-- linkedin button: https://developer.linkedin.com/plugins/share?button-type-count-top=true -->
+                        <li><script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                        <script type="IN/Share" data-url="https://zolizoli.github.io/facesofmigration_grayscale/" data-counter="right"></script></li>
+            
+                    </ul>
+            
+                </div>
+            </div>
+	   </div>
+        
+    <!-- /container -->
+
     </footer>
 
     <!-- jQuery -->
@@ -1161,6 +1236,7 @@
     
     <!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
+
 
 </body>
 

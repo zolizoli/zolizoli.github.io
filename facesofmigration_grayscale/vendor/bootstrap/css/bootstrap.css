@@ -6760,4 +6760,70 @@ button.close {
     display: none !important;
   }
 }
+
+
+
+
+
+
+
+
+.carousel-inner > div.eur {
+	width:100%;
+	height:0px;
+	padding-top:45%;
+}
+
+.carousel-inner > div.eur > iframe {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100% !important;
+	height:100% !important;
+}
+
+.carousel-inner > div.demo {
+	width:100%;
+	height:0px;
+	padding-top:45%;
+}
+
+.carousel-inner > div.demo > iframe {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100% !important;
+	height:100% !important;
+}
+
+.carousel-inner > div.emo1 {
+	width:100%;
+	height:0px;
+	padding-top:45%;
+}
+
+.carousel-inner > div.emo1 > iframe {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100% !important;
+	height:100% !important;
+}
+
+.carousel-inner >  div.item > div.new {
+	width:100%;
+	height:0px;
+	padding-top:45%;
+}
+
+.carousel-inner > div.item > div.new > iframe {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100% !important;
+	height:100% !important;
+}
+
+
+
 /*# sourceMappingURL=bootstrap.css.map */
