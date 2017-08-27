@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
 </head>
 <body>
-<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.css">
+<link rel="stylesheet" type="text/css" href="css/ldavis.v1.0.0.css">
 
 </body>
 <div id="ldavis_el229241399140362688723378829906"></div>
@@ -27,28 +27,21 @@ if(typeof(LDAvis) !== "undefined"){
    }(LDAvis);
 }else if(typeof define === "function" && define.amd){
    // require.js is available: use it to load d3/LDAvis
-   require.config({paths: {d3: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min"}});
+   require.config({paths: {d3: "js/d3.min"}});
    require(["d3"], function(d3){
       window.d3 = d3;
-      LDAvis_load_lib("https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.js", function(){
+      LDAvis_load_lib("js/ldavis.v1.0.0.js", function(){
         new LDAvis("#" + "ldavis_el229241399140362688723378829906", ldavis_el229241399140362688723378829906_data);
       });
     });
 }else{
     // require.js not available: dynamically load d3 & LDAvis
-    LDAvis_load_lib("https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js", function(){
-         LDAvis_load_lib("https://cdn.rawgit.com/bmabey/pyLDAvis/files/ldavis.v1.0.0.js", function(){
+    LDAvis_load_lib("js/d3.min.js", function(){
+         LDAvis_load_lib("js/ldavis.v1.0.0.js", function(){
                  new LDAvis("#" + "ldavis_el229241399140362688723378829906", ldavis_el229241399140362688723378829906_data);
             })
          });
 }
 </script>
 
-<h3>A pyldaviz 1-től számoz, mi meg nullától</h3>
-<iframe src='topic_words.html' scrolling="no" frameborder="0" style="width:90vw; height:30vw"></iframe>
-<h3>Hogyan kapcsolódnak a topikok?</h3>
-<object id="svg1" data="topic_connections.svg" type="image/svg+xml" style="width:90vw; height:90vw"></object>
-<h3>Topikok időben</h3>
-<p>Új verzió, csak nagy képernyőn, nem mobileszközön éri meg nézni</p>
-<iframe src='topics_over_time.html' scrolling="no" frameborder="0" style="width:100vw; height:100vw"></iframe>
 </html>

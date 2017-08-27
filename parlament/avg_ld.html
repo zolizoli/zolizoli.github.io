@@ -20,7 +20,7 @@
 
         nv.addGraph(function() {
         var chart = nv.models.lineChart();
-
+        
         chart.margin({top: 30, right: 60, bottom: 20, left: 60});
         chart.xAxis.rotateLabels(0)
 
@@ -58,8 +58,8 @@
             d3.select('#chart svg')
             .datum(datum)
             .transition().duration(500)
-            .attr('width', '1200')
-            .attr('height', 600)
+            .attr('width', '80%')
+            .attr('height', '80%')
             .call(chart);
 
 
