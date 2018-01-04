@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg contentScriptType="text/ecmascript" width="2296.0"
+     xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"
+     contentStyleType="text/css"
+     viewBox="-1182.000000 -1165.000000 2296.000000 2368.212402"
+     height="2368.2124" preserveAspectRatio="xMidYMid meet"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <g id="edges">
+        <path fill="none" stroke-width="1.3466169"
+              d="M -16.676165,-0.898766 C 213.801392,219.911819 228.301804,896.843994 7.491209,1127.321533"
+              class="12 16" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="2.4217517"
+              d="M -16.676165,-0.898766 C -139.298370,100.578941 -475.448181,68.862198 -576.925903,-53.760014"
+              class="12 18" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="3.3457866"
+              d="M -16.676165,-0.898766 C -66.829651,292.781586 -582.580383,658.071899 -876.260742,607.918396"
+              class="12 17" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="1.0136986"
+              d="M -16.676165,-0.898766 C 52.407181,144.695648 -62.359398,466.712250 -207.953812,535.795593"
+              class="12 11" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="3.0560398"
+              d="M -16.676165,-0.898766 C 148.927795,-14.639091 417.944214,213.156311 431.684540,378.760284"
+              class="12 15" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="2.2050643"
+              d="M -16.676165,-0.898766 C 29.268333,-157.327652 332.828430,-323.054260 489.257294,-277.109741"
+              class="12 13" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="2.0456622"
+              d="M -16.676165,-0.898766 C 289.692078,91.814285 610.174866,690.436279 517.461792,996.804504"
+              class="12 14" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="6.445828"
+              d="M -16.676165,-0.898766 C 83.703224,314.722931 -239.160278,938.724609 -554.781982,1039.104004"
+              class="12 10" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.8111249"
+              d="M -207.953812,535.795593 C -46.559616,611.011780 82.707390,965.927368 7.491209,1127.321533"
+              class="11 16" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="1.4047322"
+              d="M -207.953812,535.795593 C -399.659363,491.678894 -621.042603,137.945526 -576.925903,-53.760014"
+              class="11 18" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="3.464508"
+              d="M -207.953812,535.795593 C -327.190674,683.881592 -728.174805,727.155273 -876.260742,607.918396"
+              class="11 17" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.66998756"
+              d="M -207.953812,535.795593 C -111.433197,376.460846 272.349792,282.239685 431.684540,378.760284"
+              class="11 15" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.25985888"
+              d="M -207.953812,535.795593 C -231.092651,233.772308 187.233994,-253.970901 489.257294,-277.109741"
+              class="11 13" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="1.2735575"
+              d="M -207.953812,535.795593 C 29.331093,482.914246 464.580444,759.519592 517.461792,996.804504"
+              class="11 14" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="7.5981736"
+              d="M -207.953812,535.795593 C -176.657776,705.822876 -384.754669,1007.807983 -554.781982,1039.104004"
+              class="11 10" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.0"
+              d="M -876.260742,607.918396 C -595.629761,535.048584 -65.378555,846.690552 7.491209,1127.321533"
+              class="17 16" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="1.6048152"
+              d="M -876.260742,607.918396 C -948.729492,415.715729 -769.128540,18.708717 -576.925903,-53.760014"
+              class="17 18" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.05064342"
+              d="M -876.260742,607.918396 C -780.162720,157.809143 39.148026,-373.207764 489.257294,-277.109741"
+              class="17 13" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="1.1149855"
+              d="M -876.260742,607.918396 C -519.739014,406.951111 316.494507,640.282776 517.461792,996.804504"
+              class="17 14" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.25985888"
+              d="M -876.260742,607.918396 C -660.503235,300.497711 124.263832,163.002838 431.684540,378.760284"
+              class="17 15" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="5.4122043"
+              d="M -876.260742,607.918396 C -725.727844,629.859741 -532.840637,888.571106 -554.781982,1039.104004"
+              class="17 10" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.27480283"
+              d="M 431.684540,378.760284 C 312.025085,236.071732 346.568726,-157.450302 489.257294,-277.109741"
+              class="15 13" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.47820672"
+              d="M 431.684540,378.760284 C 143.458389,493.978333 -461.707855,234.466141 -576.925903,-53.760014"
+              class="15 18" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="4.4923205"
+              d="M 431.684540,378.760284 C 366.459961,708.122375 -225.419907,1104.328613 -554.781982,1039.104004"
+              class="15 10" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="1.2702366"
+              d="M 431.684540,378.760284 C 572.448853,485.213684 623.915161,856.040222 517.461792,996.804504"
+              class="15 14" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.4391864"
+              d="M 431.684540,378.760284 C 496.558136,613.311218 242.042114,1062.447876 7.491209,1127.321533"
+              class="15 16" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="2.102117"
+              d="M -576.925903,-53.760014 C -223.826172,65.572868 126.824089,774.221802 7.491209,1127.321533"
+              class="18 16" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.49149024"
+              d="M -576.925903,-53.760014 C -408.359222,-311.666626 231.350677,-445.676453 489.257294,-277.109741"
+              class="18 13" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="2.0506434"
+              d="M -576.925903,-53.760014 C -147.935410,-62.524643 508.697144,567.814026 517.461792,996.804504"
+              class="18 14" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="7.0817766"
+              d="M -576.925903,-53.760014 C -353.924316,160.384003 -340.637939,816.102417 -554.781982,1039.104004"
+              class="18 10" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="3.1415524"
+              d="M -554.781982,1039.104004 C -424.683838,944.292908 -87.319923,997.223328 7.491209,1127.321533"
+              class="10 16" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="7.13242"
+              d="M -554.781982,1039.104004 C -609.216858,567.053406 17.206696,-222.674866 489.257294,-277.109741"
+              class="10 13" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="10.0"
+              d="M -554.781982,1039.104004 C -348.793121,816.195313 294.553131,790.815674 517.461792,996.804504"
+              class="10 14" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="4.358655"
+              d="M 489.257294,-277.109741 C 749.681030,-27.967773 766.603760,736.380737 517.461792,996.804504"
+              class="13 14" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="0.7596513"
+              d="M 489.257294,-277.109741 C 673.790344,100.129738 384.730682,942.788513 7.491209,1127.321533"
+              class="13 16" stroke-opacity="1.0" stroke="#b30000"/>
+        <path fill="none" stroke-width="1.535907"
+              d="M 517.461792,996.804504 C 441.571075,1124.901978 135.588730,1203.212280 7.491209,1127.321533"
+              class="14 16" stroke-opacity="1.0" stroke="#b30000"/>
+    </g>
+    <g id="nodes">
+        <circle fill-opacity="1.0" fill="#b30000" r="70.0" cx="-16.676165"
+                class="12" cy="-0.89876646" stroke="#000000"
+                stroke-opacity="1.0" stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="-1161.4703"
+                class="06" cy="160.99062" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#b30000" r="70.0" cx="-207.95381"
+                class="11" cy="535.7956" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#b30000" r="70.0" cx="-876.26074"
+                class="17" cy="607.9184" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="1093.1947"
+                class="08" cy="-415.19748" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="1084.7748"
+                class="01" cy="122.79272" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#b30000" r="70.0" cx="431.68454"
+                class="15" cy="378.76028" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="268.2727"
+                class="02" cy="-1084.9572" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#b30000" r="70.0" cx="-576.9259"
+                class="18" cy="-53.760014" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#b30000" r="70.0" cx="-554.782"
+                class="10" cy="1039.104" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="-294.40048"
+                class="03" cy="-1144.3807" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="-732.39746"
+                class="04" cy="-810.51385" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#b30000" r="70.0" cx="489.2573"
+                class="13" cy="-277.10974" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#b30000" r="70.0" cx="517.4618"
+                class="14" cy="996.8045" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="-1079.4744"
+                class="09" cy="-413.86353" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="-112.17149"
+                class="07" cy="-567.522" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="742.36865"
+                class="05" cy="-858.7254" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#b30000" r="70.0" cx="7.4912086"
+                class="16" cy="1127.3215" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+        <circle fill-opacity="1.0" fill="#fef0d9" r="20.0" cx="978.007"
+                class="00" cy="657.44116" stroke="#000000" stroke-opacity="1.0"
+                stroke-width="1.0"/>
+    </g>
+    <g id="node-labels">
+        <text font-size="36" x="-16.676165" y="8.171546" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="12">
+            Környezetvédelem, közlekedés
+        </text>
+        <text font-size="36" x="-1161.4703" y="167.68202" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="06">
+            EU
+        </text>
+        <text font-size="36" x="-207.95381" y="544.8659" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="11">
+            Gazdaság, nyugdíj
+        </text>
+        <text font-size="36" x="-876.26074" y="616.9887" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="17">
+            Gazdaság, pénzügy
+        </text>
+        <text font-size="36" x="1093.1947" y="-406.12717" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="08">
+            Törvényalkotás 2.
+        </text>
+        <text font-size="36" x="1084.7748" y="129.75952" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="01">
+            Parlamenti vita
+        </text>
+        <text font-size="36" x="431.68454" y="387.8306" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="15">
+            Földművelés, vidékfejlesztés
+        </text>
+        <text font-size="36" x="268.2727" y="-1075.8868" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="02">
+            Gazdaság, bér és szociálpolitika
+        </text>
+        <text font-size="36" x="-576.9259" y="-43.620365" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="18">
+            Önkormányzatiság
+        </text>
+        <text font-size="36" x="-554.782" y="1048.1743" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="10">
+            Pártpolitika
+        </text>
+        <text font-size="36" x="-294.40048" y="-1135.3104" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="03">
+            Családpolitika
+        </text>
+        <text font-size="36" x="-732.39746" y="-801.44354" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="04">
+            Törvényalkotás
+        </text>
+        <text font-size="36" x="489.2573" y="-268.03943" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="13">
+            Bíróság, rendőrség, stb
+        </text>
+        <text font-size="36" x="517.4618" y="1005.8748" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="14">
+            Alkotmány, népszavazás, demokrácia
+        </text>
+        <text font-size="36" x="-1079.4744" y="-406.53638" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="09">
+            Szavazás
+        </text>
+        <text font-size="36" x="-112.17149" y="-558.45166" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="07">
+            Pénzügyek
+        </text>
+        <text font-size="36" x="742.36865" y="-849.6551" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="05">
+            Egészségpolitika
+        </text>
+        <text font-size="36" x="7.4912086" y="1134.6487" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="16">
+            Honvédelem
+        </text>
+        <text font-size="36" x="978.007" y="666.5115" fill="#000000"
+              style="text-anchor: middle; dominant-baseline: central;"
+              font-family="Dialog" class="00">
+            Külpolitika, határontúliak, média
+        </text>
+    </g>
+</svg>
