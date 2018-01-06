@@ -67,6 +67,7 @@ h1 a {
 /* AU CENTRE */
 
 #zonecentre {
+    color: black;
     position: fixed; top: 45px; bottom: 0; left: 0; right: 0; overflow: hidden;
 }
 
@@ -145,11 +146,21 @@ h1 a {
     background-position: -108px -36px;
 }
 
-#zoomSlider {
-    background:#fff;
+
+/*SLIDER STYLING*/
+#zoomSlider {  
     border:1px solid #aaa;
     height: 120px; margin: 0 auto;
 }
+
+#zoomSlider .ui-slider-handle {
+    background: black;
+}
+
+#zoomSlider .ui-slider-range {
+    background: purple;
+}
+
 
 /* EN BAS A GAUCHE */
 
@@ -278,7 +289,8 @@ a:hover {
     float: left; border: 0; width: 24px; height: 24px; margin: 2px 6px;
 }
 
-/* Overlay styling*/
+
+/* OVARLAY STYLING*/
 @media screen and (min-width: 480px) {
             body {
                 width: 95vw;
@@ -291,7 +303,7 @@ a:hover {
 {
 	width: 150px;
 	padding: 10px;
-	background-color: #FF8C00;
+	background-color: rgb(70,70,70);
     font-weight:bold;
 	text-decoration:none;
 }
