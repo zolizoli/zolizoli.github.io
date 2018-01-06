@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gephi: JavaScript GEXF Viewer</title>
+        <title>Eszti gráf</title>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="styles/gexfjs.css" />
         <link rel="stylesheet" type="text/css" href="styles/jquery-ui-1.10.3.custom.min.css" />
@@ -16,9 +16,11 @@
         <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
         <script type="text/javascript" src="js/gexfjs.js"></script>
         <script type="text/javascript" src="config.js"></script>
+
     </head>
     <body>
         <div id="zonecentre" class="gradient">
+             
             <canvas id="carte" width="0" height="0"></canvas>
             <ul id="ctlzoom">
                 <li>
@@ -36,8 +38,20 @@
                 <li>
                     <a href="#" id="edgesButton"> </a>
                 </li>
+                <li>
+                    <div align="center">
+                           <a href="#loginScreen" class="button">?</a>
+                    </div>
+                    <div id="loginScreen">
+                        <a href="#" class="cancel">&times;</a>
+                        <iframe src="loginScreen.html" style="width:100%;height:100%;" frameBorder="0" scrolling="no" ></iframe>
+                    </div>
+                    <div id="cover" >
+                    </div>
+                </li>
             </ul>
         </div>
+        
         <div id="overviewzone" class="gradient">
             <canvas id="overview" width="0" height="0"></canvas>
         </div>
@@ -52,11 +66,12 @@
                 <h1><a href="http://gephi.org/" target="_blank" title="Made with Gephi">Gephi: JavaScript GEXF Viewer</a></h1>
             </div>
             <form id="recherche">
-                <input id="searchinput" class="grey" autocomplete="off" />
+                <input id="searchinput" class="grey" autocomplete="on" />
                 <input id="searchsubmit" type="submit" />
             </form>
         </div>
         <ul id="autocomplete">
         </ul>
+        
     </body>
 </html>

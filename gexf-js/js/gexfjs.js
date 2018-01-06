@@ -1139,7 +1139,18 @@
             GexfJS.params[i] = paramlist[i];
         }
     }
+    
+    // Overlay functions
+    $("#overlay").click(function () {
+        document.getElementById('overlay').style.display = "block";
+    });
+    
+     $("#overlay").click(function () {
+        document.getElementById('overlay').style.display = "none";
+    });
 
+    // Overlay functions
+    
     $(document).ready(function () {
 
         var lang = (
