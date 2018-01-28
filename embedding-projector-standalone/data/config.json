@@ -1,0 +1,12 @@
+{
+  "embeddings": [
+    {
+      "tensorName": "Magyar alter dalaszövegek",
+      "tensorShape": [16360, 256],
+      "tensorPath": "data/word_vecs.tsv",
+      "metadataPath": "data/word_freq.tsv",
+      "bookmarksPath": "data/state.txt"
+    }
+    ],
+  "modelCheckpointPath": "Bias datasets"
+}
