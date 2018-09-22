@@ -1,0 +1,19 @@
+body {
+  font: 10px sans-serif;
+}
+.container{
+    width: inherit;
+}
+p {
+    font: 10px sans-serif;
+    color: black;
+}
+
+h1 {
+    color: black;
+}
+
+footer {
+	font: 10px Arial, Helvetica,sans-serif;
+
+}
