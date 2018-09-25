@@ -14,7 +14,7 @@ a {
 .card-row {
     display: grid;
     justify-content: center;
-    padding: 0 4px;
+    padding: 4 4px;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -53,12 +53,12 @@ a {
     background-color: #f9f9f9;
     min-width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+/*    z-index: 1;*/
     -moz-border-radius: 6px 6px 6px 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px 6px 6px 6px;
     z-index: 99 !important;
-    overflow: visible !important;
+/*    overflow: visible !important;*/
 }
 
 /*POPUPS*/
@@ -69,7 +69,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 0%;
     right: 0%;
 }
@@ -81,7 +81,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 0%;
     right: 0%;
 }
@@ -92,7 +92,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 0%;
     right: 0%;
 }
@@ -103,7 +103,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: -120%;
     right: 0%;
 }
@@ -115,7 +115,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 0%;
     right: 0%;
 }
@@ -126,7 +126,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: -120%;
     right: 0%;
 }
@@ -137,7 +137,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 0%;
     right: 0%;
 }
@@ -148,7 +148,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: -120%;
     right: 0%;
 }
@@ -159,7 +159,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 0%;
     right: 0%;
 }
@@ -170,7 +170,7 @@ a {
     height: auto;
     font-size: small;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: -120%;
     right: 0%;
 }
