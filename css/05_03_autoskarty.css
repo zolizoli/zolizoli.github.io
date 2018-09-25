@@ -87,12 +87,12 @@ td#table-title {
 
 #popup2 {
     background-color: antiquewhite;
-    width: 17vw;
+    width: 30vw;
     height: auto;
     font-size: small;
     position: absolute;
     top: 0%;
-    left: 0%;
+    left: -120%;
     right: 0%;
 }
 
